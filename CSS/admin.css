@@ -1,0 +1,22 @@
+table {
+    border-collapse: collapse;
+    width: 50%;
+}
+
+table, th ,td {
+    border: 1px solid black;
+    text-align: center;
+}
+
+td {
+    height: 25px;
+}
+
+th {
+    background-color: #50ae55;
+    color: white;
+}
+
+td:first-child {
+    width:50%;
+}

@@ -1,0 +1,80 @@
+body{
+  margin: 0px;
+  background-color: #e6e6e6;
+}
+
+#Site {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+}
+
+#header {
+  width: 100%;
+  background-color: #333333;
+  margin-bottom: 15px;
+}
+
+#inner-header {
+  max-width: 1000px;
+  margin: auto;
+  /*background-color: #1a1a1a;*/
+  overflow: hidden;
+  color: white;
+}
+
+#Main-content {
+  width: 100%;
+  margin: auto;
+  max-width: 1000px;
+  padding-top: 15px;
+  padding-left: 15px;
+  padding-right: 15px;
+  flex-grow: 1;
+  flex-shrink: 1;
+  background-color: white;
+
+}
+
+#footer {
+  margin-top: 15px;
+  padding: 10px;
+  text-align: center;
+  background-color: #4d4d4d;
+  
+}
+
+#overskrift1, #overskrift2 {
+  text-align: center;
+}
+
+#menubar {
+  max-width: 1000px;
+  float: left;
+  height: 50px;
+  text-align: center; 
+  margin: 0 auto;
+}
+
+#menu {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  width: 500px;
+}
+
+ul#menu li a {
+    display: block;
+    float: left;
+    text-decoration: none;
+    padding: 14px 16px;
+}
+
+ul#menu li a:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+a {
+  color: white;
+}
