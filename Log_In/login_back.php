@@ -1,6 +1,4 @@
 <?php
-
-   //put this in its own config.php file later
    include("config.php");
    session_start();
 
@@ -18,27 +16,28 @@
     // If result matched $myusername and $mypassword, table row must be 1 row
 
     if($count == 1) {
-      /*
-      session_register("myusername");
-      $_SESSION['login_user'] = $myusername;
-      echo $myusername . "<br>";
-      */
+
       switch ($row["role"]) {
         case 'arrangor':
-            header('Location: ../Arrangor/arrangor_home.html');
+            header('Location: ../home.html');
             break;
         case 'tekniker':
-            header('Location: ../Tekniker/tekniker_konsertoversikt.html');
+            header('Location: ../home.html');
             break;
         case 'manager':
             //header('Location: ../Manager/START_PAGE');
-            echo "manager <br>"
+            echo "manager <br>";
             break;
         case 'bookingansvarlig':
-            header('Location: ../Bookingansvarlig/bookingansvarlig.html');
+            echo "bookingansvarlig";
+            //header('Location: ../Bookingansvarlig/bookingansvarlig.html');
             break;
         case 'bookingsjef':
-            header('Location: ../Bookingsjef/bookingsjef.html');
+            echo "bookingsjef";
+            //header('Location: ../bookingsjef.html');
+            break;
+        case 'admin':
+            header('location: ../admin.html');
             break;
         default:
             echo "not a valid usertype";
