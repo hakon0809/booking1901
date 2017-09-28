@@ -1,6 +1,6 @@
 <?php
-   include("config.php");
-   session_start();
+  include("config.php");
+  session_start();
 
   if($_SERVER["REQUEST_METHOD"] == "POST") {
     //username and password is sent from form with POST method
@@ -25,8 +25,8 @@
             header('Location: ../home.html');
             break;
         case 'manager':
-            //header('Location: ../Manager/START_PAGE');
             echo "manager <br>";
+            //header('Location: ../Manager/START_PAGE');
             break;
         case 'bookingansvarlig':
             echo "bookingansvarlig";
