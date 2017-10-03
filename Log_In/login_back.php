@@ -37,7 +37,7 @@
             //header('Location: ../bookingsjef.html');
             break;
         case 'admin':
-            header('location: ../admin.html');
+            header('location: ../admin.php');
             break;
         default:
             echo "not a valid usertype";
