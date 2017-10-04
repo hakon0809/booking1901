@@ -25,8 +25,7 @@
             header('Location: ../home.html');
             break;
         case 'manager':
-            echo "manager <br>";
-            //header('Location: ../Manager/START_PAGE');
+            header('Location: ../Manager/manager.php');
             break;
         case 'bookingansvarlig':
             echo "bookingansvarlig";
@@ -37,7 +36,7 @@
             //header('Location: ../bookingsjef.html');
             break;
         case 'admin':
-            header('location: ../Admin/admin.php');
+            header('location: ../admin.php');
             break;
         default:
             echo "not a valid usertype";
