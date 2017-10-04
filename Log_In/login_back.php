@@ -28,12 +28,10 @@
             header('Location: ../Manager/manager.php');
             break;
         case 'bookingansvarlig':
-            echo "bookingansvarlig";
-            //header('Location: ../Bookingansvarlig/bookingansvarlig.html');
+            header('Location: ../bookingansvarlig.php');
             break;
         case 'bookingsjef':
-            echo "bookingsjef";
-            //header('Location: ../bookingsjef.html');
+            header('Location: ../home.html');
             break;
         case 'admin':
             header('location: ../admin.php');
