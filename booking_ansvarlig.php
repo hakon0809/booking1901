@@ -44,10 +44,6 @@
                     <td><label for="navn">  Technical spesifications from the manager: </label></td>
                       <td>  <!--the data from the database is gonna be displayed here from the technical spefications-->    </td>
                 </tr>
-
-                    <td></td>
-                    <td><button>Send</button></td>
-                  </tr>
               </table>
           </form>
       </div>
