@@ -10,11 +10,6 @@
     <title> Booking Ansvarlig </title>
     <link rel="stylesheet" type="text/css" href="CSS\standard.css">
     <style type="text/css"></style>
-
-    <script type="text/javascript" src="JavaScript/adminJS.js"></script>
-    <script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
-    <script type="text/javascript" src="JavaScript/jquery.js"></script>
-
   </head>
 
   <body id="Site">
@@ -27,7 +22,7 @@
           <ul id="menu">
               <li><a> Min Side </a></li>
               <li><a href="konsertoversikt.html">Konsertoversikt</a></li>
-              <li><a href="http://folk.ntnu.no/ahsana/booking1901/Log_In/login.php"> Log Out</a></li>
+              <li><a href="Log_In/login.php"> Log Out</a></li>
           </ul>
         </div>
       </div>

@@ -25,7 +25,7 @@
         <div id="menubar">
           <ul id="menu">
               <li><a href="#"> Home </a></li>
-              <li><a href="http://folk.ntnu.no/ahsana/booking1901/Log_In/login.php"> Log Out</a></li>
+              <li><a href="Log_In/login.php"> Log Out</a></li>
           </ul>
         </div>
       </div>
