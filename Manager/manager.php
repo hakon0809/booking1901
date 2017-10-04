@@ -33,7 +33,7 @@
       <div class="registering_band_via_manager">
           <h3></h3>
           <h3>
-              Fill out for the technical spesifications for the consert:
+              Fill out for the technical spesifications for the concert:
           </h3>
           <form class="band-form">
             <table>
