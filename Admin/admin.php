@@ -1,5 +1,6 @@
 <?php
-  include("log_out.php");
+  include("admin_back.php");
+  include("../log_out.php");
 ?>
 
 <!DOCTYPE html>
