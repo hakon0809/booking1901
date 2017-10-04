@@ -15,7 +15,7 @@ td {
 <?php
   include("config.php");
   // selects conserts and scenes from the database
-  $sql = "SELECT k_id, scene, name, date, time_start, time_end FROM konsert";
+  $sql = "SELECT konsert.k_id, konsert.s_id, konsert.name, konsert.date, konsert.time_start, konsert.time_end, scene.name FROM konsert INNER JOIN scene ON konsert.s_id = scene.s_id";
   $result = $conn->query($sql);
 
   //makes a table with the info
@@ -28,12 +28,13 @@ td {
                 <th>End</th>
           </tr>";
     while ($row = $result->fetch_assoc()) {
+
       echo "<tr>
-              <td>" . $row["scene"]. "</td>
-              <td>" . $row["name"]. "</td>
-              <td>" . $row["date"]. "</td>
-              <td>" . $row["time_start"]. "</td>
-              <td>" . $row["time_end"]. "</td>
+              <td>" . $row["scene.name"]. "</td>
+              <td>" . $row["konsert.name"]. "</td>
+              <td>" . $row["konsert.date"]. "</td>
+              <td>" . $row["konsert.time_start"]. "</td>
+              <td>" . $row["konsert.time_end"]. "</td>
             </tr>";
     }
     echo "</table>";
