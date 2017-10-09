@@ -1,10 +1,12 @@
-<?php include("log_out.php"); ?>
+<?php
+  session_start();
+?>
 
 <html>
   <head>
     <meta charset="utf-8">
 
-    <title> Manager </title>
+    <title> Konsertoversikt </title>
     <link rel="stylesheet" type="text/css" href="CSS\standard.css">
     <style type="text/css">
 
@@ -28,8 +30,8 @@
         </div>
         <div id="menubar">
           <ul id="menu">
-              <li><a>Min Side</a></li>
-              <li><a href="konsertoversikt.php">Konsertoversikt</a></li>
+              <li><a href= <?php echo "home_" . $_SESSION["role"] . ".php"; ?>> Min Side </a></li>
+              <li><a> Konsertoversikt</a></li>
               <li><a href="Log_In/login.php"> Log Out</a></li>
           </ul>
         </div>

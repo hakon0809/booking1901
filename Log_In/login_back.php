@@ -1,6 +1,6 @@
 <?php
-  include("../config.php");
   session_start();
+  include("../config.php");
 
   if($_SERVER["REQUEST_METHOD"] == "POST") {
     //username and password is sent from form with POST method
@@ -16,13 +16,14 @@
     // If result matched $myusername and $mypassword, table row must be 1 row
 
     if($count == 1) {
-
+      $_SESSION["user_id"] = $row["u_id"];
+      $_SESSION["role"] = $row["role"];
       switch ($row["role"]) {
         case 'arrangor':
             header('Location: ../home.html');
             break;
         case 'tekniker':
-            header('Location: ../home.html');
+            header('Location: ../home_tekniker.php');
             break;
         case 'manager':
             header('Location: ../Manager/manager.php');

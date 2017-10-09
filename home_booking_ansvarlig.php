@@ -1,5 +1,5 @@
 <?php
-  include("log_out.php");
+  session_start();
 ?>
 
 <!DOCTYPE html>
@@ -34,7 +34,27 @@
             <table>
               <tr>
                     <td><label for="navn"> <h4>  Tekniskebehov fra Manager: </h4></label></td>
-                      <td> <!--the data from the database is gonna be displayed here from the technical spefications-->    </td>
+                    <td>
+                    <?php
+                      include("config.php");
+                        $sql = "SELECT behov FROM teknisk_behov WHERE band_id = 1";
+                          $result = $conn->query($sql);
+
+                          //makes a table with the info
+                          if ($result->num_rows > 0) {
+                            echo "<table>";
+                            while ($row = $result->fetch_array(MYSQLI_ASSOC)) {
+                              echo "<tr><td>" . $row["behov"] . "</td></tr>";
+                            }
+                            echo "</table>";
+
+                          } else {
+                            echo "0 behov";
+                          }
+                          $conn->close();
+                    ?>
+                  </td>
+
                 </tr>
                 <tr>
                     <td><label for="navn"> <h4> Tilbud for Manager </h4></label></td>
