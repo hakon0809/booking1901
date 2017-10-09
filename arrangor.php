@@ -30,51 +30,24 @@
 
     <main id="Main-content">
         <p >Hello</p>
-        <?php
+<?php
             include("config.php");
             // selects conserts and scenes from the database
         
         
-
-
-
-       $sql="Select name from  konstert";
-
-       $result = $conn->query($sql);
-
-       $menu=" "; 
-
-       while (odbc_fetch_row($rs))
-
-       {
-
-           $menu.= '<option>'. odbc_result($rs,"ProbType").'</option>';
-
-       }
-
-       echo $menu;
-
-       $conn->close();
-
-
-?>
         
         
         
-        
-        
-            $sql = "SELECT name FROM konsert ;
+            $sql = "SELECT name FROM konsert" ;
             $result = $conn->query($sql);
-            
-            echo "<select name="konsert1">";
-            while ($row) = mysql_fetch_array($result)){
-            echo "<option value='" . $row['name'] ."'>" . $row['name'] ."</option>" }            }
-            //makes a table with the info
+            echo "<select name='konsert1>";
+            while ($row = $result->fetch_assoc()){
+                echo "<option value='". $row['name'] ."'>";
+            }
             echo "</select>";
+            $conn->close(); ?>
             
-            $conn->close();
-        ?>
-        
+
         
         
         
