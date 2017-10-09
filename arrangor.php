@@ -21,7 +21,7 @@
         <div id="menubar">
           <ul id="menu">
               <li><a>Min Side</a></li>
-              <li><a href="konsertoversikt.php">Konsertoversikt</a></li>
+              <li><a href="konsertoversikt.html">Konsertoversikt</a></li>
               <li><a href="Log_In/login.php"> Log Out</a></li>
           </ul>
         </div>
@@ -29,26 +29,32 @@
     </header>
 
     <main id="Main-content">
+        <p >Hello</p>
         <?php
             include("config.php");
             // selects conserts and scenes from the database
-            $sql = "SELECT name FROM konsert ;
-            $result = $conn->query($sql);
-
-            echo "<select name="konsert1">";
-            while ($row) = mysql_fetch_array($result)){
-            echo "<option value='" . $row['name'] ."'>" . $row['name'] ."</option>" }            }
-            //makes a table with the info
-
-            $conn->close();
-        ?>
+        
+        
 
 
 
+       $sql="Select name from  konstert";
 
-    </main>
+       $result = $conn->query($sql);
 
-    <footer id="footer">Foot</footer>
+       $menu=" "; 
 
-  </body>
-</html>
+       while (odbc_fetch_row($rs))
+
+       {
+
+           $menu.= '<option>'. odbc_result($rs,"ProbType").'</option>';
+
+       }
+
+       echo $menu;
+
+       $conn->close();
+
+
+?>
