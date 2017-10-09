@@ -40,30 +40,28 @@
         
             $sql = "SELECT k_name, k_id FROM konsert" ;
             $result = $conn->query($sql);
-            echo "<select id ='kon' name='konserter'>";
+            echo "<select name='konserter'>";
             while ($row = $result->fetch_assoc()){
-                echo "<option value=" . $row['k_id'] . ">" . $row['k_name'] . "</option>";
+                echo "<option value='konsertValue'>" . $row['k_name'] . "</option>";
             }
             echo "</select>";
             
             $sql = "SELECT users.name, users.mobile, users.email
             FROM users INNER JOIN user_konsert
-            ON users.u_id = user_konsert.user_id
+            ON users.u_id = user_konsert.user_id";
             $result = $conn->query($sql);
             if ($result->num_rows > 0) {
             echo "<table><tr>
-            <th>Scene</th>
             <th>Name</th>
-            <th>Date</th>
-            <th>Start</th>
-            <th>End</th>
+            <th>MobileNr</th>
+            <th>Mail</th>
             </tr>";
             while ($row = $result->fetch_assoc()) {
 
             echo "<tr>
                 <td>" . $row["name"]. "</td>
                 <td>" . $row["mobile"]. "</td>
-                <td>" . $row["mail"]. "</td>
+                <td>" . $row["email"]. "</td>
                 </tr>";
     }
     echo "</table>";
