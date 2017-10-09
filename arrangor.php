@@ -40,9 +40,9 @@
         
             $sql = "SELECT name FROM konsert" ;
             $result = $conn->query($sql);
-            echo "<select name='konsert1>";
+            echo "<select name='konsert1'>";
             while ($row = $result->fetch_assoc()){
-                echo "<option value='". $row['name'] ."'>";
+                echo "<option value='. $row['name'] .'>. $row['name']. </option>";
             }
             echo "</select>";
             $conn->close(); ?>
