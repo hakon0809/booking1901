@@ -38,11 +38,11 @@
         
         
         
-            $sql = "SELECT name FROM konsert" ;
-            $result = $conn->query($sql);
+            $sql = "SELECT k_name FROM konsert" ;
+            //$result = $conn->query($sql);
             echo "<select name='konsert1'>";
             while ($row = $result->fetch_assoc()){
-                echo "<option value='. $row['name'] .'>. $row['name']. </option>";
+                echo "<option value=\"konsert1\">" . $row['k_name'] . "</option>";
             }
             echo "</select>";
             $conn->close(); ?>
