@@ -58,3 +58,29 @@
 
 
 ?>
+        
+        
+        
+        
+        
+            $sql = "SELECT name FROM konsert ;
+            $result = $conn->query($sql);
+            
+            echo "<select name="konsert1">";
+            while ($row) = mysql_fetch_array($result)){
+            echo "<option value='" . $row['name'] ."'>" . $row['name'] ."</option>" }            }
+            //makes a table with the info
+            echo "</select>";
+            
+            $conn->close();
+        ?>
+        
+        
+        
+        
+    </main>
+
+    <footer id="footer">Foot</footer>
+
+  </body>
+</html>
