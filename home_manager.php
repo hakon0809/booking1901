@@ -8,7 +8,7 @@
     <meta charset="utf-8">
 
     <title> Manager </title>
-    <link rel="stylesheet" type="text/css" href="..\CSS\standard.css">
+    <link rel="stylesheet" type="text/css" href="CSS\standard.css">
     <style type="text/css"></style>
 
   </head>

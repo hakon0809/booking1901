@@ -26,7 +26,7 @@
             header('Location: ../home_tekniker.php');
             break;
         case 'manager':
-            header('Location: ../Manager/manager.php');
+            header('Location: ../home_manager.php');
             break;
         case 'bookingansvarlig':
             header('Location: ../booking_ansvarlig.php');
