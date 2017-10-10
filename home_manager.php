@@ -23,7 +23,7 @@
           <ul id="menu">
               <li><a>Min Side</a></li>
               <li><a href="konsertoversikt.php">Konsertoversikt</a></li>
-              <li><a href="../Log_In/login.php"> Log Out</a></li>
+              <li><a href="Log_In/login.php"> Log Out</a></li>
           </ul>
         </div>
       </div>

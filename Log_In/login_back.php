@@ -20,7 +20,7 @@
       $_SESSION["role"] = $row["role"];
       switch ($row["role"]) {
         case 'arrangor':
-            header('Location: ../home.html');
+            header('Location: ../home_arrangor.php');
             break;
         case 'tekniker':
             header('Location: ../home_tekniker.php');
