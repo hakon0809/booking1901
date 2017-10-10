@@ -29,39 +29,54 @@
     </header>
 
     <main id="Main-content">
-        <p >Hello</p>
-        <script type="text/javascript">
-            function send_option () {
-                var sel = document.getElementById( "my_select" );
-                var txt = document.getElementById( "my_option" );
-                txt.value = sel.options[ sel.selectedIndex ];
-                var frm = document.getElementById( "my_form" );
-                frm.submit();
-            }
+
+
+
+<title>My list</title>
+    <script type="text/javascript">
+//----------------------------------------------------------------
+// SENDS SELECTED OPTION TO RETRIEVE DATA TO FILL TABLE.
+function send_option () {
+var sel = document.getElementById( "my_select" );
+var txt = document.getElementById( "my_option" );
+txt.value = sel.options[ sel.selectedIndex ].value;
+var frm = document.getElementById( "my_form" );
+frm.submit();
+}
+//----------------------------------------------------------------
         </script>
-            <?php
-            include("config.php");
-            // selects conserts and scenes from the database
-            
-        
-            
-        
+
+    Click on any option
+    <br/>
+    <select id="my_select" onchange="send_option();">
+    <option>Velg konsert</option>
+<?php
+        include ("config.php");
+//----------------------------------------------------------------
+// LIST FILLED FROM DATABASE (ALLEGEDLY).
             $sql = "SELECT k_name, k_id FROM konsert";
             $result = $conn->query($sql);
-            echo "<select name='konserter' id='my_select' onchange='send_option()'>";
             while ($row = $result->fetch_assoc()){
                 echo "<option value='konsertValue'>" . $row['k_name'] . "</option>";
             }
-            echo "</select>";
-            
-            $sql = "SELECT users.name, users.mobile, users.email
+//----------------------------------------------------------------
+?>
+    </select>
+    <br/> 
+    <br/>
+    <table>
+<?php
+//----------------------------------------------------------------
+// TABLE FILLED FROM DATABASE ACCORDING TO SELECTED OPTION.
+if ( IsSet( $_POST["my_option"] ) ){ // IF USER SELECTED ANY OPTION.
+$sql = "SELECT users.name, users.mobile, users.email
             FROM users INNER JOIN user_konsert
-            ON users.u_id = user_konsert.user_id";
+            ON users.u_id = user_konsert.user_id AND user_konsert.k_name = '$_POST[my_opinion]'";
             $result = $conn->query($sql);
             //if( IsSet ($_POST["my_opinion"])){
                 if ($result->num_rows > 0){ 
                 echo "<table><tr>
-                <th>Name</th>
+                <th>Navn</th>
                 <th>MobileNr</th>
                 <th>Mail</th>
                 </tr>";
@@ -77,21 +92,23 @@
                 }
     else{
     echo "0 results";
-    }//}
-            
-            
-            
-            $conn->close(); ?>
-            
-                <form method="post" style="display:none" id="my_form">
-            <input type="text" id="my_select" name="my_select"/>
+    }}
+    $conn->close();
+//----------------------------------------------------------------
+?>
+    </table>
+
+<!-- FORM TO SEND THE SELECTED OPTION. -->
+    <form method="post" action"page2.php" style="display:none" id="my_form">
+      <input type="text" id="my_option" name="my_option"/>
     </form>
-            
 
         
         
         
-    </main>
+        
+        
+         </main>
 
     <footer id="footer">Foot</footer>
 
