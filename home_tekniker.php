@@ -26,7 +26,7 @@
     <header id="header">
       <div id="inner-header">
         <div>
-          <h1 id="overskrift1"> WELCOME </h1>
+          <h1 id="overskrift1"> DAGENE </h1>
         </div>
         <div id="menubar">
           <ul id="menu">

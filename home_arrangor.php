@@ -1,4 +1,6 @@
-<!DOCTYPE html>
+<?php
+  session_start();
+?>
 <html>
   <head>
     <meta charset="utf-8">
@@ -16,7 +18,7 @@
     <header id="header">
       <div id="inner-header">
         <div>
-          <h1 id="overskrift1">WELCOME</h1>
+          <h1 id="overskrift1">DAGENE</h1>
         </div>
         <div id="menubar">
           <ul id="menu">
@@ -43,7 +45,10 @@
       <?php
         include("config.php");
           // selects conserts and scenes from the database
-          $sql = "SELECT k_name, k_id FROM konsert" ;
+          $sql = "SELECT konsert.k_name, konsert.k_id
+                  FROM konsert INNER JOIN user_konsert
+                  ON user_konsert.konsert_id = konsert.k_id
+                  AND user_konsert.user_id = '$_SESSION[user_id]'" ;
           $result = $conn->query($sql);
           echo "<form id='myForm' method = 'post'>";
           echo "<select name='konserter' onChange=selectChange(this.value)>";
@@ -55,10 +60,12 @@
           echo "</form>";
 
           if($_SERVER["REQUEST_METHOD"] == "POST") {
+
             $sql = "SELECT k_name from konsert WHERE k_id = '$_POST[konserter]'";
             $result = $conn->query($sql);
             $row = $result->fetch_assoc();
             echo "<h2> $row[k_name] </h2>";
+
             $sql = "SELECT users.name, users.mobile, users.email
             FROM users INNER JOIN user_konsert
             ON users.u_id = user_konsert.user_id

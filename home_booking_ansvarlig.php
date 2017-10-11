@@ -17,7 +17,7 @@
     <header id="header">
       <div id="inner-header">
         <div>
-          <h1 id="overskrift1">WELCOME</h1>
+          <h1 id="overskrift1">DAGENE</h1>
         </div>
         <div id="menubar">
           <ul id="menu">
@@ -29,11 +29,11 @@
       </div>
         <script src="http://code.jquery.com/jquery-1.9.0.min.js"></script>
     </header>
-      
+
     <main id="Main-content">
-        
-        
-        <script type="text/javascript" language="javascript"> 
+
+
+        <script type="text/javascript" language="javascript">
         function selectChange(val) {
         //Set the value of action in action attribute of form element.
         //Submit the form
@@ -60,10 +60,11 @@
           <form class="band-form">
             <table>
               <tr>
-                <td><label for="navn"> <h4>  Tekniskebehov fra Manager: </h4></label></td>
-                <td>
+                <td><label for="navn"> <h4>  Tekniskebehov fra band: </h4></label></td>
+                  <td>
                   <?php
                     if ($_SERVER["REQUEST_METHOD"] == "POST") {
+
                       $sql = "SELECT behov FROM teknisk_behov WHERE band_id = '$_POST[band_id]'";
                       $result = $conn->query($sql);
 
