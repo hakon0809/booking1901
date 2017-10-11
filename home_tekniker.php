@@ -45,10 +45,12 @@
 
       <?php
         include("config.php");
-        $sql = "SELECT konsert.k_name, konsert.date, konsert.time_start, konsert.time_end
+        $sql = "SELECT scene.s_name, konsert.k_name, konsert.date, konsert.time_start, konsert.time_end
                 FROM konsert INNER JOIN user_konsert
                 ON konsert.k_id = user_konsert.konsert_id
-                AND user_konsert.user_id = '$_SESSION[user_id]'";
+                AND user_konsert.user_id = '$_SESSION[user_id]'
+                INNER JOIN scene
+                ON scene.s_id = konsert.scene_id";
         $result = $conn->query($sql);
 
         if ($result->num_rows > 0) {
@@ -57,6 +59,7 @@
                   <ul>
                     <li><strong>Dato: " . $row["date"] . " </strong></li>
                     <li><strong>Klokka: " . $row["time_start"] . "-" . $row["time_end"] . " </strong></li>
+                    <li><strong>Scene: " . $row["s_name"] . " </strong></li>
                   </ul>";
           }
         } else {
