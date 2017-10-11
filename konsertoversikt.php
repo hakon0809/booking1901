@@ -1,5 +1,6 @@
 <?php
   session_start();
+  include("config.php");
 ?>
 
 <html>
@@ -40,8 +41,7 @@
 
     <main id="Main-content">
     <?php
-      include("config.php");
-      $sql = "SELECT konsert.k_id, konsert.s_id, konsert.k_name, konsert.date, konsert.time_start, konsert.time_end, scene.s_name FROM konsert INNER JOIN scene ON konsert.s_id = scene.s_id";
+      $sql = "SELECT konsert.k_id, konsert.scene_id, konsert.k_name, konsert.date, konsert.time_start, konsert.time_end, scene.s_name FROM konsert INNER JOIN scene ON konsert.scene_id = scene.s_id";
       $result = $conn->query($sql);
 
       //makes a table with the info

@@ -1,5 +1,6 @@
 <?php
   session_start();
+  include("config.php");
 ?>
 
 <!DOCTYPE html>
@@ -29,35 +30,51 @@
     </header>
 
     <main id="Main-content">
-      <div class="registering_band_via_manager">
+
+      <?php
+        $sql = "SELECT band.b_id, users.username
+                FROM users INNER JOIN band
+                ON band.manager_id = u_id" ;
+        $result = $conn->query($sql);
+        echo "<form method = 'post'>";
+        echo "<select name='band_id'>";
+        while ($row = $result->fetch_assoc()){
+          echo "<option value=" . $row['b_id'] . ">" . $row['username'] . "</option>";
+        }
+        echo "</select>";
+        echo "<button type='submit' name='submit' > velg </button>";
+        echo "</form>";
+        ?>
+
+        <div class="registering_band_via_manager">
           <form class="band-form">
             <table>
               <tr>
-                    <td><label for="navn"> <h4>  Tekniskebehov fra Manager: </h4></label></td>
-                    <td>
-                    <?php
-                      include("config.php");
-                        $sql = "SELECT behov FROM teknisk_behov WHERE band_id = 1";
-                          $result = $conn->query($sql);
+                <td><label for="navn"> <h4>  Tekniskebehov fra Manager: </h4></label></td>
+                <td>
+                  <?php
+                    if ($_SERVER["REQUEST_METHOD"] == "POST") {
+                      $sql = "SELECT behov FROM teknisk_behov WHERE band_id = '$_POST[band_id]'";
+                      $result = $conn->query($sql);
 
-                          //makes a table with the info
-                          if ($result->num_rows > 0) {
-                            echo "<table>";
-                            while ($row = $result->fetch_array(MYSQLI_ASSOC)) {
-                              echo "<tr><td>" . $row["behov"] . "</td></tr>";
-                            }
-                            echo "</table>";
-
-                          } else {
-                            echo "0 behov";
-                          }
-                          $conn->close();
+                      //makes a table with the info
+                      if ($result->num_rows > 0) {
+                        echo "<table>";
+                        while ($row = $result->fetch_array(MYSQLI_ASSOC)) {
+                          echo "<tr><td>" . $row["behov"] . "</td></tr>";
+                        }
+                          echo "</table>";
+                        } else {
+                          echo "0 behov";
+                        }
+                      }
+                      $conn->close();
                     ?>
                   </td>
 
                 </tr>
                 <tr>
-                    <td><label for="navn"> <h4> Tilbud for Manager </h4></label></td>
+                    <td><label for="navn"> <h4> Tilbud til Manager </h4></label></td>
                 </tr>
                 <tr>
                     <td><label for="pris"> Pris: </label></td>
