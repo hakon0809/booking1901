@@ -21,76 +21,66 @@
         <div id="menubar">
           <ul id="menu">
               <li><a>Min Side</a></li>
-              <li><a href="konsertoversikt.php">Konsertoversikt</a></li>
+              <li><a href="konsertoversikt.php"> Konsertoversikt</a></li>
               <li><a href="Log_In/login.php"> Log Out</a></li>
           </ul>
         </div>
       </div>
+        <script src="http://code.jquery.com/jquery-1.9.0.min.js"></script>
     </header>
 
     <main id="Main-content">
-        <p >Hello</p>
-        <script type="text/javascript">
-            function send_option () {
-                var sel = document.getElementById( "my_select" );
-                var txt = document.getElementById( "my_option" );
-                txt.value = sel.options[ sel.selectedIndex ];
-                var frm = document.getElementById( "my_form" );
-                frm.submit();
+        
+        <script type="text/javascript" language="javascript"> 
+            function selectChange(val) {
+            //Set the value of action in action attribute of form element.
+            //Submit the form
+            $('#myForm').submit();
             }
         </script>
-            <?php
-            include("config.php");
-            // selects conserts and scenes from the database
-            
         
-            
         
-            $sql = "SELECT k_name, k_id FROM konsert";
-            $result = $conn->query($sql);
-            echo "<select name='konserter' id='my_select' onchange='send_option()'>";
-            while ($row = $result->fetch_assoc()){
-                echo "<option value='konsertValue'>" . $row['k_name'] . "</option>";
-            }
-            echo "</select>";
-            
+      <?php
+        include("config.php");
+          // selects conserts and scenes from the database
+          $sql = "SELECT k_name, k_id FROM konsert" ;
+          $result = $conn->query($sql);
+          echo "<form id='myForm' method = 'post'>";
+          echo "<select name='konserter' onChange=selectChange(this.value)>";
+          echo "<option hidden>Velg konsert</option>";
+          while ($row = $result->fetch_assoc()){
+            echo "<option value=" . $row['k_id'] . ">" . $row['k_name'] . "</option>";
+          }
+          echo "</select>";
+          echo "</form>";
+
+          if($_SERVER["REQUEST_METHOD"] == "POST") {
             $sql = "SELECT users.name, users.mobile, users.email
             FROM users INNER JOIN user_konsert
-            ON users.u_id = user_konsert.user_id";
+            ON users.u_id = user_konsert.user_id
+            AND user_konsert.konsert_id = '$_POST[konserter]'";
             $result = $conn->query($sql);
-            //if( IsSet ($_POST["my_opinion"])){
-                if ($result->num_rows > 0){ 
-                echo "<table><tr>
-                <th>Name</th>
-                <th>MobileNr</th>
-                <th>Mail</th>
-                </tr>";
-                while ($row = $result->fetch_assoc()) {
+            if ($result->num_rows > 0) {
+              echo "<table><tr>
+                    <th>Name</th>
+                    <th>MobileNr</th>
+                    <th>Mail</th>
+                    </tr>";
+              while ($row = $result->fetch_assoc()) {
 
                 echo "<tr>
-                <td>" . $row["name"]. "</td>
-                <td>" . $row["mobile"]. "</td>
-                <td>" . $row["email"]. "</td>
-                </tr>";
-                }
-    echo "</table>";
-                }
-    else{
-    echo "0 results";
-    }//}
-            
-            
-            
-            $conn->close(); ?>
-            
-                <form method="post" style="display:none" id="my_form">
-            <input type="text" id="my_select" name="my_select"/>
-    </form>
-            
-
-        
-        
-        
+                      <td>" . $row["name"]. "</td>
+                      <td>" . $row["mobile"]. "</td>
+                      <td>" . $row["email"]. "</td>
+                      </tr>";
+              }
+                echo "</table>";
+              } else {
+                echo "0 results";
+              }
+            }
+            $conn->close();
+          ?>
     </main>
 
     <footer id="footer">Foot</footer>
