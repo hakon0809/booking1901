@@ -30,16 +30,16 @@
     </header>
 
     <main id="Main-content">
-        
-        <script type="text/javascript" language="javascript"> 
+
+        <script type="text/javascript" language="javascript">
             function selectChange(val) {
             //Set the value of action in action attribute of form element.
             //Submit the form
             $('#myForm').submit();
             }
         </script>
-        
-        
+
+
       <?php
         include("config.php");
           // selects conserts and scenes from the database
@@ -55,6 +55,7 @@
           echo "</form>";
 
           if($_SERVER["REQUEST_METHOD"] == "POST") {
+            echo "<h2>  '$_POST[konserter]' </h2>";
             $sql = "SELECT users.name, users.mobile, users.email
             FROM users INNER JOIN user_konsert
             ON users.u_id = user_konsert.user_id
