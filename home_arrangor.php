@@ -55,7 +55,10 @@
           echo "</form>";
 
           if($_SERVER["REQUEST_METHOD"] == "POST") {
-            echo "<h2>  '$_POST[konserter]' </h2>";
+            $sql = "SELECT k_name from konsert WHERE k_id = '$_POST[konserter]'";
+            $result = $conn->query($sql);
+            $row = $result->fetch_assoc();
+            echo "<h2> $row[k_name] </h2>";
             $sql = "SELECT users.name, users.mobile, users.email
             FROM users INNER JOIN user_konsert
             ON users.u_id = user_konsert.user_id
