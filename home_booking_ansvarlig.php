@@ -27,22 +27,32 @@
           </ul>
         </div>
       </div>
+        <script src="http://code.jquery.com/jquery-1.9.0.min.js"></script>
     </header>
-
+      
     <main id="Main-content">
+        
+        
+        <script type="text/javascript" language="javascript"> 
+        function selectChange(val) {
+        //Set the value of action in action attribute of form element.
+        //Submit the form
+        $('#myForm').submit();
+        }
+        </script>
 
       <?php
-        $sql = "SELECT band.b_id, users.username
+        $sql = "SELECT band.b_id, users.name
                 FROM users INNER JOIN band
                 ON band.manager_id = u_id" ;
         $result = $conn->query($sql);
-        echo "<form method = 'post'>";
-        echo "<select name='band_id'>";
+        echo "<form id='myForm' method = 'post'>";
+        echo "<select name='band_id' onChange=selectChange(this.value)>";
+        echo "<option hidden>Velg manager</option>";
         while ($row = $result->fetch_assoc()){
-          echo "<option value=" . $row['b_id'] . ">" . $row['username'] . "</option>";
+          echo "<option value=" . $row['b_id'] . ">" . $row['name'] . "</option>";
         }
         echo "</select>";
-        echo "<button type='submit' name='submit' > velg </button>";
         echo "</form>";
         ?>
 
