@@ -63,7 +63,7 @@
                   </ul>";
           }
         } else {
-          echo "0 results";
+          echo "Ingen konserter";
         }
         $conn->close();
       ?>

@@ -69,7 +69,8 @@
             $sql = "SELECT users.name, users.mobile, users.email
             FROM users INNER JOIN user_konsert
             ON users.u_id = user_konsert.user_id
-            AND user_konsert.konsert_id = '$_POST[konserter]'";
+            AND user_konsert.konsert_id = '$_POST[konserter]'
+            AND users.role = 'tekniker'";
             $result = $conn->query($sql);
             if ($result->num_rows > 0) {
               echo "<table><tr>
@@ -87,7 +88,7 @@
               }
                 echo "</table>";
               } else {
-                echo "0 results";
+                echo "Ingen teknikere satt til denne konserten";
               }
             }
             $conn->close();

@@ -16,7 +16,7 @@
             <input type="password" name="password" required="required" placeholder="Password">
             <button type="submit" name="login" value="login_submit" class="submit_login">Logg inn</button>
         </form>
-        <div style = "font-size:11px; color:#cc0000; margin-top:10px"><?php echo $error; ?></div>
+        <div style = "font-size:12px; color:#cc0000; margin-top:10px"><?php echo $error; ?></div>
     </div>
 </body>
 

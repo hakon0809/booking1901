@@ -42,7 +42,7 @@
       }
 
     } else {
-      $error = "Your Login Name or Password is invalid";
+      $error = "Feil brukernavn eller passord";
     }
   }
   $conn->close()

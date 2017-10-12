@@ -77,7 +77,7 @@
                         }
                           echo "</table>";
                         } else {
-                          echo "0 behov";
+                          echo "Ingen behov lagt inn";
                         }
                       }
                       $conn->close();
