@@ -8,7 +8,7 @@
   <head>
     <meta charset="utf-8">
 
-    <title> Booking Ansvarlig </title>
+    <title> Bookingansvarlig </title>
     <link rel="stylesheet" type="text/css" href="CSS\standard.css">
     <style type="text/css"></style>
   </head>
@@ -23,7 +23,7 @@
           <ul id="menu">
               <li><a> Min Side </a></li>
               <li><a href="konsertoversikt.php">Konsertoversikt</a></li>
-              <li><a href="Log_In/login.php"> Log Out</a></li>
+              <li><a href="Log_In/login.php"> Logg Ut</a></li>
           </ul>
         </div>
       </div>
@@ -44,7 +44,8 @@
       <?php
         $sql = "SELECT band.b_id, users.name
                 FROM users INNER JOIN band
-                ON band.manager_id = u_id" ;
+                ON band.manager_id = u_id
+                AND band.bans_id = '$_SESSION[user_id]'" ;
         $result = $conn->query($sql);
         echo "<form id='myForm' method = 'post'>";
         echo "<select name='band_id' onChange=selectChange(this.value)>";
@@ -60,7 +61,7 @@
           <form class="band-form">
             <table>
               <tr>
-                <td><label for="navn"> <h4>  Tekniskebehov fra band: </h4></label></td>
+                <td><label for="navn"> <h4>  Tekniske behov fra band: </h4></label></td>
                   <td>
                   <?php
                     if ($_SERVER["REQUEST_METHOD"] == "POST") {

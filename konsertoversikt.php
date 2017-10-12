@@ -33,7 +33,7 @@
           <ul id="menu">
               <li><a href= <?php echo "home_" . $_SESSION["role"] . ".php"; ?>> Min Side </a></li>
               <li><a> Konsertoversikt</a></li>
-              <li><a href="Log_In/login.php"> Log Out</a></li>
+              <li><a href="Log_In/login.php"> Logg Ut</a></li>
           </ul>
         </div>
       </div>
@@ -48,10 +48,10 @@
       if ($result->num_rows > 0) {
         echo "<table><tr>
               <th>Scene</th>
-              <th>Name</th>
-              <th>Date</th>
+              <th>Navn</th>
+              <th>Dato</th>
               <th>Start</th>
-              <th>End</th>
+              <th>Slutt</th>
               </tr>";
         while ($row = $result->fetch_assoc()) {
 

@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8">
 
-    <title>A clean template</title>
+    <title>Arrangør</title>
     <link rel="stylesheet" type="text/css" href="CSS\standard.css">
     <style type="text/css">
 
@@ -24,7 +24,7 @@
           <ul id="menu">
               <li><a>Min Side</a></li>
               <li><a href="konsertoversikt.php"> Konsertoversikt</a></li>
-              <li><a href="Log_In/login.php"> Log Out</a></li>
+              <li><a href="Log_In/login.php"> Logg Ut</a></li>
           </ul>
         </div>
       </div>
@@ -73,8 +73,8 @@
             $result = $conn->query($sql);
             if ($result->num_rows > 0) {
               echo "<table><tr>
-                    <th>Name</th>
-                    <th>MobileNr</th>
+                    <th>Navn</th>
+                    <th>Mobil</th>
                     <th>Mail</th>
                     </tr>";
               while ($row = $result->fetch_assoc()) {
