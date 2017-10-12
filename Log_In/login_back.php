@@ -32,7 +32,7 @@
             header('Location: ../home_booking_ansvarlig.php');
             break;
         case 'booking_sjef':
-            header('Location: ../home.html');
+            header('Location: ../home_bookingsjef.php');
             break;
         case 'admin':
             header('location: ../admin.php');
