@@ -35,7 +35,7 @@ include("config.php");
         <tr>
             <td>Scene: </td>
             <td><select id="scene">
-                    <option value="0" disabled selected>Velg scene</option>
+                    <option value="0" hidden>Velg scene</option>
                     <option value="10">Scene1 (10 plasser)</option>
                     <option value="50">Scene2 (50 plasser)</option>
                     <option value="500">Scene3 (500 plasser)</option>
@@ -84,5 +84,5 @@ include("config.php");
 <footer id="footer">Foot</footer>
 
 </body>
-<script type="text/javascript" src="JavaScript/prisforslag.js"
+<script type="text/javascript" src="JavaScript/prisforslag.js"></script>
 </html>
