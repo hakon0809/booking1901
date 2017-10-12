@@ -79,3 +79,43 @@ ul#menu li a:hover {
 a {
   color: white;
 }
+
+/* table stylezzz*/
+table{
+  border-collapse:collapse;
+  border-spacing:0;
+  width:75%;
+  display:table
+  border:1px solid #ccc
+}
+
+table tr{
+  border-bottom:1px solid #ddd
+}
+
+table tr:nth-child(odd){
+  background-color:#fff
+}
+
+table tr:nth-child(even){
+  background-color:#f1f1f1
+}
+
+table td, table th{
+  padding:8px 8px;
+  display:table-cell;
+  text-align:left;
+  vertical-align:top
+}
+
+table th:first-child,.table td:first-child{
+  padding-left:16px
+}
+
+.thead, .thead:hover{
+  color:#000!important;
+  background-color: #d4d4d4 !important
+}
+table tr:hover {
+  background-color: #ababab;
+}
