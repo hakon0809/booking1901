@@ -53,11 +53,8 @@
                 </div><!-- /.navbar-collapse -->
               </div><!-- /.container-fluid -->
             </nav>
-
             </div>
             </div>
-
-
       <script src="http://code.jquery.com/jquery-1.9.0.min.js"></script>
     </header>
 
@@ -146,6 +143,5 @@
     </main>
 
     <footer id="footer">Foot</footer>
-
   </body>
 </html>
