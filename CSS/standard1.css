@@ -8,7 +8,7 @@ body{
     display: flex;
     min-height: 100vh;
     flex-direction: column;
-    background-color: #FFEFD5;
+    background-color: #008080;
 }
 
 #Main-content {
