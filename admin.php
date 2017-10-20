@@ -6,7 +6,7 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title> Bookingsjef </title>
+    <title> Administrator </title>
 
     <!-- BOOTSTRAP CDN -->
 
