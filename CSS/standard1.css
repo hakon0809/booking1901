@@ -1,24 +1,20 @@
 body{
-  margin: 0px;
+  margin-top: 50px;
   background-color: #e6e6e6;
   font-family: Arial, Georgia, Serif, Times;
 }
 
-#Site {
-    display: flex;
-    min-height: 100vh;
-    flex-direction: column;
-    background-color: #008080;
-}
-
 #Main-content {
   width: 100%;
-  margin: auto;
+  margin-top: 40px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 60px;
   max-width: 1000px;
-  padding-top: 15px;
+  padding-top: 50px;
   padding-left: 15px;
   padding-right: 15px;
-  margin-bottom: 30px;
+  padding-bottom: 50px;
   flex-grow: 1;
   flex-shrink: 1;
   background-color: #FFFFFF;
@@ -29,13 +25,23 @@ body{
   padding: 10px;
   text-align: center;
   background-color: #4d4d4d;
-
 }
+  .copyright{
+  	opacity:0.5;
+
+  	font-size:11px;
+  	text-transform:uppercase;
+  	color:#FFF;
+  	text-align:right;
+  }
 
 #overskrift1, #overskrift2 {
   text-align: center;
 }
 
+#dropdownmenu{
+  padding-bottom: 20px;
+}
 a {
   color: white;
 }
@@ -106,7 +112,7 @@ table tr:hover {
 	box-shadow:10px 15px 10px rgba(0,0,0,0.5);
 }
 .navbar-default .navbar-brand, .navbar-default .navbar-brand:focus, .navbar-default .navbar-brand:hover{
-	background:white;
+	background:#414141; /*forside color*/
 	padding-left:30px;
 	padding-right:30px;
 	margin-right:15px;
@@ -141,6 +147,7 @@ table tr:hover {
 .navbar-default .navbar-toggle:focus, .navbar-default .navbar-toggle{background:#FFF;}
 .navbar-default .navbar-toggle:hover, .navbar-default .navbar-toggle-collapsed{background:#EEE;}
 
+/* Følgende vil skje når nettleservinduet er < 768px bredt. */
 @media screen and (max-width:768px){
 	body{padding-top:50px;} /* Gir plass til fixed navbar på topp */
 	.container{background:rgba(255,255,255,1);}
