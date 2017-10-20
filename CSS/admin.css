@@ -20,3 +20,12 @@ th {
 td:first-child {
     width:50%;
 }
+
+#name, #job, #btn {
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+#btns{
+  margin-bottom: 10px;
+}

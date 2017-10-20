@@ -21,7 +21,7 @@
   </head>
 
   <body>
-    <h1 id="overskrift1">DAGENE</h1>
+    <h1 id="overskrift1">Dagene</h1>
     <div class="container top-container">
         <!-- Header -->
         <div class="page-header">
@@ -136,6 +136,6 @@
               </form>
           </div>
         </main>
-        <footer id="footer"> <div class="container copyright"> &copy; 2017</div> </footer>
+        <footer id="footer"> <div class="container copyright"> Dagene &copy; 2017</div> </footer>
       </body>
 </html>
