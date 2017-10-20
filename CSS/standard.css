@@ -9,7 +9,7 @@ body{
   margin-top: 40px;
   margin-left: auto;
   margin-right: auto;
-  margin-bottom: 100px;
+  margin-bottom: 60px;
   max-width: 1000px;
   padding-top: 30px;
   padding-left: 15px;
@@ -87,6 +87,14 @@ table tr:hover {
 }
  #overskrift1{
    margin-top: 20;
+ }
+
+ #btn {
+   margin-top: 10px;
+ }
+
+ #tilbudmanager {
+   margin-top: 10px;
  }
 
 .page-header{

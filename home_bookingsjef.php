@@ -43,7 +43,7 @@ include("config.php");
                 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                   <ul class="nav navbar-nav">
                     <li class="active"><a> Min Side <span class="sr-only">(current)</span> </a></li>
-                    <li><a href="konsertoversikt.php">Konsertoversikt</a></li>
+                    <li><a href="konsertoversikt.php">Konsert Oversikt</a></li>
                   </ul>
                   <ul class="nav navbar-nav navbar-right">
                     <li><a href="Log_In/login.php"> Logg Ut</a></li>
@@ -55,7 +55,7 @@ include("config.php");
         </div>
 
     <main id="Main-content">
-      <h4> Tilbud for Manager </h4>
+      <h4> Tilbud for Manager </h4>  <!-- for å finne tilbud til manager og godkjenne den -->
           <script type="text/javascript" language="javascript">
           function selectChange(val1) {
           //Set the value of action in action attribute of form element.
@@ -81,11 +81,11 @@ include("config.php");
                 ?>
               </div>
 
-          <div class="registering_band_via_manager">
+    <!--      <div class="registering_band_via_manager">
                 <form class="band-form">
                   <table>
                     <tr>
-                      <td><label for="navn"> <h4>  Tekniske behov fra band: </h4></label></td>
+                      <td><label for="navn"> <h1>  Tekniske behov fra band: </h1></label></td>
                         <td>
                         <?php
                           if ($_SERVER["REQUEST_METHOD"] == "POST") {
@@ -106,6 +106,8 @@ include("config.php");
                             }
                             $conn->close();
                           ?>
+            </div> -->
+
       <h4> Billett Priser </h4>
         <table>
             <tr>
@@ -156,7 +158,7 @@ include("config.php");
             </tr>
         </table>
     </main>
-  <footer id="footer"> <div class="container copyright"> Dagene &copy; 2017</div> </footer>
+<footer id="footer"> <div class="container copyright"> Dagene &copy; 2017</div> </footer>
 </body>
 <script type="text/javascript" src="JavaScript/prisforslag.js"></script>
 </html>

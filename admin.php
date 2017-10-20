@@ -47,7 +47,7 @@
                 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                   <ul class="nav navbar-nav">
                     <li class="active"><a> Min Side <span class="sr-only">(current)</span> </a></li>
-                    <li><a href="konsertoversikt.php">Konsertoversikt</a></li>
+                    <li><a href="konsertoversikt.php">Konsert Oversikt</a></li>
                   </ul>
                   <ul class="nav navbar-nav navbar-right">
                     <li><a href="Log_In/login.php"> Logg Ut</a></li>
@@ -59,6 +59,7 @@
         </div>
 
     <main id="Main-content">
+      <h4> Bruker </h4>
           <form id="addForm">
             <div id="name ">
               Name:  <input type="text" name="nameInput" id="nameInput"><br>
@@ -75,36 +76,32 @@
           </form>
 
         <div id="btns">
-          <button onclick="function_test()" id="addBtn">Add worker</button>
-          <button onclick="sortTable()" id="sortBtn">Sort table</button>
+          <button onclick="function_test()" id="addBtn">Lage Bruker</button>
+          <button onclick="sortTable()" id="sortBtn">Sorter table</button>
         </div>
 
 
-        <table id="table"> <!--style="width:100%"-->
+        <table id="myTable"> <!--style="width:100%"-->
             <tbody>
             <tr>
                 <th>Navn</th>
+                <th>???</th>
                 <th>Stilling</th>
             </tr>
             <tr>
                 <td>b navn</td>
+                <td>?</td>
                 <td>Arrangør</td>
             </tr>
             <tr>
                 <td>a navn</td>
+                <td>?</td>
                 <td>Bookingsjef</td>
             </tr>
             <tr>
                 <td>c navn</td>
+                <td>?</td>
                 <td>Bookingsjef</td>
-            </tr>
-            <tr>
-                <td>d navn</td>
-                <td>Tekniker</td>
-            </tr>
-            <tr>
-                <td>e navn</td>
-                <td>Arrangør 2</td>
             </tr>
             </tbody>
         </table>
@@ -114,6 +111,6 @@
         <p><button id="BTN">hehe</button></p>
       </div>
     </main>
-  <footer id="footer"> <div class="container copyright"> Dagene &copy; 2017</div> </footer>
-</body>
+    <footer id="footer"> <div class="container copyright"> Dagene &copy; 2017</div> </footer>
+    </body>
 </html>

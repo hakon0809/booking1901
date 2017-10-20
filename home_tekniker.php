@@ -1,12 +1,13 @@
 <?php
   session_start();
+  include("config.php");
 ?>
 
 <!DOCTYPE html>
 <html>
   <head>
     <meta charset="utf-8">
-    <title> Bookingansvarlig </title>
+    <title> Tekniker </title>
 
     <!-- BOOTSTRAP CDN -->
 
@@ -26,27 +27,42 @@
     </style>
   </head>
 
-  <body id="Site">
-    <header id="header">
-      <div id="inner-header">
-        <div>
-          <h1 id="overskrift1"> DAGENE </h1>
+  <body>
+    <h1 id="overskrift1">Dagene</h1>
+    <div class="container top-container">
+        <!-- Header -->
+        <div class="page-header">
+            <!-- Meny-stripe hentet fra bootstrap tutorials -->
+            <nav class="navbar navbar-default">
+              <div class="container-fluid">
+                <!-- Brand og veksle blir gruppert for bedre utsikt for mobil utstilling -->
+                <div class="navbar-header">
+                  <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                  </button>
+                  <span class="navbar-brand">Forside</span>
+                </div>
+
+                <!-- Henter nav linker, forms, og andre innhold for aktivering til navbaren-->
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                  <ul class="nav navbar-nav">
+                    <li class="active"><a> Min Side <span class="sr-only">(current)</span> </a></li>
+                    <li><a href="konsertoversikt.php">Konsert Oversikt</a></li>
+                  </ul>
+                  <ul class="nav navbar-nav navbar-right">
+                    <li><a href="Log_In/login.php"> Logg Ut</a></li>
+                  </ul>
+                </div><!-- /.navbar-collapse -->
+              </div><!-- /.container-fluid -->
+            </nav>
+          </div>
         </div>
-        <div id="menubar">
-          <ul id="menu">
-              <li><a> Min Side </a></li>
-              <li><a href="konsertoversikt.php"> Konsertoversikt</a></li>
-              <li><a href="Log_In/login.php"> Logg Ut</a></li>
-          </ul>
-        </div>
-      </div>
-    </header>
 
     <main id="Main-content">
-
-
       <h1>Mine konserter</h1>
-
       <?php
         include("config.php");
         $sql = "SELECT scene.s_name, konsert.k_name, konsert.date, konsert.time_start, konsert.time_end
@@ -72,5 +88,6 @@
         $conn->close();
       ?>
     </main>
-  </body>
+    <footer id="footer"> <div class="container copyright"> Dagene &copy; 2017</div> </footer>
+    </body>
 </html>

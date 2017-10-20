@@ -43,7 +43,7 @@
                 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                   <ul class="nav navbar-nav">
                     <li class="active"><a> Min Side <span class="sr-only">(current)</span> </a></li>
-                    <li><a href="konsertoversikt.php">Konsertoversikt</a></li>
+                    <li><a href="konsertoversikt.php">Konsert Oversikt</a></li>
                   </ul>
                   <ul class="nav navbar-nav navbar-right">
                     <li><a href="Log_In/login.php"> Logg Ut</a></li>
@@ -137,5 +137,5 @@
           </div>
         </main>
         <footer id="footer"> <div class="container copyright"> Dagene &copy; 2017</div> </footer>
-      </body>
+        </body>
 </html>

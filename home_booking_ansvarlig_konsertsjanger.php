@@ -1,12 +1,14 @@
 <?php
   session_start();
+  include("config.php");
 ?>
+
 
 <!DOCTYPE html>
 <html>
   <head>
     <meta charset="utf-8">
-    <title> Arrangør </title>
+    <title> Konsert Sjanger </title>
 
     <!-- BOOTSTRAP CDN -->
 
@@ -19,23 +21,40 @@
     <style type="text/css"></style>
   </head>
 
-  <body id="Site">
-    <header id="header">
-      <div id="inner-header">
-        <div>
-          <h1 id="overskrift1">DAGENE</h1>
+  <body>
+    <h1 id="overskrift1">Dagene</h1>
+    <div class="container top-container">
+        <!-- Header -->
+        <div class="page-header">
+            <!-- Meny-stripe hentet fra bootstrap tutorials -->
+            <nav class="navbar navbar-default">
+              <div class="container-fluid">
+                <!-- Brand og veksle blir gruppert for bedre utsikt for mobil utstilling -->
+                <div class="navbar-header">
+                  <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                  </button>
+                  <span class="navbar-brand">Sjanger</span>
+                </div>
+
+                <!-- Henter nav linker, forms, og andre innhold for aktivering til navbaren-->
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                  <ul class="nav navbar-nav">
+                    <li><a> Min Side </a></li>
+                    <li ><a href="konsertoversikt.php"> Konsert Oversikt</a></li>
+                    <li class="active"><a>Sjanger<span class="sr-only">(current)</span></a></li>
+                  </ul>
+                  <ul class="nav navbar-nav navbar-right">
+                    <li><a href="Log_In/login.php"> Logg Ut</a></li>
+                  </ul>
+                </div><!-- /.navbar-collapse -->
+              </div><!-- /.container-fluid -->
+            </nav>
+          </div>
         </div>
-        <div id="menubar">
-          <ul id="menu">
-              <li><a>Min Side</a></li>
-              <li><a href="konsertoversikt.php"> Konsertoversikt</a></li>
-              <li><a href="Log_In/login.php"> Logg Ut</a></li>
-          </ul>
-        </div>
-      </div>
-        <script src="http://code.jquery.com/jquery-1.9.0.min.js"></script>
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-    </header>
 
     <main id="Main-content">
 
@@ -46,14 +65,11 @@
             $('#myForm').submit();
             }
         </script>
-        <h1>Min side</h1>
-
-
+        <h4>Sjanger</h4>
 
       <?php
         include("config.php");
           // selects conserts and scenes from the database
-
           $sql = "SELECT DISTINCT k_genre FROM konsert" ;
           $result = $conn->query($sql);
           echo "<form id='myForm' method = 'post'>";
@@ -66,12 +82,10 @@
           echo "</form>";
 
           if($_SERVER["REQUEST_METHOD"] == "POST") {
-
             $sql = "SELECT  scene.s_name, konsert.k_name, konsert.date, konsert.time_start, konsert.time_end
             FROM konsert INNER JOIN scene
             ON konsert.scene_id = scene.s_id
             AND k_genre LIKE '$_POST[sjanger]'" ;
-
             $result = $conn->query($sql);
             if ($result->num_rows > 0) {
               echo "<table class='table-striped'><tr>
@@ -82,7 +96,6 @@
                     <th>Slutt</th>
                     </tr>";
               while ($row = $result->fetch_assoc()) {
-
                 echo "<tr>
                     <td>" . $row["s_name"]. "</td>
                     <td>" . $row["k_name"]. "</td>
@@ -99,8 +112,6 @@
             $conn->close();
           ?>
     </main>
-
-    <footer id="footer">Foot</footer>
-
-  </body>
+    <footer id="footer"> <div class="container copyright"> Dagene &copy; 2017</div> </footer>
+    </body>
 </html>
