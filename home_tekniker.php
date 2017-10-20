@@ -2,24 +2,28 @@
   session_start();
 ?>
 
+<!DOCTYPE html>
 <html>
   <head>
     <meta charset="utf-8">
+    <title> Bookingansvarlig </title>
 
-    <title> Konsertoversikt </title>
+    <!-- BOOTSTRAP CDN -->
+
+    <!-- Latest compiled and minified CSS -->             <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <!-- jQuery library -->					                      <script src="http://code.jquery.com/jquery-1.9.0.min.js"></script>
+    <!-- To ensure proper rendering and touch zooming -->	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Lokal CSS/JS -->
     <link rel="stylesheet" type="text/css" href="CSS\standard.css">
     <style type="text/css">
-
-    table, th, td {
-        border: 1px solid black;
-    }
-    td {
-      width: 100px;
-      height: 1.5em;
-    }
-
+            table, th, td {
+                border: 1px solid black;
+            }
+            td {
+              width: 100px;
+              height: 1.5em;}
     </style>
-
   </head>
 
   <body id="Site">

@@ -5,13 +5,20 @@ include("config.php");
 
 <!DOCTYPE html>
 <html>
-<head>
+  <head>
     <meta charset="utf-8">
-
     <title> Bookingsjef </title>
+
+    <!-- BOOTSTRAP CDN -->
+
+    <!-- Latest compiled and minified CSS -->             <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <!-- jQuery library -->					                      <script src="http://code.jquery.com/jquery-1.9.0.min.js"></script>
+    <!-- To ensure proper rendering and touch zooming -->	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Lokal CSS/JS -->
     <link rel="stylesheet" type="text/css" href="CSS\standard.css">
     <style type="text/css"></style>
-</head>
+  </head>
 
 <body id="Site">
 <header id="header">
