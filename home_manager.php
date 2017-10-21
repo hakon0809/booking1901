@@ -1,5 +1,6 @@
 <?php
-  include("log_out.php");
+  session_start();
+  include("config.php");
 ?>
 
 <!DOCTYPE html>
@@ -54,18 +55,28 @@
         </div>
 
     <main id="Main-content">
-      <div class="tekniskebehov">
-          <h4>
-              Teknisk Behov
-          </h4>
-          <form class="band-form">
+      <div class="teknisk_behov">
+          <h4>Teknisk Behov</h4>
+
+          <?php
+          include("config.php");
+          if(isset($_POST['submit'])){
+            $tekniskbehov = $_POST['submit'];
+          }
+          $sql = "INSERT INTO `teknisk_behov` (`behov`, `band_id`, `tb_id`) VALUES ($tekniskbehov, '3', NULL)";
+            ?>
+
+          <form class="band-form" action="" method="post">
             <table>
                   <tr>
-                    <td><label for="tekniskebehov"> Skriv tekniskebehov for konserten:</label></td>
-                    <td><textarea class="textarea-tekniskebehov"></textarea></td>
+                    <td><label> Skriv tekniskebehov for konserten:</label></td>
+                    <td>
+                    <textarea id="tekniskebehov" name="tekniskebehov" type="text" rows="5" cols="40" ></textarea>
+                    </td>
                   </tr>
               </table>
-              <button id="btn">Send </button>
+              <input id="btn" type="submit" name="submit" value="Send"/>
+
           </form>
       </div>
 
