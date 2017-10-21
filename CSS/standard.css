@@ -25,6 +25,9 @@ body{
   padding: 10px;
   text-align: center;
   background-color: #4d4d4d;
+  position:absolute;
+  bottom:0;
+  width:100%;
 }
   .copyright{
   	opacity:0.5;
