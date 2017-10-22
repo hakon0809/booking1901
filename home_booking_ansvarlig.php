@@ -82,7 +82,7 @@
             </div>
 
             <div class="registering_band_via_manager">
-              <form class="band-form">
+              <form>
                 <table>
                   <tr>
                     <td><label for="navn"> <h4>  Tekniske behov fra band: </h4></label></td>
@@ -107,35 +107,54 @@
                           $conn->close();
                         ?>
                       </td>
-
+                </form>
+                <form action="sendtilbudBA.php" method="post">
+                    </tr>
+                    <label for="navn"> <h4> Tilbud til Manager </h4></label>
+                    <tr>
+                        <td><label> Pris: </label></td>
+                      <td><input id="pris" name="pris" type="text"/> kr,- </td>
                     </tr>
                     <tr>
-                        <td><label for="navn"> <h4> Tilbud til Manager </h4></label></td>
+                        <td><label> Scene For Konserten: </label></td>
+                      <td><input id="scene" name="scene" type="text"/></td>
                     </tr>
                     <tr>
-                        <td><label for="pris"> Pris: </label></td>
-                      <td><input type="text" name="pris"/> kr,- </td>
+                        <td><label> Dato For Konserten: </label></td>
+                      <td><input id="datokonsert" name="datokonsert" type="text"/></td>
                     </tr>
                     <tr>
-                        <td><label for="dato"> Dato: </label></td>
-                      <td><input type="text" name="dato"/></td>
+                        <td><label> Dato Tilbud Blir Sendt: </label></td>
+                      <td><input  id="datosend" name="datosend" type="text"/></td>
                     </tr>
                     <tr>
-                        <td><label for="starttid"> Start Tid: </label></td>
-                      <td><input type="text" name="starttid"/></td>
+                        <td><label> Konsert Start Tid: </label></td>
+                      <td><input id="konsertstart" name="konsertstart" type="text"/></td>
                     </tr>
                     <tr>
-                        <td><label for="slutttid"> Slutt Tid: </label></td>
-                      <td><input type="text" name="slutttid"/></td>
+                        <td><label> Konsert Slutt Tid: </label></td>
+                      <td><input id="konsertslutt" name="konsertslutt" type="text"/></td>
                     </tr>
                     <tr>
+                        <td><label> Melding til Manager </label></td>
+                      <td>
+                        <textarea id="meldingm" name="meldingm" type="text"rows="5" cols="40" ></textarea>
+                      </td>
+                    </tr>
+                    <tr>
+                        <td><label> Melding til Bookingsjef: </label></td>
+                      <td>
+                        <textarea id="meldingbs" name="meldingbs" type="text"rows="5" cols="40" ></textarea>
+                      </td>
+                    </tr>
                         <td></td>
-                      <td><button> Send Tilbud </button></td> <!--tilbud blir sendt til Bookingsjef-->
+                      <td> <input id="btn" type="submit" name="submit" value="Send"/>
+                      </td> <!--tilbud blir sendt til Bookingsjef-->
                     </tr>
                   </table>
               </form>
           </div>
         </main>
-        <footer id="footer"> <div class="container copyright"> Dagene &copy; 2017</div> </footer>
         </body>
+
 </html>

@@ -58,23 +58,15 @@
       <div class="teknisk_behov">
           <h4>Teknisk Behov</h4>
 
-          <?php
-          include("config.php");
-          if(isset($_POST['submit'])){
-            $tekniskbehov = $_POST['submit'];
-          }
-          $sql = "INSERT INTO `teknisk_behov` (`behov`, `band_id`, `tb_id`) VALUES ($tekniskbehov, '3', NULL)";
-            ?>
-
-          <form class="band-form" action="" method="post">
-            <table>
+          <form action="tekniskbehov_manager.php" method="post">
                   <tr>
                     <td><label> Skriv tekniskebehov for konserten:</label></td>
+                    <br>
                     <td>
-                    <textarea id="tekniskebehov" name="tekniskebehov" type="text" rows="5" cols="40" ></textarea>
+                      <textarea id="tekniskebehov" name="tekniskbehov" type="text"rows="5" cols="40" ></textarea>
                     </td>
                   </tr>
-              </table>
+                  <br>
               <input id="btn" type="submit" name="submit" value="Send"/>
 
           </form>
