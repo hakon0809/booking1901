@@ -55,7 +55,7 @@ include("config.php");
         </div>
 
     <main id="Main-content">
-      <h4> Tilbud for Manager </h4>  <!-- for å finne tilbud til manager og godkjenne den -->
+      <label><h4> Tilbud for Manager </h4></label>  <!-- for å finne tilbud til manager og godkjenne den -->
           <script type="text/javascript" language="javascript">
           function selectChange(val1) {
           //Set the value of action in action attribute of form element.
@@ -81,11 +81,11 @@ include("config.php");
                 ?>
               </div>
 
-    <!--      <div class="registering_band_via_manager">
+     <div class="registering_band_via_manager">
                 <form class="band-form">
                   <table>
                     <tr>
-                      <td><label for="navn"> <h1>  Tekniske behov fra band: </h1></label></td>
+                      <td><label>  Tekniske behov fra band: </label></td>
                         <td>
                         <?php
                           if ($_SERVER["REQUEST_METHOD"] == "POST") {
@@ -106,12 +106,98 @@ include("config.php");
                             }
                             $conn->close();
                           ?>
-            </div> -->
+                        </td>
+                      </tr>
+                          <td><label> Pris: </label></td>
+                        <td>
+                        </td>
+                      </tr>
+                      <tr>
+                          <td><label> Scene For Konserten: </label></td>
+                        <td>
+                        </td>
+                      </tr>
+                      <tr>
+                          <td><label> Dato For Konserten: </label></td>
+                        <td>
+                        </td>
+                      </tr>
+                      <tr>
+                          <td><label> Dato Tilbud Blir Sendt: </label></td>
+                        <td>
+                        </td>
+                      </tr>
+                      <tr>
+                          <td><label> Konsert Start Tid: </label></td>
+                        <td>
+                        </td>
+                      </tr>
+                      <tr>
+                          <td><label> Konsert Slutt Tid: </label></td>
+                        <td>
+                        </td>
+                      </tr>
+                      <tr>
+                          <td><label> Melding til Manager </label></td>
+                        <td>
+                        </td>
+                      </tr>
+                      <tr>
+                          <td><label> Melding fra Bookingansvarlig: </label></td>
+                        <td>
+                        </td>
+                      </tr>
+                      <tr>
+                          <td><label> Godkjenn Tilbud: </label></td>
+                        <td>
+                        </td>
+                      </tr>
+                </table>
+                <td></td>
+              <td> <input id="btn" type="submit" name="submit" value="Godkjenn"/>
+              </td>
+              <td></td>
+            <td> <input id="btn" type="submit" name="submit" value="Ikke Godkjenn"/>
+            </td>
+              </form>
+            </div>
+              <br>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
       <h4> Billett Priser </h4>
         <table>
             <tr>
-                <td>Scene: </td>
+                <td><label>Scene: </label></td>
                 <td><select id="scene">
                         <option value="0" hidden>Velg scene</option>
                         <option value="10">Scene 1 (10 plasser)</option>
@@ -121,11 +207,11 @@ include("config.php");
                     </select></td>
             </tr>
             <tr>
-                <td>Utgifter: </td>
+                <td><label>Utgifter: </label></td>
                 <td><input type="number" id="konsertUtgifter" step="1" placeholder="0" maxlength="8"></td>
             </tr>
             <tr>
-                <td>Ønsket overskudd dersom utsolgt: </td>
+                <td><label>Ønsket overskudd dersom utsolgt: </label></td>
                 <td><input type="number" id="konsertOverskudd" step="1" placeholder="0" maxlength="6"></td>
             </tr>
             <tr>
@@ -133,32 +219,30 @@ include("config.php");
                 <td id="anbefaltPris"></td>
             </tr>
             <tr>
-                <td>
+                <td><label>
                     Dersom 50% billettsalg:
-                </td>
+                </label></td>
                 <td id="50pris">
 
                 </td>
             </tr>
             <tr>
-                <td>
+                <td><label>
                     Dersom 75% billettsalg:
-                </td>
+                </label></td>
                 <td id="75pris">
-
                 </td>
             </tr>
             <tr>
-                <td>
+                <td><label>
                     Dersom 100% billettsalg:
-                </td>
+                </label></td>
                 <td id="100pris">
 
                 </td>
             </tr>
         </table>
     </main>
-<footer id="footer"> <div class="container copyright"> Dagene &copy; 2017</div> </footer>
 </body>
 <script type="text/javascript" src="JavaScript/prisforslag.js"></script>
 </html>

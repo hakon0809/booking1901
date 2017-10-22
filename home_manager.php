@@ -68,13 +68,15 @@
                   </tr>
                   <br>
               <input id="btn" type="submit" name="submit" value="Send"/>
-
           </form>
       </div>
 
     <div id="tilbudmanager">
       <h4> Tilbud </h4>  <!-- for å finne tilbud fra bookingsjef og godkjenne den -->
+
     </div>
+
+
     </main>
     <footer id="footer"> <div class="container copyright"> Dagene &copy; 2017</div> </footer>
     </body>
