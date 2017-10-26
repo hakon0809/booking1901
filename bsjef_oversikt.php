@@ -87,7 +87,7 @@ include("config.php");
               }
         $sql = "SELECT * FROM tilbud";
         $result = $conn->query($sql);
-        
+        echo "test";
         echo "Antall tilbud sendt: 'mysql_num_rows($result)'"; 
 
         
