@@ -43,7 +43,8 @@
                 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                   <ul class="nav navbar-nav">
                     <li class="active"><a href= <?php echo "home_" . $_SESSION["role"] . ".php"; ?>> Min Side <span class="sr-only">(current)</span> </a></li>
-                    <li><a href="konsertoversikt.php">Konsert Oversikt</a></li>
+                    <li><a href="konsertoversikt.php">Konsertoversikt</a></li>
+                    <li><a href="home_booking_ansvarlig_konsertsjanger.php">Tidligere konserter</a></li>
                   </ul>
                   <ul class="nav navbar-nav navbar-right">
                     <li><a href="Log_In/login.php"> Logg Ut</a></li>
