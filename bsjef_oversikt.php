@@ -66,7 +66,7 @@ include("config.php");
         <?php
         include("config.php");
           // selects conserts and scenes from the database
-         $sql = "SELECT UNIQUE date FROM konsert";
+         $sql = "SELECT date FROM konsert";
             $result = $conn->query($sql);
             if ($result->num_rows > 0) {
               echo "<table class='table-striped'><tr>
