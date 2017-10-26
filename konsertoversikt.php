@@ -62,6 +62,7 @@
                         case 'manager':
                             break;
                         case 'booking_ansvarlig':
+                            echo "<li><a href='bans_tidligere_konserter.php'>Tidligere konserter</a></li>";
                             break;
                         case 'bookingsjef':
                             echo "<li><a href='bsjef_rapport.php'>Rapport</a></li>
