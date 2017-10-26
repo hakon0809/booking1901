@@ -44,7 +44,7 @@ include("config.php");
                   <ul class="nav navbar-nav">
                     <li><a href= <?php echo "home_" . $_SESSION["role"] . ".php"; ?>> Min Side </a></li>
                     <li><a href="konsertoversikt.php">Konsert Oversikt</a></li>
-                    <li><a href="bsjef_oversikt.php">Bookingoversikt <span class="sr-only">(current)</span></a></li>
+                    <li class="active"><a href="bsjef_oversikt.php">Bookingoversikt <span class="sr-only">(current)</span></a></li>
                   </ul>
                   <ul class="nav navbar-nav navbar-right">
                     <li><a href="Log_In/login.php"> Logg Ut</a></li>
@@ -56,7 +56,7 @@ include("config.php");
         </div>
 
     <main id="Main-content">
-      <label><h4> Datoer booket: </h4></label>  <!-- for å finne tilbud til manager og godkjenne den -->
+      <label><h4> Oversikt: </h4></label>  <!-- for å finne tilbud til manager og godkjenne den -->
           <script type="text/javascript" language="javascript">
           function selectChange(val1) {
           //Set the value of action in action attribute of form element.
@@ -85,6 +85,10 @@ include("config.php");
             else {
                 echo "no data";
               }
+        $sql = "SELECT * FROM tilbud";
+        $result = $conn->query($sql);
+        
+        echo "Antall tilbud sendt: 'mysql_num_rows($result)'"; 
 
         
             $conn->close(); 
