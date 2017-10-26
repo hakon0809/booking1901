@@ -79,6 +79,10 @@ include("config.php");
                       </tr>";
               }
                 echo "</table>";
+            }
+            else {
+                echo "Ingen teknikere satt til denne konserten";
+              }
 
             }
         
