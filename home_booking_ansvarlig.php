@@ -108,9 +108,12 @@
                           $conn->close();
                         ?>
                       </td>
+                    </tr>
+                  </table>
                 </form>
                 <form action="sendtilbudBA.php" method="post">
-                    </tr>
+                    <table>
+                    <tr>
                     <label for="navn"> <h4> Tilbud til Manager </h4></label>
                     <tr>
                         <td><label> Artist: </label></td>
