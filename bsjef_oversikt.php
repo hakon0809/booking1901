@@ -73,24 +73,24 @@ include("config.php");
             if ($result->num_rows > 0) {
               echo "<table class='table-striped'><tr>
                     <th>Datoer</th>
-                    <th>Datoer</th>
+                    <th>Booking</th>
                     </tr>";
               $row = $result->fetch_assoc();
               for ($i = 1; $i <= 7; $i++){
-                  $date = "0".$i."11".date("y");
-                  if ($date == $row) {
+                  $date = "0".$i.".11.".date("y");
+                  if ($date == $row["date"]) {
                       echo "<tr>
                             <td>" . $row["date"]. "</td>
                             <td> booked </td>
-                            </tr>";      
-                      $row = $result->fetch_assoc();   
+                            </tr>";
+                      $row = $result->fetch_assoc();
                   } else {
                       echo "<tr>
                             <td>" . $date . "</td>
-                            <td> booked </td>
+                            <td> not booked </td>
                             </tr>";
                   }
-              }  
+              }
                 echo "</table>";
             }
             else {
