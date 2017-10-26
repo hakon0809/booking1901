@@ -42,7 +42,7 @@ include("config.php");
                 <!-- Henter nav linker, forms, og andre innhold for aktivering til navbaren-->
                 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                   <ul class="nav navbar-nav">
-                    <li class="active"><a> Min Side <span class="sr-only">(current)</span> </a></li>
+                    <li class="active"><a href= <?php echo "home_" . $_SESSION["role"] . ".php"; ?>> Min Side <span class="sr-only">(current)</span> </a></li>
                     <li><a href="konsertoversikt.php">Konsertoversikt</a></li>
                     <li><a href="bsjef_rapport.php">Rapport</a></li>
                     <li><a href="bsjef_oversikt.php">Bookingoversikt</a></li>
