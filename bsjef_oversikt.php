@@ -78,7 +78,7 @@ include("config.php");
               $row = $result->fetch_assoc();
               for ($i = 1; $i <= 7; $i++){
                   $date = "0".$i."11".date("y");
-                  if ($date = $row) {
+                  if ($date == $row) {
                       echo "<tr>
                             <td>" . $row["date"]. "</td>
                             <td> booked </td>
