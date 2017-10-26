@@ -45,6 +45,7 @@ include("config.php");
                     <li class="active"><a> Min Side <span class="sr-only">(current)</span> </a></li>
                     <li><a href="konsertoversikt.php">Konsertoversikt</a></li>
                     <li><a href="bsjef_rapport.php">Rapport</a></li>
+                    <li><a href="bsjef_oversikt.php">Bookingoversikt</a></li>
                   </ul>
                   <ul class="nav navbar-nav navbar-right">
                     <li><a href="Log_In/login.php"> Logg Ut</a></li>
