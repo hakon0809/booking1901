@@ -51,7 +51,7 @@
                 <!-- Henter nav linker, forms, og andre innhold for aktivering til navbaren-->
                 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                   <ul class="nav navbar-nav">
-                    <li><a> Min Side </a></li> <!-- må skrive en side for hver user side som vi kan linke til og for de brukerne som kan også bruke dette side-->
+                    <li><a href= <?php echo "home_" . $_SESSION["role"] . ".php"; ?>> Min Side </a></li><!-- må skrive en side for hver user side som vi kan linke til og for de brukerne som kan også bruke dette side-->
                     <li class="active"><a href="konsertoversikt.php"> Konsert Oversikt<span class="sr-only">(current)</a></li>
                   </ul>
                   <ul class="nav navbar-nav navbar-right">
