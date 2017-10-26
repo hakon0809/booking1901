@@ -111,14 +111,9 @@
                 <form action="sendtilbudBA.php" method="post">
                     </tr>
                     <label for="navn"> <h4> Tilbud til Manager </h4></label>
-                    <
-                    <tr>
-                        <td><label> Artist: </label></td>
-                        <td><input id="artist" name="artist" type="text"/></td>
-                    </tr>
                     <tr>
                         <td><label> Pris: </label></td>
-                      <td><input id="pris" name="pris" type="number"/> kr,- </td>
+                      <td><input id="pris" name="pris" type="text"/> kr,- </td>
                     </tr>
                     <tr>
                         <td><label> Scene For Konserten: </label></td>
@@ -143,12 +138,8 @@
                     <tr>
                         <td><label> Melding til Manager </label></td>
                       <td>
-                        <textarea id="meldingm" name="meldingm" type="text" rows="5" cols="40" ></textarea>
+                        <textarea id="meldingm" name="meldingm" type="text"rows="5" cols="40" ></textarea>
                       </td>
-                    </tr>
-                    <tr>
-                        <td><label> Manager e-mail </label></td>
-                        <td><input id="mail_m" type="email" name="mail_m"/></td>
                     </tr>
                     <tr>
                         <td><label> Melding til Bookingsjef: </label></td>
