@@ -42,7 +42,7 @@ include("config.php");
                 <!-- Henter nav linker, forms, og andre innhold for aktivering til navbaren-->
                 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                   <ul class="nav navbar-nav">
-                    <li class="active"><a href= <?php echo "home_" . $_SESSION["role"] . ".php"; ?>> Min Side </a></li>
+                    <li><a href= <?php echo "home_" . $_SESSION["role"] . ".php"; ?>> Min Side </a></li>
                     <li><a href="konsertoversikt.php">Konsert Oversikt</a></li>
                     <li><a href="bsjef_oversikt.php">Bookingoversikt <span class="sr-only">(current)</span></a></li>
                   </ul>
@@ -84,7 +84,6 @@ include("config.php");
                 echo "Ingen teknikere satt til denne konserten";
               }
 
-            }
         
             $conn->close(); 
         ?>
