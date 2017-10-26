@@ -83,7 +83,7 @@
 
           if($_SERVER["REQUEST_METHOD"] == "POST") {
             $current_concert = "dagene " . date("y");
-            $sql = "SELECT  scene.s_name, konsert.festival_name, konsert.k_name, konsert.date, konsert.time_start, konsert.time_end
+            $sql = "SELECT  scene.s_name, konsert.festival_name, konsert.publikum_antall, konsert.k_name, konsert.date, konsert.time_start, konsert.time_end
             FROM konsert INNER JOIN scene
             ON konsert.scene_id = scene.s_id
             AND k_genre LIKE '$_POST[sjanger]'
@@ -95,6 +95,7 @@
                     <th>Scene</th>
                     <th>Navn</th>
                     <th>Dato</th>
+                    <th>Publikumsantall</th>
                     <th>Start</th>
                     <th>Slutt</th>
                     </tr>";
@@ -104,6 +105,7 @@
                     <td>" . $row["s_name"]. "</td>
                     <td>" . $row["k_name"]. "</td>
                     <td>" . $row["date"]. "</td>
+                    <td>" . $row["publikum_antall"]. "</td>
                     <td>" . $row["time_start"]. "</td>
                     <td>" . $row["time_end"]. "</td>
                       </tr>";
