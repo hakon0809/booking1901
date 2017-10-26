@@ -36,7 +36,7 @@ include("config.php");
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                   </button>
-                  <span class="navbar-brand">Forside</span>
+                  <span class="navbar-brand">Oversikt</span>
                 </div>
 
                 <!-- Henter nav linker, forms, og andre innhold for aktivering til navbaren-->
@@ -44,6 +44,7 @@ include("config.php");
                   <ul class="nav navbar-nav">
                     <li><a href= <?php echo "home_" . $_SESSION["role"] . ".php"; ?>> Min Side </a></li>
                     <li><a href="konsertoversikt.php">Konsertoversikt</a></li>
+                    <li><a href="bsjef_rapport.php">Rapport</a></li>
                     <li class="active"><a href="bsjef_oversikt.php">Bookingoversikt <span class="sr-only">(current)</span></a></li>
                   </ul>
                   <ul class="nav navbar-nav navbar-right">

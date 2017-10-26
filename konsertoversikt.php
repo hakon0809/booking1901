@@ -53,6 +53,24 @@
                   <ul class="nav navbar-nav">
                     <li><a href= <?php echo "home_" . $_SESSION["role"] . ".php"; ?>> Min Side </a></li><!-- må skrive en side for hver user side som vi kan linke til og for de brukerne som kan også bruke dette side-->
                     <li class="active"><a href="konsertoversikt.php"> Konsertoversikt<span class="sr-only">(current)</a></li>
+                      <?php
+                      switch ($_SESSION["role"]) {
+                        case 'arrangor':
+                            break;
+                        case 'tekniker':
+                            break;
+                        case 'manager':
+                            break;
+                        case 'booking_ansvarlig':
+                            break;
+                        case 'bookingsjef':
+                            echo "<li><a href='bsjef_rapport.php'>Rapport</a></li>
+                                  <li><a href='bsjef_oversikt.php'>Bookingoversikt</a></li>";
+                            break;
+                        case 'admin':
+                            break;
+                      }
+                    ?>
                   </ul>
                   <ul class="nav navbar-nav navbar-right">
                     <li><a href="Log_In/login.php"> Logg Ut</a></li>
