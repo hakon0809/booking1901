@@ -82,13 +82,16 @@
           echo "</form>";
 
           if($_SERVER["REQUEST_METHOD"] == "POST") {
-            $sql = "SELECT  scene.s_name, konsert.k_name, konsert.date, konsert.time_start, konsert.time_end
+            $current_concert = "dagene " . date("y");
+            $sql = "SELECT  scene.s_name, konsert.festival_name, konsert.k_name, konsert.date, konsert.time_start, konsert.time_end
             FROM konsert INNER JOIN scene
             ON konsert.scene_id = scene.s_id
-            AND k_genre LIKE '$_POST[sjanger]'" ;
+            AND k_genre LIKE '$_POST[sjanger]'
+            AND NOT konsert.festival_name = '$current_concert'" ;
             $result = $conn->query($sql);
             if ($result->num_rows > 0) {
               echo "<table class='table-striped'><tr>
+                    <th>Festival</th>
                     <th>Scene</th>
                     <th>Navn</th>
                     <th>Dato</th>
@@ -97,6 +100,7 @@
                     </tr>";
               while ($row = $result->fetch_assoc()) {
                 echo "<tr>
+                    <td>" . $row["festival_name"]. "</td>
                     <td>" . $row["s_name"]. "</td>
                     <td>" . $row["k_name"]. "</td>
                     <td>" . $row["date"]. "</td>
