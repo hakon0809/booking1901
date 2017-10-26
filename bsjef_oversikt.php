@@ -65,8 +65,10 @@ include("config.php");
           </script>
         <?php
         include("config.php");
+        $current_concert = "dagene " . date("y");
           // selects conserts and scenes from the database
-         $sql = "SELECT DISTINCT date FROM konsert";
+         $sql = "SELECT DISTINCT date FROM konsert 
+                WHERE konsert.festival_name = '$current_concert'";
             $result = $conn->query($sql);
             if ($result->num_rows > 0) {
               echo "<table class='table-striped'><tr>
