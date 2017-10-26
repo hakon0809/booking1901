@@ -8,7 +8,7 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title> Konsert Sjanger </title>
+    <title> Tidligere konserter </title>
 
     <!-- BOOTSTRAP CDN -->
 
