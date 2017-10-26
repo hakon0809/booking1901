@@ -87,7 +87,7 @@ include("config.php");
               }
         $sql = "SELECT * FROM tilbud";
         $result = $conn->query($sql);
-        $num_rows = 2
+        $num_rows = 2 ;
         echo "Antall tilbud sendt: $num_rows"; 
 
         
