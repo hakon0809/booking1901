@@ -72,14 +72,25 @@ include("config.php");
             $result = $conn->query($sql);
             if ($result->num_rows > 0) {
               echo "<table class='table-striped'><tr>
-                    <th>Datoer booket</th>
+                    <th>Datoer</th>
+                    <th>Datoer</th>
                     </tr>";
-              while ($row = $result->fetch_assoc()) {
-
-                echo "<tr>
-                      <td>" . $row["date"]. "</td>
-                      </tr>";
-              }
+              $row = $result->fetch_assoc();
+              for ($i = 1; $i <= 7; $i++){
+                  $date = "0".$i."11".date("y");
+                  if ($date = $row) {
+                      echo "<tr>
+                            <td>" . $row["date"]. "</td>
+                            <td> booked </td>
+                            </tr>";      
+                      $row = $result->fetch_assoc();   
+                  } else {
+                      echo "<tr>
+                            <td>" . $date . "</td>
+                            <td> booked </td>
+                            </tr>";
+                  }
+              }  
                 echo "</table>";
             }
             else {
