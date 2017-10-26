@@ -31,7 +31,7 @@
         case 'booking_ansvarlig':
             header('Location: ../home_booking_ansvarlig.php');
             break;
-        case 'booking_sjef':
+        case 'bookingsjef':
             header('Location: ../home_bookingsjef.php');
             break;
         case 'admin':
