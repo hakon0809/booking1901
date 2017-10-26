@@ -112,7 +112,6 @@
                 <form action="sendtilbudBA.php" method="post">
                     </tr>
                     <label for="navn"> <h4> Tilbud til Manager </h4></label>
-                    <
                     <tr>
                         <td><label> Artist: </label></td>
                         <td><input id="artist" name="artist" type="text"/></td>
