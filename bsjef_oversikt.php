@@ -67,7 +67,7 @@ include("config.php");
         include("config.php");
         $current_concert = "dagene " . date("y");
           // selects conserts and scenes from the database
-         $sql = "SELECT DISTINCT date FROM konsert 
+         $sql = "SELECT DISTINCT date FROM konsert
                 WHERE konsert.festival_name = '$current_concert'";
             $result = $conn->query($sql);
             if ($result->num_rows > 0) {
@@ -87,15 +87,14 @@ include("config.php");
               }
         $sql = "SELECT * FROM tilbud";
         $result = $conn->query($sql);
-        $num_rows = 2;
-        echo "Antall tilbud sendt: $num_rows"; 
+        echo "<h4> Antall tilbud sendt: $result->num_rows </h4>";
 
-        
-            $conn->close(); 
+
+            $conn->close();
         ?>
-        
 
-        
+
+
     </main>
 </body>
 </html>
