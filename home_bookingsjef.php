@@ -43,7 +43,8 @@ include("config.php");
                 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                   <ul class="nav navbar-nav">
                     <li class="active"><a> Min Side <span class="sr-only">(current)</span> </a></li>
-                    <li><a href="konsertoversikt.php">Konsert Oversikt</a></li>
+                    <li><a href="konsertoversikt.php">Konsertoversikt</a></li>
+                    <li><a href="bsjef_rapport.php">Rapport</a></li>
                   </ul>
                   <ul class="nav navbar-nav navbar-right">
                     <li><a href="Log_In/login.php"> Logg Ut</a></li>
@@ -135,7 +136,7 @@ include("config.php");
                                         <tr><td><label> Manager e-mail: </label></td><td> " . $row["mail_m"] . "</td></tr>
                                         <tr><td><label> Melding fra Bookingansvarlig: </label></td><td> " . $row["melding_til_bs"] . "</td></tr>
                                         <tr><td><label> Godkjenn Tilbud: </label><input id=\"btn\" type=\"submit\" name=\"submit\" value=\"Godkjenn\"/></td><td><input class='avslaaBtn' onclick='setID(this.id)' formaction='avslaaTilbud.php' id=\"avslaaBtn\" type=\"submit\" name=\"submit\" value=\"Avslå tilbud\"/></td></tr>
-                                        
+
                                         </table><br>
                                         </form>";
                                 }
