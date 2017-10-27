@@ -125,7 +125,7 @@ include("config.php");
                                         <form method='post'>
                                         <button type='button' id='0' onclick='moreOrLess(this.id)' class='artistButton'>Artist: " . $row["t_artist_name"] . "</button>
                                         <table class='tilbudText' style='display:none'>
-                                        <input class='o' name='tilbudid' id='tilbudid' style='display:block' value='" . $row["t_id"] . "'/>
+                                        <input class='o' name='tilbudid' id='tilbudid' style='display:none' value='" . $row["t_id"] . "'/>
                                         <tr><th><label>Artist: </label></th><th>" . $row["t_artist_name"] . "</th></tr>
                                         <tr><td><label> Pris: </label></td><td> " . $row["t_pris"] . ",- NOK</td></tr>
                                         <tr><td><label> Dato for konsert: </label></td><td> " . $row["t_dato_k"] . "</td></tr>
