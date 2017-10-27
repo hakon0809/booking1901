@@ -125,7 +125,7 @@ include("config.php");
                                         <form method='post'>
                                         <button type='button' id='0' onclick='moreOrLess(this.id)' class='artistButton'>Artist: " . $row["t_artist_name"] . "</button>
                                         <table class='tilbudText' style='display:none'>
-                                        <label class='o' style='display:block'>" . $row["t_id"] . "</label>
+                                        <input class='o' name='tilbudid' id='tilbudid' style='display:block' value='" . $row["t_id"] . "'/>
                                         <tr><th><label>Artist: </label></th><th>" . $row["t_artist_name"] . "</th></tr>
                                         <tr><td><label> Pris: </label></td><td> " . $row["t_pris"] . ",- NOK</td></tr>
                                         <tr><td><label> Dato for konsert: </label></td><td> " . $row["t_dato_k"] . "</td></tr>
@@ -136,7 +136,7 @@ include("config.php");
                                         <tr><td><label> Melding til Manager: </label></td><td> " . $row["melding_til_m"] . "</td></tr>
                                         <tr><td><label> Manager e-mail: </label></td><td> " . $row["mail_m"] . "</td></tr>
                                         <tr><td><label> Melding fra Bookingansvarlig: </label></td><td> " . $row["melding_til_bs"] . "</td></tr>
-                                        <tr><td><label> Godkjenn Tilbud: </label><input id=\"btn\" type=\"submit\" name=\"submit\" value=\"Godkjenn\"/></td><td><input class='avslaaBtn' onclick='setID(this.id)' formaction='avslaaTilbud.php' id=\"avslaaBtn\" type=\"submit\" name=\"submit\" value=\"Avslå tilbud\"/></td></tr>
+                                        <tr><td><label> Godkjenn Tilbud: </label><input id=\"btn\" type=\"submit\" name=\"submit\" value=\"Godkjenn\"/></td><td><input class='avslaaBtn' formaction='avslaaTilbud.php' id=\"avslaaBtn\" type=\"submit\" name=\"submit\" value=\"Avslå tilbud\"/></td></tr><!-- onclick='setID(this.id)'-->
 
                                         </table><br>
                                         </form>";
@@ -149,12 +149,15 @@ include("config.php");
                     <script>
                         var artistList = document.getElementsByClassName("artistButton");
                         var tekstList = document.getElementsByClassName("tilbudText");
+                        /*
                         var avslaaList = document.getElementsByClassName("o");
                         var avslaaBtnList = document.getElementsByClassName("avslaaBtn");
+                        */
+
                         for(var i=0;i<=artistList.length;i++) {
                             artistList[i].id = i;
-                            tekstList[i].id = "0" + i;
-                            avslaaBtnList[i].id = i;
+                            //tekstList[i].id = "0" + i;
+                            //avslaaBtnList[i].id = i;
 
                         }
 
@@ -166,9 +169,11 @@ include("config.php");
                             }
                         }
 
+                        /*
                         function setID(i) {
                             avslaaList[i].id = "tilbudid";
                         }
+                        */
                     </script>
               </form>
             </div>
