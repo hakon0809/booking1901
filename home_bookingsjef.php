@@ -82,7 +82,7 @@ include("config.php");
               </div>
 
      <div class="registering_band_via_manager">
-                <form class="band-form">
+                <form class="band-form" >
                   <table>
                     <tr>
                       <td><label>  Tekniske behov fra band: </label></td>
@@ -108,6 +108,9 @@ include("config.php");
                           ?>
                         </td>
                       </tr>
+                    </table>
+                  </form>
+                    <table>
                           <td><label> Pris: </label></td>
                         <td>
                         </td>
@@ -153,14 +156,16 @@ include("config.php");
                         </td>
                       </tr>
                 </table>
-                <td></td>
-              <td> <input id="btn" type="submit" name="submit" value="Godkjenn"/>
-              </td>
-              <td></td>
-            <td> <input id="btn" type="submit" name="submit" value="Ikke Godkjenn"/>
-            </td>
-              </form>
-            </div>
+                <form action="godkjent_tilbud_bs.php" method="post">
+                      <td></td>
+                    <td> <input id="btn" type="submit" name="submit" value="Godkjenn"/>
+                    </td>
+                </form>
+                <form action="ikkegodkjent_tilbud_bs.php" method="post">
+                  <td> <input id="btn" type="submit" name="submit" value="Ikke Godkjenn"/>
+                  </td>
+                </form>
+          </div>
               <br>
 
 
