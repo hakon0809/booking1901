@@ -115,7 +115,7 @@ include("config.php");
                             <?php
                             include("config.php");
                             $sql = "SELECT t_id, t_artist_name, t_pris, t_scene, t_dato_k, t_dato_sendt, t_tidkonsertstart, t_tidkonsertslutt, melding_til_m, mail_m, melding_til_bs, godkjent_bs, godkjent_m, tilbud_sendt_til_bs, tilbud_sendt_til_m
-                              FROM tilbud
+                              FROM tilbud WHERE godkjent_bs = 0
                               ";
                             $result = $conn->query($sql);
 
