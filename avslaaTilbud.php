@@ -7,6 +7,8 @@ $conn = new mysqli(DB_SERVER,DB_USERNAME,DB_PASSWORD,DB_DATABASE);
 if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
+
+/*
 $artist = $_POST['artist'];
 $pris = $_POST['pris'];
 $scene = $_POST['scene'];
@@ -17,16 +19,18 @@ $konsertslutt = $_POST['konsertslutt'];
 $meldingm = $_POST['meldingm'];
 $mail_m = $_POST['mail_m'];
 $meldingbs = $_POST['meldingbs'];
+*/
 
 $id = $_POST['tilbudid'];
 
-$sql ="DELETE FROM tilbud WHERE t_id = $id";
+$sql = ("UPDATE tilbud
+        SET godkjent_bs = '2'
+        WHERE t_id = $id");
 
 if(!mysqli_query($conn,$sql)){
     echo "$id" ,"Noe gikk galt!";
 } else {
-    echo ". $id . ";
-    echo "$id" ,"Tilbud avslått!";
+    echo "Tilbud avslått!";
 }
 header("refresh:1; url= home_bookingsjef.php");
 ?>

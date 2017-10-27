@@ -8,8 +8,6 @@ if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
 
-include 'mailToManager.php';
-
 /*
 $artist = $_POST['artist'];
 $pris = $_POST['pris'];
@@ -22,17 +20,24 @@ $meldingm = $_POST['meldingm'];
 $mail_m = $_POST['mail_m'];
 $meldingbs = $_POST['meldingbs'];
 */
-
 $id = $_POST['tilbudid'];
 
-$sql = "UPDATE tilbud
-        SET godkjent_bs = '1'
-        WHERE t_id = $id";
+$sql = ("SELECT mail_m, melding_til_m
+            FROM tilbud
+            WHERE t_id = $id");
 
-if(!mysqli_query($conn,$sql)){
-    echo "$id" ,"Noe gikk galt!";
+$result = $conn->query($sql);
+$row = $result->fetch_assoc();
+
+$msg = $row["melding_til_m"];
+$mail = $row["mail_m"];
+$header = "hilsen dagen hehe";
+$sendMail = mail($mail, "Booking", $header, $msg);
+
+if(!mysqli_query($conn,$sql, $sendMail)){
+    echo "Noe gikk galt!";
 } else {
-    echo "$id" ,"";
+    echo "Tilbud godtatt og mail sendt til manager (", $mail, ")!";
 }
-header("refresh:3; url= home_bookingsjef.php");
+//header("refresh:1; url= home_bookingsjef.php");
 ?>
