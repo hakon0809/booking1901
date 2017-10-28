@@ -7,7 +7,7 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title> Administrator </title>
+    <title> Arrangør </title>
 
     <!-- BOOTSTRAP CDN -->
 
@@ -17,11 +17,7 @@
 
     <!-- Lokal CSS/JS -->
     <link rel="stylesheet" type="text/css" href="CSS\standard.css">
-    <link rel="stylesheet" type="text/css" href="CSS\admin.css">
     <style type="text/css"></style>
-    <script type="text/javascript" src="JavaScript/adminJS.js"></script>
-    <script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
-    <script type="text/javascript" src="JavaScript/jquery.js"></script>
   </head>
 
   <body>
@@ -46,7 +42,7 @@
                 <!-- Henter nav linker, forms, og andre innhold for aktivering til navbaren-->
                 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                   <ul class="nav navbar-nav">
-                    <li class="active"><a> Min Side <span class="sr-only">(current)</span> </a></li>
+                    <li class="active"><a href= <?php echo "home_" . $_SESSION["role"] . ".php"; ?>> Min Side <span class="sr-only">(current)</span> </a></li>
                     <li><a href="konsertoversikt.php">Konsert Oversikt</a></li>
                   </ul>
                   <ul class="nav navbar-nav navbar-right">
@@ -59,59 +55,7 @@
         </div>
 
     <main id="Main-content">
-      <h4> Bruker </h4>
-          <form id="addForm">
-            <div id="name ">
-              Name:  <input type="text" name="nameInput" id="nameInput"><br>
-            </div>
-            <div id="job">
-              Job:
-                <select id="jobInput" name="job">
-                    <option value="arrangor">Arrangør</option>
-                    <option value="tekniker">Tekniker</option>
-                    <option value="bookingansvarlig">Bookingansvarlig</option>
-                    <option value="bookingsjef">Bookingsjef</option>
-                    <option value="pr_ansvarlig">PR Ansvarlig</option>
-
-                </select>
-            </div>
-          </form>
-
-        <div id="btns">
-          <button onclick="function_test()" id="addBtn">Lage Bruker</button>
-          <button onclick="sortTable()" id="sortBtn">Sorter table</button>
-        </div>
-
-
-        <table id="myTable"> <!--style="width:100%"-->
-            <tbody>
-            <tr>
-                <th>Navn</th>
-                <th>???</th>
-                <th>Stilling</th>
-            </tr>
-            <tr>
-                <td>b navn</td>
-                <td>?</td>
-                <td>Arrangør</td>
-            </tr>
-            <tr>
-                <td>a navn</td>
-                <td>?</td>
-                <td>Bookingsjef</td>
-            </tr>
-            <tr>
-                <td>c navn</td>
-                <td>?</td>
-                <td>Bookingsjef</td>
-            </tr>
-            </tbody>
-        </table>
-
-      <div id="btn"
-        <p id="demo">ok</p>
-        <p><button id="BTN">hehe</button></p>
-      </div>
+      
     </main>
     <footer id="footer"> <div class="container copyright"> Dagene &copy; 2017</div> </footer>
     </body>

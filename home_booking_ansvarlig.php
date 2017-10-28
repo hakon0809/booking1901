@@ -144,6 +144,10 @@
                       <td><input id="konsertslutt" name="konsertslutt" type="text"/></td>
                     </tr>
                     <tr>
+                        <td><label> Omtale </label></td>
+                        <td><input id="omtale" type="text" name="omtale"/></td>
+                    </tr>
+                    <tr>
                         <td><label> Melding til Manager </label></td>
                       <td>
                         <textarea id="meldingm" name="meldingm" type="text" rows="5" cols="40" ></textarea>
