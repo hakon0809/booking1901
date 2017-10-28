@@ -110,7 +110,7 @@ include("config.php");
                           ?>
                         </td>
                       </tr>
-<<<<<<< HEAD
+<!-- <<<<<<< HEAD
                     </table>
                   </form>
                     <table>
@@ -169,7 +169,7 @@ include("config.php");
                   </td>
                 </form>
           </div>
-=======
+======= -->
                   </table>
                     <label>Tilbud mottatt for godkjenning: </label><br>
                             <?php
@@ -238,7 +238,7 @@ include("config.php");
               </form>
             </div>
 >>>>>>> a6142299ebe93ed4f3c65463f192ea113fbd9a3a
-              <br>
+              <br><br>
 
 
 

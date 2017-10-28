@@ -7,7 +7,7 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title> Arrangør </title>
+    <title> PR Ansvarlig </title>
 
     <!-- BOOTSTRAP CDN -->
 
@@ -55,8 +55,67 @@
         </div>
 
     <main id="Main-content">
-      
+      <div>
+        <form>
+              <?php
+              include("config.php");
+              $sql = "SELECT t_id, t_artist_name, t_pris, t_scene, t_dato_k,  t_tidkonsertstart, t_tidkonsertslutt, mail_m
+                FROM tilbud WHERE godkjent_bs = 2 ";
+              $result = $conn->query($sql);
+
+              if ($result->num_rows > 0) {
+                  while ($row = $result->fetch_assoc()) {
+                      echo "
+                          <form method='post'>
+                          <button type='button' id='0' onclick='moreOrLess(this.id)' class='artistButton'>Artist: " . $row["t_artist_name"] . "</button>
+                          <table class='tilbudText' style='display:none'>
+                          <input class='o' name='tilbudid' id='tilbudid' style='display:none' value='" . $row["t_id"] . "'/>
+                          <tr><th><label>Artist: </label></th><th>" . $row["t_artist_name"] . "</th></tr>
+                          <tr><td><label> Pris: </label></td><td> " . $row["t_pris"] . ",- NOK</td></tr>
+                          <tr><td><label> Dato for konsert: </label></td><td> " . $row["t_dato_k"] . "</td></tr>
+                          <tr><td><label> Scene: </label></td><td> " . $row["t_scene"] . "</td></tr>
+                          <tr><td><label> Konsert start tid: </label></td><td> " . $row["t_tidkonsertstart"] . "</td></tr>
+                          <tr><td><label> Konsert slutt tid: </label></td><td> " . $row["t_tidkonsertslutt"] . "</td></tr>
+                          <tr><td><label> Manager e-mail: </label></td><td> " . $row["mail_m"] . "</td></tr>
+                          </table><br>
+                          </form>";
+                  }
+              } else {
+                  echo "Ingen konserter";
+              }
+              $conn->close();
+              ?>
+            <script>
+              var artistList = document.getElementsByClassName("artistButton");
+              var tekstList = document.getElementsByClassName("tilbudText");
+              /*
+              var avslaaList = document.getElementsByClassName("o");
+              var avslaaBtnList = document.getElementsByClassName("avslaaBtn");
+              */
+
+              for(var i=0;i<=artistList.length;i++) {
+                  artistList[i].id = i;
+                  //tekstList[i].id = "0" + i;
+                  //avslaaBtnList[i].id = i;
+
+              }
+
+              function moreOrLess(i) {
+                  if (tekstList[i].style.display == "none") {
+                      tekstList[i].style.display = "block";
+                  } else {
+                      tekstList[i].style.display = "none";
+                  }
+              }
+
+              /*
+              function setID(i) {
+                  avslaaList[i].id = "tilbudid";
+              }
+              */
+            </script>
+        </form>
+      </div>
     </main>
-    <footer id="footer"> <div class="container copyright"> Dagene &copy; 2017</div> </footer>
     </body>
 </html>
