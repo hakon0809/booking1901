@@ -8,7 +8,7 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title> Konsert Sjanger </title>
+    <title> Rapport </title>
 
     <!-- BOOTSTRAP CDN -->
 
@@ -37,15 +37,16 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                   </button>
-                  <span class="navbar-brand">Sjanger</span>
+                  <span class="navbar-brand">Rapport</span>
                 </div>
 
                 <!-- Henter nav linker, forms, og andre innhold for aktivering til navbaren-->
                 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                   <ul class="nav navbar-nav">
-                    <li><a> Min Side </a></li>
-                    <li ><a href="konsertoversikt.php"> Konsert Oversikt</a></li>
-                    <li class="active"><a>Sjanger<span class="sr-only">(current)</span></a></li>
+                    <li><a href = "home_bookingsjef.php"> Min Side </a></li>
+                    <li ><a href="konsertoversikt.php"> Konsertoversikt</a></li>
+                    <li class="active"><a>Rapport<span class="sr-only">(current)</span></a></li>
+                    <li><a href="bsjef_oversikt.php">Bookingoversikt</a></li>
                   </ul>
                   <ul class="nav navbar-nav navbar-right">
                     <li><a href="Log_In/login.php"> Logg Ut</a></li>
@@ -65,43 +66,42 @@
             $('#myForm').submit();
             }
         </script>
-        <h4>Sjanger</h4>
+        <h4>Scene</h4>
 
       <?php
         include("config.php");
           // selects conserts and scenes from the database
-          $sql = "SELECT DISTINCT k_genre FROM konsert" ;
+
+          $sql = "SELECT s_id, s_name FROM scene" ;
           $result = $conn->query($sql);
           echo "<form id='myForm' method = 'post'>";
-          echo "<select name='sjanger' class='selectpicker' data-style='btn-success' onChange=selectChange(this.value)>";
-          echo "<option hidden>Velg sjanger</option>";
+          echo "<select name='scene' class='selectpicker' data-style='btn-success' onChange=selectChange(this.value)>";
+          echo "<option hidden>Velg scene</option>";
           while ($row = $result->fetch_assoc()){
-            echo "<option value=" . $row['k_genre'] . ">" . $row['k_genre'] . "</option>";
+            echo "<option value=" . $row['s_id'] . ">" . $row['s_name'] . "</option>";
           }
           echo "</select>";
           echo "</form>";
 
           if($_SERVER["REQUEST_METHOD"] == "POST") {
-            $sql = "SELECT  scene.s_name, konsert.k_name, konsert.date, konsert.time_start, konsert.time_end
-            FROM konsert INNER JOIN scene
-            ON konsert.scene_id = scene.s_id
-            AND k_genre LIKE '$_POST[sjanger]'" ;
+            $sql = "SELECT k_name, publikum_antall, kostnad, economic_result
+                    FROM konsert WHERE scene_id = '$_POST[scene]'";
+
             $result = $conn->query($sql);
             if ($result->num_rows > 0) {
               echo "<table class='table-striped'><tr>
-                    <th>Scene</th>
                     <th>Navn</th>
-                    <th>Dato</th>
-                    <th>Start</th>
-                    <th>Slutt</th>
+                    <th>Publikum</th>
+                    <th>Kostnader</th>
+                    <th>Økonomisk Restultat</th>
                     </tr>";
               while ($row = $result->fetch_assoc()) {
+
                 echo "<tr>
-                    <td>" . $row["s_name"]. "</td>
                     <td>" . $row["k_name"]. "</td>
-                    <td>" . $row["date"]. "</td>
-                    <td>" . $row["time_start"]. "</td>
-                    <td>" . $row["time_end"]. "</td>
+                    <td>" . $row["publikum_antall"]. "</td>
+                    <td>" . $row["kostnad"]. "</td>
+                    <td>" . $row["economic_result"]. "</td>
                       </tr>";
               }
                 echo "</table>";
