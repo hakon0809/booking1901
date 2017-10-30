@@ -7,9 +7,6 @@ $conn = new mysqli(DB_SERVER,DB_USERNAME,DB_PASSWORD,DB_DATABASE);
 if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
-
-include 'newManagerUser.php.php.php';
-
 /*
 $artist = $_POST['artist'];
 $pris = $_POST['pris'];
@@ -19,29 +16,34 @@ $datosend = $_POST['datosend'];
 $konsertstart = $_POST['konsertstart'];
 $konsertslutt = $_POST['konsertslutt'];
 $meldingm = $_POST['meldingm'];
-$mail_m = $_POST['mail_m'];
-$meldingbs = $_POST['meldingbs'];
 */
-$id = $_POST['tilbudid'];
+$mail_m = $_POST['mail_m'];
+/*
+$meldingbs = $_POST['meldingbs'];
+$omtale = $_POST['omtale'];
+*/
 
-$sql = ("SELECT mail_m, melding_til_m
-            FROM tilbud
-            WHERE t_id = $id");
-
-$result = $conn->query($sql);
-$row = $result->fetch_assoc();
-
-$msg = $row["melding_til_m"]
-    + "Brukernavn: " + $un
-    + "Passord: " + $p;
-$mail = $row["mail_m"];
-$header = "hilsen dagen hehe";
-$sendMail = mail($mail, "Booking", $header, $msg);
-
-if(!mysqli_query($conn,$sql, $sendMail)){
-    echo "Noe gikk galt!";
-} else {
-    echo "Tilbud godtatt og mail sendt til manager (", $mail, ")!";
+function createUsername($len = 10) {
+    $uName = array_merge(range('a', 'z'), range('A', 'Z'));
+    shuffle($uName);
+    return substr(implode($uName), 0, $len);
 }
-//header("refresh:1; url= home_bookingsjef.php");
+
+function createPassword($len = 10) {
+    $pw = array_merge(range('a', 'z'), range('A', 'Z'));
+    shuffle($pw);
+    return substr(implode($pw), 0, $len);
+}
+
+$un = createUserName();
+$p = createPassword();
+
+$sql = "INSERT INTO users (username, password, role, email)
+                    VALUES ('$un', '$p', 'manager', '$mail_m')";
+if(!mysqli_query($conn,$sql)){
+    echo "Not Sent!";
+} else {
+    echo "Sent!";
+}
+
 ?>
