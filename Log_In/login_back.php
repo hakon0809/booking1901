@@ -25,6 +25,9 @@
         case 'tekniker':
             header('Location: ../home_tekniker.php');
             break;
+        case 'pr_ansvarlig':
+            header('Location: ../home_pr_ansvarlig.php');
+            break;
         case 'manager':
             header('Location: ../home_manager.php');
             break;

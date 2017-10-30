@@ -71,6 +71,8 @@
                     <option value="tekniker">Tekniker</option>
                     <option value="bookingansvarlig">Bookingansvarlig</option>
                     <option value="bookingsjef">Bookingsjef</option>
+                    <option value="pr_ansvarlig">PR Ansvarlig</option>
+
                 </select>
             </div>
           </form>

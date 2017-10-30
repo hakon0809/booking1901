@@ -56,65 +56,62 @@
         </div>
 
         <main id="Main-content">
-          <script type="text/javascript" language="javascript">
-          function selectChange(val) {
-          //Set the value of action in action attribute of form element.
-          //Submit the form
-          $('#myForm').submit();
-          }
-          </script>
+          <label><h4> Tilbud for Manager </h4></label>  <!-- for å finne tilbud til manager og godkjenne den -->
+              <script type="text/javascript" language="javascript">
+              function selectChange(val1) {
+              //Set the value of action in action attribute of form element.
+              //Submit the form
+              $('#myForm').submit();}
+              </script>
 
-          <div id="dropdownmenu">
-              <?php
-                $sql = "SELECT band.b_id, users.name
-                        FROM users INNER JOIN band
-                        ON users.u_id = band.manager_id
-                        AND band.bans_id = '$_SESSION[user_id]'" ;
-                $result = $conn->query($sql);
-                echo "<form id='myForm' method = 'post'>";
-                echo "<select name='band_id' onChange=selectChange(this.value)>";
-                echo "<option hidden> Velg manager </option>";
-                while ($row = $result->fetch_assoc()){
-                  echo "<option value=" . $row['b_id'] . ">" . $row['name'] . "</option>";
-                }
-                echo "</select>";
-                echo "</form>";
-                ?>
-            </div>
+              <div id="dropdownmenu">
+                  <?php
+                    $sql = "SELECT band.b_id, users.name
+                            FROM users INNER JOIN band
+                            ON users.u_id = band.manager_id
+                            AND band.bans_id = '$_SESSION[user_id]'" ;
+                    $result = $conn->query($sql);
+                    echo "<form id='myForm' method = 'post'>";
+                    echo "<select name='band_id' onChange=selectChange(this.value)>";
+                    echo "<option hidden> Velg manager </option>";
+                    while ($row = $result->fetch_assoc()){
+                      echo "<option value=" . $row['b_id'] . ">" . $row['name'] . "</option>";
+                    }
+                    echo "</select>";
+                    echo "</form>";
+                    ?>
+                  </div>
 
-            <div class="registering_band_via_manager">
-              <form>
-                <table>
-                  <tr>
-                    <td><label for="navn"> <h4>  Tekniske behov fra band: </h4></label></td>
-                      <td>
-                      <?php
-                        if ($_SERVER["REQUEST_METHOD"] == "POST") {
+         <div class="registering_band_via_manager">
+                    <form class="band-form" >
+                      <table>
+                        <tr>
+                          <td><label>  Tekniske behov fra band: </label></td>
+                            <td>
+                            <?php
+                              if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
-                          $sql = "SELECT behov FROM teknisk_behov WHERE band_id = '$_POST[band_id]'";
-                          $result = $conn->query($sql);
+                                $sql = "SELECT behov FROM teknisk_behov WHERE band_id = '$_POST[band_id]'";
+                                $result = $conn->query($sql);
 
-                          //makes a table with the info
-                          if ($result->num_rows > 0) {
-                            echo "<table>";
-                            while ($row = $result->fetch_array(MYSQLI_ASSOC)) {
-                              echo "<tr><td>" . $row["behov"] . "</td></tr>";
-                            }
-                              echo "</table>";
-                            } else {
-                              echo "Ingen behov lagt inn";
-                            }
-                          }
-                          $conn->close();
-                        ?>
-                      </td>
-                    </tr>
-                  </table>
-                </form>
+                                //makes a table with the info
+                                if ($result->num_rows > 0) {
+                                  echo "<table>";
+                                  while ($row = $result->fetch_array(MYSQLI_ASSOC)) {
+                                    echo "<tr><td>" . $row["behov"] . "</td></tr>";
+                                  }
+                                    echo "</table>";
+                                  } else {
+                                    echo "Ingen behov lagt inn";
+                                  }
+                                }
+                                $conn->close();
+                              ?>
+                            </td>
+                          </tr>
                 <form action="sendtilbudBA.php" method="post">
                     <table>
                     <tr>
-                    <label for="navn"> <h4> Tilbud til Manager </h4></label>
                     <tr>
                         <td><label> Artist: </label></td>
                         <td><input id="artist" name="artist" type="text"/></td>
@@ -142,6 +139,12 @@
                     <tr>
                         <td><label> Konsert Slutt Tid: </label></td>
                       <td><input id="konsertslutt" name="konsertslutt" type="text"/></td>
+                    </tr>
+                    <tr>
+                        <td><label> Omtale </label></td>
+                        <td>
+                          <textarea id="omtale" name="omtale" type="text" rows="5" cols="40"></textarea>
+                        </td>
                     </tr>
                     <tr>
                         <td><label> Melding til Manager </label></td>

@@ -23,7 +23,7 @@
 
     <style>
         body {
-            background-color: aliceblue;
+            background-color: #e86764;
         }
 
         .Login-field {

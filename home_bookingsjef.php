@@ -84,7 +84,7 @@ include("config.php");
               </div>
 
      <div class="registering_band_via_manager">
-                <form class="band-form">
+                <form class="band-form" >
                   <table>
                     <tr>
                       <td><label>  Tekniske behov fra band: </label></td>
@@ -110,6 +110,66 @@ include("config.php");
                           ?>
                         </td>
                       </tr>
+<!-- <<<<<<< HEAD
+                    </table>
+                  </form>
+                    <table>
+                          <td><label> Pris: </label></td>
+                        <td>
+                        </td>
+                      </tr>
+                      <tr>
+                          <td><label> Scene For Konserten: </label></td>
+                        <td>
+                        </td>
+                      </tr>
+                      <tr>
+                          <td><label> Dato For Konserten: </label></td>
+                        <td>
+                        </td>
+                      </tr>
+                      <tr>
+                          <td><label> Dato Tilbud Blir Sendt: </label></td>
+                        <td>
+                        </td>
+                      </tr>
+                      <tr>
+                          <td><label> Konsert Start Tid: </label></td>
+                        <td>
+                        </td>
+                      </tr>
+                      <tr>
+                          <td><label> Konsert Slutt Tid: </label></td>
+                        <td>
+                        </td>
+                      </tr>
+                      <tr>
+                          <td><label> Melding til Manager </label></td>
+                        <td>
+                        </td>
+                      </tr>
+                      <tr>
+                          <td><label> Melding fra Bookingansvarlig: </label></td>
+                        <td>
+                        </td>
+                      </tr>
+                      <tr>
+                          <td><label> Godkjenn Tilbud: </label></td>
+                        <td>
+                        </td>
+                      </tr>
+                </table>
+                <form action="godkjent_tilbud_bs.php" method="post">
+                      <td></td>
+                    <td> <input id="btn" type="submit" name="submit" value="Godkjenn"/>
+                    </td>
+                </form>
+                <form action="ikkegodkjent_tilbud_bs.php" method="post">
+                  <td> <input id="btn" type="submit" name="submit" value="Ikke Godkjenn"/>
+                  </td>
+                </form>
+          </div>
+======= -->
                   </table>
                     <label>Tilbud mottatt for godkjenning: </label><br>
                             <?php
@@ -177,7 +237,8 @@ include("config.php");
                     </script>
               </form>
             </div>
-              <br>
+>>>>>>> a6142299ebe93ed4f3c65463f192ea113fbd9a3a
+              <br><br>
 
 
 
