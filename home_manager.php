@@ -58,12 +58,12 @@
       <div class="teknisk_behov">
           <h4>Teknisk Behov</h4>
 
-          <form action="Backend/manager_back.php" method="post">
+          <form action="tekniskbehov_manager.php" method="post">
                   <tr>
                     <td><label> Skriv tekniskebehov for konserten:</label></td>
                     <br>
                     <td>
-                      <textarea id="teknisk_behov" name="teknisk_behov" type="text"rows="5" cols="40" ></textarea>
+                      <textarea id="tekniskebehov" name="tekniskbehov" type="text"rows="5" cols="40" ></textarea>
                     </td>
                   </tr>
                   <br>

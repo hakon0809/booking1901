@@ -42,9 +42,8 @@
                 <!-- Henter nav linker, forms, og andre innhold for aktivering til navbaren-->
                 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                   <ul class="nav navbar-nav">
-                    <li class="active"><a href= <?php echo "home_" . $_SESSION["role"] . ".php"; ?>> Min Side <span class="sr-only">(current)</span> </a></li>
-                    <li><a href="konsertoversikt.php">Konsertoversikt</a></li>
-                    <li><a href="home_booking_ansvarlig_konsertsjanger.php">Tidligere konserter</a></li>
+                    <li class="active"><a> Min Side <span class="sr-only">(current)</span> </a></li>
+                    <li><a href="konsertoversikt.php">Konsert Oversikt</a></li>
                   </ul>
                   <ul class="nav navbar-nav navbar-right">
                     <li><a href="Log_In/login.php"> Logg Ut</a></li>
@@ -108,20 +107,13 @@
                           $conn->close();
                         ?>
                       </td>
-                    </tr>
-                  </table>
                 </form>
                 <form action="sendtilbudBA.php" method="post">
-                    <table>
-                    <tr>
+                    </tr>
                     <label for="navn"> <h4> Tilbud til Manager </h4></label>
                     <tr>
-                        <td><label> Artist: </label></td>
-                        <td><input id="artist" name="artist" type="text"/></td>
-                    </tr>
-                    <tr>
                         <td><label> Pris: </label></td>
-                      <td><input id="pris" name="pris" type="number"/> kr,- </td>
+                      <td><input id="pris" name="pris" type="text"/> kr,- </td>
                     </tr>
                     <tr>
                         <td><label> Scene For Konserten: </label></td>
@@ -146,12 +138,8 @@
                     <tr>
                         <td><label> Melding til Manager </label></td>
                       <td>
-                        <textarea id="meldingm" name="meldingm" type="text" rows="5" cols="40" ></textarea>
+                        <textarea id="meldingm" name="meldingm" type="text"rows="5" cols="40" ></textarea>
                       </td>
-                    </tr>
-                    <tr>
-                        <td><label> Manager e-mail </label></td>
-                        <td><input id="mail_m" type="email" name="mail_m"/></td>
                     </tr>
                     <tr>
                         <td><label> Melding til Bookingsjef: </label></td>
