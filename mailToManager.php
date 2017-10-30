@@ -5,8 +5,10 @@ define('DB_PASSWORD', 'sommer');
 define('DB_DATABASE', 'hkmardal_databasen');
 $conn = new mysqli(DB_SERVER,DB_USERNAME,DB_PASSWORD,DB_DATABASE);
 if ($conn->connect_error) {
-   die("Connection failed: " . $conn->connect_error);
+    die("Connection failed: " . $conn->connect_error);
 }
+
+/*
 $artist = $_POST['artist'];
 $pris = $_POST['pris'];
 $scene = $_POST['scene'];
@@ -17,14 +19,25 @@ $konsertslutt = $_POST['konsertslutt'];
 $meldingm = $_POST['meldingm'];
 $mail_m = $_POST['mail_m'];
 $meldingbs = $_POST['meldingbs'];
+*/
+$id = $_POST['tilbudid'];
 
+$sql = ("SELECT mail_m, melding_til_m
+            FROM tilbud
+            WHERE t_id = $id");
 
-$sql = "INSERT INTO tilbud (t_artist_name, t_pris, t_scene, t_dato_k, t_dato_sendt, t_tidkonsertstart, t_tidkonsertslutt, melding_til_m, mail_m, melding_til_bs, tilbud_sendt_til_bs, tilbud_sendt_til_m)
-                    VALUES ('$artist', '$pris', '$scene', '$datokonsert', '$datosend', '$konsertstart', '$konsertslutt', '$meldingm', '$mail_m', '$meldingbs', 'Ja', 'Nei')";
-if(!mysqli_query($conn,$sql)){
-  echo "Not Sent!";
+$result = $conn->query($sql);
+$row = $result->fetch_assoc();
+
+$msg = $row["melding_til_m"];
+$mail = $row["mail_m"];
+$header = "hilsen dagen hehe";
+$sendMail = mail($mail, "Booking", $header, $msg);
+
+if(!mysqli_query($conn,$sql, $sendMail)){
+    echo "Noe gikk galt!";
 } else {
-  echo "Sent!";
+    echo "Tilbud godtatt og mail sendt til manager (", $mail, ")!";
 }
-header("refresh:3; url= home_booking_ansvarlig.php");
-  ?>
+//header("refresh:1; url= home_bookingsjef.php");
+?>

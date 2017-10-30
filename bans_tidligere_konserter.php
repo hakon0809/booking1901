@@ -3,11 +3,12 @@
   include("config.php");
 ?>
 
+
 <!DOCTYPE html>
 <html>
   <head>
     <meta charset="utf-8">
-    <title> Arrangør </title>
+    <title> Tidligere konserter </title>
 
     <!-- BOOTSTRAP CDN -->
 
@@ -36,14 +37,15 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                   </button>
-                  <span class="navbar-brand">Forside</span>
+                  <span class="navbar-brand">Tidligere konserter</span>
                 </div>
 
                 <!-- Henter nav linker, forms, og andre innhold for aktivering til navbaren-->
                 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                   <ul class="nav navbar-nav">
-                    <li class="active"><a href= <?php echo "home_" . $_SESSION["role"] . ".php"; ?>> Min Side <span class="sr-only">(current)</span> </a></li>
-                    <li><a href="konsertoversikt.php">Konsert Oversikt</a></li>
+                    <li><a href= <?php echo "home_" . $_SESSION["role"] . ".php"; ?>> Min Side </a></li>
+                    <li ><a href="konsertoversikt.php"> Konsertoversikt</a></li>
+                    <li class="active"><a href="home_booking_ansvarlig_konsertsjanger.php">Tidligere konserter<span class="sr-only">(current)</span></a></li>
                   </ul>
                   <ul class="nav navbar-nav navbar-right">
                     <li><a href="Log_In/login.php"> Logg Ut</a></li>
@@ -55,7 +57,7 @@
         </div>
 
     <main id="Main-content">
-      <h4> Sjanger </h4>
+
         <script type="text/javascript" language="javascript">
             function selectChange(val) {
             //Set the value of action in action attribute of form element.
@@ -63,53 +65,54 @@
             $('#myForm').submit();
             }
         </script>
+        <h4>Sjanger</h4>
+
       <?php
         include("config.php");
           // selects conserts and scenes from the database
-          $sql = "SELECT konsert.k_name, konsert.k_id
-                  FROM konsert INNER JOIN user_konsert
-                  ON user_konsert.konsert_id = konsert.k_id
-                  AND user_konsert.user_id = '$_SESSION[user_id]'" ;
+          $sql = "SELECT DISTINCT k_genre FROM konsert" ;
           $result = $conn->query($sql);
           echo "<form id='myForm' method = 'post'>";
-          echo "<select name='konserter' onChange=selectChange(this.value)>";
-          echo "<option hidden>Velg konsert</option>";
+          echo "<select name='sjanger' class='selectpicker' data-style='btn-success' onChange=selectChange(this.value)>";
+          echo "<option hidden>Velg sjanger</option>";
           while ($row = $result->fetch_assoc()){
-            echo "<option value=" . $row['k_id'] . ">" . $row['k_name'] . "</option>";
+            echo "<option value=" . $row['k_genre'] . ">" . $row['k_genre'] . "</option>";
           }
           echo "</select>";
           echo "</form>";
 
           if($_SERVER["REQUEST_METHOD"] == "POST") {
-
-            $sql = "SELECT k_name from konsert WHERE k_id = '$_POST[konserter]'";
-            $result = $conn->query($sql);
-            $row = $result->fetch_assoc();
-            echo "<h2> $row[k_name] </h2>";
-
-            $sql = "SELECT users.name, users.mobile, users.email
-            FROM users INNER JOIN user_konsert
-            ON users.u_id = user_konsert.user_id
-            AND user_konsert.konsert_id = '$_POST[konserter]'
-            AND users.role = 'tekniker'";
+            $current_concert = "dagene " . date("y");
+            $sql = "SELECT  scene.s_name, konsert.festival_name, konsert.publikum_antall, konsert.k_name, konsert.date, konsert.time_start, konsert.time_end
+            FROM konsert INNER JOIN scene
+            ON konsert.scene_id = scene.s_id
+            AND k_genre LIKE '$_POST[sjanger]'
+            AND NOT konsert.festival_name = '$current_concert'" ;
             $result = $conn->query($sql);
             if ($result->num_rows > 0) {
               echo "<table class='table-striped'><tr>
+                    <th>Festival</th>
+                    <th>Scene</th>
                     <th>Navn</th>
-                    <th>Mobil</th>
-                    <th>Mail</th>
+                    <th>Dato</th>
+                    <th>Publikumsantall</th>
+                    <th>Start</th>
+                    <th>Slutt</th>
                     </tr>";
               while ($row = $result->fetch_assoc()) {
-
                 echo "<tr>
-                      <td>" . $row["name"]. "</td>
-                      <td>" . $row["mobile"]. "</td>
-                      <td>" . $row["email"]. "</td>
+                    <td>" . $row["festival_name"]. "</td>
+                    <td>" . $row["s_name"]. "</td>
+                    <td>" . $row["k_name"]. "</td>
+                    <td>" . $row["date"]. "</td>
+                    <td>" . $row["publikum_antall"]. "</td>
+                    <td>" . $row["time_start"]. "</td>
+                    <td>" . $row["time_end"]. "</td>
                       </tr>";
               }
                 echo "</table>";
               } else {
-                echo "Ingen teknikere satt til denne konserten";
+                echo "Ingen data";
               }
             }
             $conn->close();

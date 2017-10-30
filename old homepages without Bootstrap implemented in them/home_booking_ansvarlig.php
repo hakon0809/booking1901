@@ -21,7 +21,7 @@
         </div>
         <div id="menubar">
           <ul id="menu">
-              <li><a> Min Side </a></li>
+              <li><a href= <?php echo "home_" . $_SESSION["role"] . ".php"; ?>> Min Side </a></li>
               <li><a href="konsertoversikt.php">Konsertoversikt</a></li>
               <li><a href="Log_In/login.php"> Logg Ut</a></li>
           </ul>
