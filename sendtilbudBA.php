@@ -22,12 +22,8 @@ $presseomtale = $_POST['presseomtale'];
 
 
 <<<<<<< HEAD
-$sql = "INSERT INTO tilbud (t_artist_name, t_pris, t_scene, t_dato_k, t_dato_sendt, t_tidkonsertstart, t_tidkonsertslutt, melding_til_m, mail_m, melding_til_bs, tilbud_sendt_til_bs, tilbud_sendt_til_m, omtaler, presseomtaler)
-                    VALUES ('$artist', '$pris', '$scene', '$datokonsert', '$datosend', '$konsertstart', '$konsertslutt', '$meldingm', '$mail_m', '$meldingbs', 'Ja', 'Nei', '$omtale', '$presseomtale')";
-=======
-$sql = "INSERT INTO tilbud (t_artist_name, t_pris, t_scene, t_dato_k, t_dato_sendt, t_tidkonsertstart, t_tidkonsertslutt, melding_til_m, mail_m, melding_til_bs, tilbud_sendt_til_bs, tilbud_sendt_til_m, omtaler, fra_bans_id)
-                    VALUES ('$artist', '$pris', '$scene', '$datokonsert', '$datosend', '$konsertstart', '$konsertslutt', '$meldingm', '$mail_m', '$meldingbs', 'Ja', 'Nei', '$omtale', '$_SESSION[user_id]')";
->>>>>>> b40f7d108ac691280658efbe64467657459e285e
+$sql = "INSERT INTO tilbud (t_artist_name, t_pris, t_scene, t_dato_k, t_dato_sendt, t_tidkonsertstart, t_tidkonsertslutt, melding_til_m, mail_m, melding_til_bs, tilbud_sendt_til_bs, tilbud_sendt_til_m, omtaler, presseomtaler, fra_bans_id)
+                    VALUES ('$artist', '$pris', '$scene', '$datokonsert', '$datosend', '$konsertstart', '$konsertslutt', '$meldingm', '$mail_m', '$meldingbs', 'Ja', 'Nei', '$omtale', '$presseomtale', '$_SESSION[user_id]')";
 if(!mysqli_query($conn,$sql)){
   echo "Not Sent!";
 } else {
