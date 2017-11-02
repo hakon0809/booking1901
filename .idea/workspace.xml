@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f9ea7f48-9a8d-4dc0-8acd-f6a22bef6e6f" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/home_booking_ansvarlig.php" afterPath="$PROJECT_DIR$/home_booking_ansvarlig.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sendtilbudBA.php" afterPath="$PROJECT_DIR$/sendtilbudBA.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -17,26 +17,26 @@
         <entry file="file://$PROJECT_DIR$/home_booking_ansvarlig.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="385">
-              <caret line="181" column="0" lean-forward="false" selection-start-line="181" selection-start-column="0" selection-end-line="181" selection-end-column="0" />
+              <caret line="180" column="0" lean-forward="false" selection-start-line="180" selection-start-column="0" selection-end-line="180" selection-end-column="0" />
               <folding>
-                <marker date="1509612311000" expanded="true" signature="3079:3290" ph="SELECT band.... users" />
-                <marker date="1509612311000" expanded="true" signature="4276:4341" ph="SELECT behov... teknisk_behov" />
-                <marker date="1509612311000" expanded="true" signature="6014:6047" ph="SELECT DISTI... scene" />
-                <marker date="1509612311000" expanded="true" signature="6529:6636" ph="..." />
-                <marker date="1509612311000" expanded="true" signature="6738:6850" ph="..." />
-                <marker date="1509612311000" expanded="true" signature="6946:7052" ph="..." />
-                <marker date="1509612311000" expanded="true" signature="7156:7262" ph="..." />
-                <marker date="1509612311000" expanded="true" signature="7366:7492" ph="..." />
-                <marker date="1509612311000" expanded="true" signature="7452:7492" ph="..." />
-                <marker date="1509612311000" expanded="true" signature="7638:7782" ph="..." />
-                <marker date="1509612311000" expanded="true" signature="7742:7782" ph="..." />
-                <marker date="1509612311000" expanded="true" signature="7940:8075" ph="..." />
-                <marker date="1509612311000" expanded="true" signature="8037:8075" ph="..." />
-                <marker date="1509612311000" expanded="true" signature="8224:8328" ph="..." />
-                <marker date="1509612311000" expanded="true" signature="9079:9415" ph="SELECT t_id,... tilbud" />
-                <marker date="1509612311000" expanded="false" signature="9842:9854" ph="..." />
-                <marker date="1509612311000" expanded="true" signature="9855:11369" ph="..." />
-                <marker date="1509612311000" expanded="false" signature="9935:9947" ph="..." />
+                <marker date="1509612376000" expanded="true" signature="3079:3290" ph="SELECT band.... users" />
+                <marker date="1509612376000" expanded="true" signature="4276:4341" ph="SELECT behov... teknisk_behov" />
+                <marker date="1509612376000" expanded="true" signature="5962:5995" ph="SELECT DISTI... scene" />
+                <marker date="1509612376000" expanded="true" signature="6477:6584" ph="..." />
+                <marker date="1509612376000" expanded="true" signature="6686:6798" ph="..." />
+                <marker date="1509612376000" expanded="true" signature="6894:7000" ph="..." />
+                <marker date="1509612376000" expanded="true" signature="7104:7210" ph="..." />
+                <marker date="1509612376000" expanded="true" signature="7314:7440" ph="..." />
+                <marker date="1509612376000" expanded="true" signature="7400:7440" ph="..." />
+                <marker date="1509612376000" expanded="true" signature="7586:7730" ph="..." />
+                <marker date="1509612376000" expanded="true" signature="7690:7730" ph="..." />
+                <marker date="1509612376000" expanded="true" signature="7888:8023" ph="..." />
+                <marker date="1509612376000" expanded="true" signature="7985:8023" ph="..." />
+                <marker date="1509612376000" expanded="true" signature="8172:8276" ph="..." />
+                <marker date="1509612376000" expanded="true" signature="9027:9363" ph="SELECT t_id,... tilbud" />
+                <marker date="1509612376000" expanded="false" signature="9790:9802" ph="..." />
+                <marker date="1509612376000" expanded="true" signature="9803:11317" ph="..." />
+                <marker date="1509612376000" expanded="false" signature="9883:9895" ph="..." />
               </folding>
             </state>
           </provider>
@@ -148,12 +148,12 @@
       <workItem from="1509087399880" duration="115000" />
       <workItem from="1509378152422" duration="8462000" />
       <workItem from="1509398793524" duration="2628000" />
-      <workItem from="1509612158862" duration="153000" />
+      <workItem from="1509612158862" duration="293000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="11654000" />
+    <option name="totallyTimeSpent" value="11794000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1280" height="729" extended-state="6" />
@@ -194,24 +194,24 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <marker date="1509612311000" expanded="true" signature="3079:3290" ph="SELECT band.... users" />
-            <marker date="1509612311000" expanded="true" signature="4276:4341" ph="SELECT behov... teknisk_behov" />
-            <marker date="1509612311000" expanded="true" signature="6014:6047" ph="SELECT DISTI... scene" />
-            <marker date="1509612311000" expanded="true" signature="6529:6636" ph="..." />
-            <marker date="1509612311000" expanded="true" signature="6738:6850" ph="..." />
-            <marker date="1509612311000" expanded="true" signature="6946:7052" ph="..." />
-            <marker date="1509612311000" expanded="true" signature="7156:7262" ph="..." />
-            <marker date="1509612311000" expanded="true" signature="7366:7492" ph="..." />
-            <marker date="1509612311000" expanded="true" signature="7452:7492" ph="..." />
-            <marker date="1509612311000" expanded="true" signature="7638:7782" ph="..." />
-            <marker date="1509612311000" expanded="true" signature="7742:7782" ph="..." />
-            <marker date="1509612311000" expanded="true" signature="7940:8075" ph="..." />
-            <marker date="1509612311000" expanded="true" signature="8037:8075" ph="..." />
-            <marker date="1509612311000" expanded="true" signature="8224:8328" ph="..." />
-            <marker date="1509612311000" expanded="true" signature="9079:9415" ph="SELECT t_id,... tilbud" />
-            <marker date="1509612311000" expanded="false" signature="9842:9854" ph="..." />
-            <marker date="1509612311000" expanded="true" signature="9855:11369" ph="..." />
-            <marker date="1509612311000" expanded="false" signature="9935:9947" ph="..." />
+            <marker date="1509612376000" expanded="true" signature="3079:3290" ph="SELECT band.... users" />
+            <marker date="1509612376000" expanded="true" signature="4276:4341" ph="SELECT behov... teknisk_behov" />
+            <marker date="1509612376000" expanded="true" signature="5962:5995" ph="SELECT DISTI... scene" />
+            <marker date="1509612376000" expanded="true" signature="6477:6584" ph="..." />
+            <marker date="1509612376000" expanded="true" signature="6686:6798" ph="..." />
+            <marker date="1509612376000" expanded="true" signature="6894:7000" ph="..." />
+            <marker date="1509612376000" expanded="true" signature="7104:7210" ph="..." />
+            <marker date="1509612376000" expanded="true" signature="7314:7440" ph="..." />
+            <marker date="1509612376000" expanded="true" signature="7400:7440" ph="..." />
+            <marker date="1509612376000" expanded="true" signature="7586:7730" ph="..." />
+            <marker date="1509612376000" expanded="true" signature="7690:7730" ph="..." />
+            <marker date="1509612376000" expanded="true" signature="7888:8023" ph="..." />
+            <marker date="1509612376000" expanded="true" signature="7985:8023" ph="..." />
+            <marker date="1509612376000" expanded="true" signature="8172:8276" ph="..." />
+            <marker date="1509612376000" expanded="true" signature="9027:9363" ph="SELECT t_id,... tilbud" />
+            <marker date="1509612376000" expanded="false" signature="9790:9802" ph="..." />
+            <marker date="1509612376000" expanded="true" signature="9803:11317" ph="..." />
+            <marker date="1509612376000" expanded="false" signature="9883:9895" ph="..." />
           </folding>
         </state>
       </provider>
@@ -246,26 +246,26 @@
     <entry file="file://$PROJECT_DIR$/home_booking_ansvarlig.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="385">
-          <caret line="181" column="0" lean-forward="false" selection-start-line="181" selection-start-column="0" selection-end-line="181" selection-end-column="0" />
+          <caret line="180" column="0" lean-forward="false" selection-start-line="180" selection-start-column="0" selection-end-line="180" selection-end-column="0" />
           <folding>
-            <marker date="1509612311000" expanded="true" signature="3079:3290" ph="SELECT band.... users" />
-            <marker date="1509612311000" expanded="true" signature="4276:4341" ph="SELECT behov... teknisk_behov" />
-            <marker date="1509612311000" expanded="true" signature="6014:6047" ph="SELECT DISTI... scene" />
-            <marker date="1509612311000" expanded="true" signature="6529:6636" ph="..." />
-            <marker date="1509612311000" expanded="true" signature="6738:6850" ph="..." />
-            <marker date="1509612311000" expanded="true" signature="6946:7052" ph="..." />
-            <marker date="1509612311000" expanded="true" signature="7156:7262" ph="..." />
-            <marker date="1509612311000" expanded="true" signature="7366:7492" ph="..." />
-            <marker date="1509612311000" expanded="true" signature="7452:7492" ph="..." />
-            <marker date="1509612311000" expanded="true" signature="7638:7782" ph="..." />
-            <marker date="1509612311000" expanded="true" signature="7742:7782" ph="..." />
-            <marker date="1509612311000" expanded="true" signature="7940:8075" ph="..." />
-            <marker date="1509612311000" expanded="true" signature="8037:8075" ph="..." />
-            <marker date="1509612311000" expanded="true" signature="8224:8328" ph="..." />
-            <marker date="1509612311000" expanded="true" signature="9079:9415" ph="SELECT t_id,... tilbud" />
-            <marker date="1509612311000" expanded="false" signature="9842:9854" ph="..." />
-            <marker date="1509612311000" expanded="true" signature="9855:11369" ph="..." />
-            <marker date="1509612311000" expanded="false" signature="9935:9947" ph="..." />
+            <marker date="1509612376000" expanded="true" signature="3079:3290" ph="SELECT band.... users" />
+            <marker date="1509612376000" expanded="true" signature="4276:4341" ph="SELECT behov... teknisk_behov" />
+            <marker date="1509612376000" expanded="true" signature="5962:5995" ph="SELECT DISTI... scene" />
+            <marker date="1509612376000" expanded="true" signature="6477:6584" ph="..." />
+            <marker date="1509612376000" expanded="true" signature="6686:6798" ph="..." />
+            <marker date="1509612376000" expanded="true" signature="6894:7000" ph="..." />
+            <marker date="1509612376000" expanded="true" signature="7104:7210" ph="..." />
+            <marker date="1509612376000" expanded="true" signature="7314:7440" ph="..." />
+            <marker date="1509612376000" expanded="true" signature="7400:7440" ph="..." />
+            <marker date="1509612376000" expanded="true" signature="7586:7730" ph="..." />
+            <marker date="1509612376000" expanded="true" signature="7690:7730" ph="..." />
+            <marker date="1509612376000" expanded="true" signature="7888:8023" ph="..." />
+            <marker date="1509612376000" expanded="true" signature="7985:8023" ph="..." />
+            <marker date="1509612376000" expanded="true" signature="8172:8276" ph="..." />
+            <marker date="1509612376000" expanded="true" signature="9027:9363" ph="SELECT t_id,... tilbud" />
+            <marker date="1509612376000" expanded="false" signature="9790:9802" ph="..." />
+            <marker date="1509612376000" expanded="true" signature="9803:11317" ph="..." />
+            <marker date="1509612376000" expanded="false" signature="9883:9895" ph="..." />
           </folding>
         </state>
       </provider>
