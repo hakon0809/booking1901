@@ -124,7 +124,6 @@
                         <td><label> Scene For Konserten: </label></td>
                       <td>
                           <select name="scene" id="scene">
-                              <option>hihi</option>
                             <?php
                             include ("config.php");
                             $sql = "SELECT DISTINCT s_name FROM scene";
