@@ -56,7 +56,7 @@
         </div>
 
         <main id="Main-content">
-          <label><h4> Tilbud for Manager </h4></label>  <!-- for å finne tilbud til manager og godkjenne den -->
+
               <script type="text/javascript" language="javascript">
               function selectChange(val1) {
               //Set the value of action in action attribute of form element.
@@ -82,8 +82,6 @@
                     ?>
                   </div>
 
-         <div class="registering_band_via_manager">
-                    <form class="band-form" >
                       <table>
                         <tr>
                           <td><label>  Tekniske behov fra band: </label></td>
@@ -109,6 +107,11 @@
                               ?>
                             </td>
                           </tr>
+                        </table>
+
+          <label><h4> Nytt tilbud til manager </h4></label>  <!-- for å finne tilbud til manager og godkjenne den -->
+
+         <div class="registering_band_via_manager">
                 <form action="sendtilbudBA.php" method="post">
                     <table>
                     <tr>
@@ -124,13 +127,14 @@
                         <td><label> Scene For Konserten: </label></td>
                       <td>
                           <select name="scene" id="scene">
+                            <option hidden>Velg scene</option>
                             <?php
                             include ("config.php");
                             $sql = "SELECT DISTINCT s_name FROM scene";
                             $result = $conn->query($sql);
                             if ($result->num_rows > 0) {
                                 while ($row = $result->fetch_assoc()) {
-                                    echo "<option>" . $row["s_name"] . "</option>";
+                                    echo "<option value=" . $row["s_name"]  .">" . $row["s_name"] . "</option>";
                                 }
                             }
                             ?>
