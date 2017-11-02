@@ -123,17 +123,19 @@
                     <tr>
                         <td><label> Scene For Konserten: </label></td>
                       <td>
-                                    <select name="scene" id="scene">
-                        <?php
-                        $sql = "SELECT DISTINCT s_name FROM scene";
-                        $result = $conn->query($sql);
-                        if ($result->num_rows > 0) {
-                            while ($row = $result->fetch_assoc()) {
-                                echo "<option>" . $row["s_name"] . "</option>";
+                          <select name="scene" id="scene">
+                              <option>hihi</option>
+                            <?php
+                            include ("config.php");
+                            $sql = "SELECT DISTINCT s_name FROM scene";
+                            $result = $conn->query($sql);
+                            if ($result->num_rows > 0) {
+                                while ($row = $result->fetch_assoc()) {
+                                    echo "<option>" . $row["s_name"] . "</option>";
+                                }
                             }
-                        }
-                        ?>
-                      </select>
+                            ?>
+                          </select>
                       </td>
                     </tr>
                     <tr>
