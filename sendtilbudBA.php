@@ -20,11 +20,6 @@ $meldingbs = $_POST['meldingbs'];
 $omtale = $_POST['omtale'];
 $presseomtale = $_POST['presseomtale'];
 
-<<<<<<< HEAD
-=======
-
-
->>>>>>> 97811708a0c8be9d94966487c6cee03734ccce99
 $sql = "INSERT INTO tilbud (t_artist_name, t_pris, t_scene, t_dato_k, t_dato_sendt, t_tidkonsertstart, t_tidkonsertslutt, melding_til_m, mail_m, melding_til_bs, tilbud_sendt_til_bs, tilbud_sendt_til_m, omtaler, presseomtaler, fra_bans_id)
                     VALUES ('$artist', '$pris', '$scene', '$datokonsert', '$datosend', '$konsertstart', '$konsertslutt', '$meldingm', '$mail_m', '$meldingbs', 'Ja', 'Nei', '$omtale', '$presseomtale', '$_SESSION[user_id]')";
 if(!mysqli_query($conn,$sql)){
