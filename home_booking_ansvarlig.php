@@ -122,7 +122,18 @@
                     </tr>
                     <tr>
                         <td><label> Scene For Konserten: </label></td>
-                      <td><input id="scene" name="scene" type="text"/></td>
+                      <td>
+                                    <select name="scene" id="scene">
+                        <?php
+                        $sql = "SELECT DISTINCT s_name FROM scene";
+                        $result = $conn->query($sql);
+                        if ($result->num_rows > 0) {
+                            while ($row = $result->fetch_assoc()) {
+                                echo "<option>" . $row["s_name"] . "</option>";
+                            }
+                        }
+                        ?>
+                      </td>
                     </tr>
                     <tr>
                         <td><label> Dato For Konserten: </label></td>
