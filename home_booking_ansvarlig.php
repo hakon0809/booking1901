@@ -147,6 +147,12 @@
                         </td>
                     </tr>
                     <tr>
+                        <td><label> Lenker til Presseomtaler </label></td>
+                        <td>
+                          <textarea id="presseomtale" name="presseomtale" type="text" rows="5" cols="40"></textarea>
+                        </td>
+                    </tr>
+                    <tr>
                         <td><label> Melding til Manager </label></td>
                       <td>
                         <textarea id="meldingm" name="meldingm" type="text" rows="5" cols="40" ></textarea>

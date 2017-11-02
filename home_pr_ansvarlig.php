@@ -56,10 +56,11 @@
 
     <main id="Main-content">
       <div>
+          <label><h4> Oversikt av Konserter </h4></label>
         <form>
               <?php
               include("config.php");
-              $sql = "SELECT t_id, t_artist_name, t_pris, t_scene, t_dato_k,  t_tidkonsertstart, t_tidkonsertslutt, mail_m
+              $sql = "SELECT t_id, t_artist_name,  t_scene, t_dato_k,  t_tidkonsertstart, t_tidkonsertslutt, omtaler, mail_m
                 FROM tilbud WHERE godkjent_bs = 2 ";
               $result = $conn->query($sql);
 
@@ -67,15 +68,18 @@
                   while ($row = $result->fetch_assoc()) {
                       echo "
                           <form method='post'>
-                          <button type='button' id='0' onclick='moreOrLess(this.id)' class='artistButton'>Artist: " . $row["t_artist_name"] . "</button>
+                          <button type='button' id='0' onclick='moreOrLess(this.id)' class='artistButton'>Artist:  " . $row["t_artist_name"] . "</button> <br>
                           <table class='tilbudText' style='display:none'>
                           <input class='o' name='tilbudid' id='tilbudid' style='display:none' value='" . $row["t_id"] . "'/>
                           <tr><th><label>Artist: </label></th><th>" . $row["t_artist_name"] . "</th></tr>
-                          <tr><td><label> Pris: </label></td><td> " . $row["t_pris"] . ",- NOK</td></tr>
+                          <tr><td><label> Pris per billett: </label></td><td> " . $row[""] . ",- NOK</td></tr>
                           <tr><td><label> Dato for konsert: </label></td><td> " . $row["t_dato_k"] . "</td></tr>
                           <tr><td><label> Scene: </label></td><td> " . $row["t_scene"] . "</td></tr>
                           <tr><td><label> Konsert start tid: </label></td><td> " . $row["t_tidkonsertstart"] . "</td></tr>
                           <tr><td><label> Konsert slutt tid: </label></td><td> " . $row["t_tidkonsertslutt"] . "</td></tr>
+                          <tr><td><label> Omtale av band: </label></td><td> " . $row["omtaler"] . "</td></tr>
+                          <tr><td><label> Salgstall: </label></td><td> " . $row[""] . "</td></tr>
+                          <tr><td><label> Lenker til presseomtaler: </label></td><td> " . $row[""] . "</td></tr>
                           <tr><td><label> Manager e-mail: </label></td><td> " . $row["mail_m"] . "</td></tr>
                           </table><br>
                           </form>";
@@ -107,7 +111,6 @@
                       tekstList[i].style.display = "none";
                   }
               }
-
               /*
               function setID(i) {
                   avslaaList[i].id = "tilbudid";
