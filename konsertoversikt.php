@@ -74,7 +74,7 @@ include("config.php");
                         ?>
                     </ul>
                     <ul class="nav navbar-nav navbar-right">
-                        <li><a href="Log_In/login.php"> Logg Ut</a></li>
+                        <li><a href="Log_In/login.php"> Logg ut</a></li>
                     </ul>
                 </div><!-- /.navbar-collapse -->
             </div><!-- /.container-fluid -->
@@ -183,7 +183,6 @@ include("config.php");
     $conn->close();
     ?>
 </main>
-<footer id="footer"> <div class="container copyright"> Dagene &copy; 2017</div> </footer>
 </body>
 <script src="JavaScript/konsertSort.js"></script>
 </html>

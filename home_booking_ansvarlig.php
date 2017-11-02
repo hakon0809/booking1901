@@ -47,7 +47,7 @@
                     <li><a href="home_booking_ansvarlig_konsertsjanger.php">Tidligere konserter</a></li>
                   </ul>
                   <ul class="nav navbar-nav navbar-right">
-                    <li><a href="Log_In/login.php"> Logg Ut</a></li>
+                    <li><a href="Log_In/login.php"> Logg ut</a></li>
                   </ul>
                 </div><!-- /.navbar-collapse -->
               </div><!-- /.container-fluid -->
