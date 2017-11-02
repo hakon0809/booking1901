@@ -48,7 +48,7 @@ include("config.php");
                     <li class="active"><a href="bsjef_oversikt.php">Bookingoversikt <span class="sr-only">(current)</span></a></li>
                   </ul>
                   <ul class="nav navbar-nav navbar-right">
-                    <li><a href="Log_In/login.php"> Logg Ut</a></li>
+                    <li><a href="Log_In/login.php"> Logg ut</a></li>
                   </ul>
                 </div><!-- /.navbar-collapse -->
               </div><!-- /.container-fluid -->
