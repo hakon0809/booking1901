@@ -12,7 +12,7 @@
     <div class="Login-field">
         <h1>DAGENE</h1>
         <form method = "post">
-            <input type="text" name="username" required="required" placeholder="Username">
+            <input type="text" name="username" required="required" placeholder="Username" autofocus>
             <input type="password" name="password" required="required" placeholder="Password">
             <button type="submit" name="login" value="login_submit" class="submit_login">Logg inn</button>
         </form>
