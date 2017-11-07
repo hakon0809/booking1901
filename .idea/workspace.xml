@@ -90,21 +90,21 @@
       <file leaf-file-name="bans_tidligere_konserter.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/bans_tidligere_konserter.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="310">
-              <caret line="59" column="4" lean-forward="false" selection-start-line="59" selection-start-column="0" selection-end-line="118" selection-end-column="14" />
+            <state relative-caret-position="1602">
+              <caret line="222" column="51" lean-forward="false" selection-start-line="222" selection-start-column="51" selection-end-line="222" selection-end-column="51" />
               <folding>
-                <marker date="1510025726889" expanded="true" signature="3036:3072" ph="SELECT DISTI... konsert" />
-                <marker date="1510025726889" expanded="true" signature="3680:4013" ph="SELECT scene... konsert" />
-                <marker date="1510025726889" expanded="true" signature="4148:4434" ph="..." />
-                <marker date="1510025726889" expanded="true" signature="4152:4434" ph="..." />
-                <marker date="1510025726889" expanded="true" signature="4517:4922" ph="..." />
-                <marker date="1510025726889" expanded="true" signature="5535:5571" ph="SELECT DISTI... konsert" />
-                <marker date="1510025726889" expanded="true" signature="6067:6100" ph="SELECT DISTI... scene" />
-                <marker date="1510025726889" expanded="true" signature="7482:7524" ph="SELECT DISTI... konsert" />
-                <marker date="1510025726889" expanded="true" signature="7927:8126" ph="SELECT konse... konsert" />
-                <marker date="1510025726889" expanded="true" signature="8285:8483" ph="..." />
-                <marker date="1510025726889" expanded="true" signature="8289:8483" ph="..." />
-                <marker date="1510025726889" expanded="true" signature="8565:8874" ph="..." />
+                <marker date="1510025802185" expanded="true" signature="3036:3072" ph="SELECT DISTI... konsert" />
+                <marker date="1510025802185" expanded="true" signature="3680:4013" ph="SELECT scene... konsert" />
+                <marker date="1510025802185" expanded="true" signature="4148:4434" ph="..." />
+                <marker date="1510025802185" expanded="true" signature="4152:4434" ph="..." />
+                <marker date="1510025802185" expanded="true" signature="4517:4922" ph="..." />
+                <marker date="1510025802185" expanded="true" signature="5535:5571" ph="SELECT DISTI... konsert" />
+                <marker date="1510025802185" expanded="true" signature="6067:6100" ph="SELECT DISTI... scene" />
+                <marker date="1510025802185" expanded="true" signature="7482:7524" ph="SELECT DISTI... konsert" />
+                <marker date="1510025802185" expanded="true" signature="7927:8126" ph="SELECT konse... konsert" />
+                <marker date="1510025802185" expanded="true" signature="8285:8483" ph="..." />
+                <marker date="1510025802185" expanded="true" signature="8289:8483" ph="..." />
+                <marker date="1510025802185" expanded="true" signature="8565:8874" ph="..." />
               </folding>
             </state>
           </provider>
@@ -219,12 +219,12 @@
       <workItem from="1509378152422" duration="8462000" />
       <workItem from="1509398793524" duration="2628000" />
       <workItem from="1509612158862" duration="599000" />
-      <workItem from="1510012834455" duration="3722000" />
+      <workItem from="1510012834455" duration="3797000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="15822000" />
+    <option name="totallyTimeSpent" value="15897000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-1088" y="-454" width="1096" height="1896" extended-state="6" />
@@ -383,21 +383,21 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/bans_tidligere_konserter.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="310">
-          <caret line="59" column="4" lean-forward="false" selection-start-line="59" selection-start-column="0" selection-end-line="118" selection-end-column="14" />
+        <state relative-caret-position="1602">
+          <caret line="222" column="51" lean-forward="false" selection-start-line="222" selection-start-column="51" selection-end-line="222" selection-end-column="51" />
           <folding>
-            <marker date="1510025726889" expanded="true" signature="3036:3072" ph="SELECT DISTI... konsert" />
-            <marker date="1510025726889" expanded="true" signature="3680:4013" ph="SELECT scene... konsert" />
-            <marker date="1510025726889" expanded="true" signature="4148:4434" ph="..." />
-            <marker date="1510025726889" expanded="true" signature="4152:4434" ph="..." />
-            <marker date="1510025726889" expanded="true" signature="4517:4922" ph="..." />
-            <marker date="1510025726889" expanded="true" signature="5535:5571" ph="SELECT DISTI... konsert" />
-            <marker date="1510025726889" expanded="true" signature="6067:6100" ph="SELECT DISTI... scene" />
-            <marker date="1510025726889" expanded="true" signature="7482:7524" ph="SELECT DISTI... konsert" />
-            <marker date="1510025726889" expanded="true" signature="7927:8126" ph="SELECT konse... konsert" />
-            <marker date="1510025726889" expanded="true" signature="8285:8483" ph="..." />
-            <marker date="1510025726889" expanded="true" signature="8289:8483" ph="..." />
-            <marker date="1510025726889" expanded="true" signature="8565:8874" ph="..." />
+            <marker date="1510025802185" expanded="true" signature="3036:3072" ph="SELECT DISTI... konsert" />
+            <marker date="1510025802185" expanded="true" signature="3680:4013" ph="SELECT scene... konsert" />
+            <marker date="1510025802185" expanded="true" signature="4148:4434" ph="..." />
+            <marker date="1510025802185" expanded="true" signature="4152:4434" ph="..." />
+            <marker date="1510025802185" expanded="true" signature="4517:4922" ph="..." />
+            <marker date="1510025802185" expanded="true" signature="5535:5571" ph="SELECT DISTI... konsert" />
+            <marker date="1510025802185" expanded="true" signature="6067:6100" ph="SELECT DISTI... scene" />
+            <marker date="1510025802185" expanded="true" signature="7482:7524" ph="SELECT DISTI... konsert" />
+            <marker date="1510025802185" expanded="true" signature="7927:8126" ph="SELECT konse... konsert" />
+            <marker date="1510025802185" expanded="true" signature="8285:8483" ph="..." />
+            <marker date="1510025802185" expanded="true" signature="8289:8483" ph="..." />
+            <marker date="1510025802185" expanded="true" signature="8565:8874" ph="..." />
           </folding>
         </state>
       </provider>
