@@ -11,9 +11,9 @@ $sql = ("SELECT mail_m, melding_til_m
 $result = $conn->query($sql);
 $row = $result->fetch_assoc();
 
-$msg = $row["melding_til_m"]
-    + "Brukernavn: " + $un
-    + "Passord: " + $p;
+$msg = $row["melding_til_m"] . "\n" .
+    "Brukernavn: " . $un . "\n" .
+    "Passord: " . $p;
 $mail = $row["mail_m"];
 $header = "hilsen dagen hehe";
 $sendMail = mail($mail, "Booking", $header, $msg);
