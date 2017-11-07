@@ -188,7 +188,7 @@
             </select>
         </form>
         <?php
-        $sql = "SELECT konsert.k_id, konsert.scene_id, konsert.k_name, konsert.k_genre, konsert.date, konsert.time_start, konsert.time_end, scene.s_name FROM konsert INNER JOIN scene ON konsert.scene_id = scene.s_id";
+        $sql = "SELECT konsert.k_id, konsert.scene_id, konsert.k_name, konsert.k_genre, konsert.date, konsert.time_start, konsert.time_end, scene.s_name, publikum_antall, kostnad, economic_result FROM konsert INNER JOIN scene ON konsert.scene_id = scene.s_id";
         $result = $conn->query($sql);
 
         //makes a table with the info
@@ -200,6 +200,9 @@
               <th>Dato</th>
               <th>Start</th>
               <th>Slutt</th>
+              <th>Antall publikum</th>
+              <th>Total kostnad</th>
+              <th>Økonomisk resultat</th>
               </tr>";
             while ($row = $result->fetch_assoc()) {
 
@@ -210,6 +213,9 @@
                 <td>" . $row["date"]. "</td>
                 <td>" . $row["time_start"]. "</td>
                 <td>" . $row["time_end"]. "</td>
+                <td>" . $row["publikum_antall"]. "</td>
+                <td>" . $row["kostnad"]. "</td>
+                <td>" . $row["economic_result"]. "</td>
                 </tr>";
             }
             echo "</table>";
