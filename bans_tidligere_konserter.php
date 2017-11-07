@@ -57,7 +57,7 @@
         </div>
 
     <main id="Main-content">
-
+<!--
         <script type="text/javascript" language="javascript">
             function selectChange(val) {
             //Set the value of action in action attribute of form element.
@@ -67,8 +67,8 @@
         </script>
         <h4>Sjanger</h4>
 
-      <?php
-        include("config.php");
+      --><?php
+/*        include("config.php");
           // selects conserts and scenes from the database
           $sql = "SELECT DISTINCT k_genre FROM konsert" ;
           $result = $conn->query($sql);
@@ -116,7 +116,108 @@
               }
             }
             $conn->close();
-          ?>
+          */?>
+
+
+        <h1>Tidligere konserter:</h1>
+        <form>
+            <button type="button" onClick="showAll()">Vis alle</button>Søk: <input type="text" id="searchField" onkeyup="nameSort()" placeholder="Søk etter en tidligere konsert">
+            Sjanger:
+            <select name="sjanger" id="sjanger" onchange="genreSort()">
+                <option value="0">Alle sjangre</option>
+                <?php
+                $sql = "SELECT DISTINCT k_genre FROM konsert";
+                $result = $conn->query($sql);
+                if ($result->num_rows > 0) {
+                    while ($row = $result->fetch_assoc()) {
+                        echo "<option>" . $row["k_genre"] . "</option>";
+                    }
+                }
+                ?>
+            </select>
+            Scene:
+            <select name="scene" id="scene" onchange="sceneSort()">
+                <option value="0">Alle scener</option>
+                <?php
+                $sql = "SELECT DISTINCT s_name FROM scene";
+                $result = $conn->query($sql);
+                if ($result->num_rows > 0) {
+                    while ($row = $result->fetch_assoc()) {
+                        echo "<option>" . $row["s_name"] . "</option>";
+                    }
+                }
+                ?>
+            </select>
+            År:
+            <select name="år" id="year" onchange="yearSort()">
+                <option value="0">Alle år</option>
+                <?php
+                /*
+                $sql = "SELECT DISTINCT konsert.date FROM konsert";
+                $result = $conn->query($sql);
+                if ($result->num_rows > 0) {
+                    $currentDate = date("d.m.Y");
+
+                    $currentYear = substr($currentDate, -2, 2);
+                    $currentMonth = substr($currentDate, -7, 2);
+                    $currentDay = substr($currentDate, 0, 2);
+
+                    while ($row = $result->fetch_assoc()) {
+                        $year = substr($row["date"], -2);
+
+                        $month = substr($row["date"], -5, 2);
+                        $day = substr($row["date"], 0, 2);
+
+                        if ($year < $currentYear) {
+                            echo "<option>$year</option>";
+                        }
+                    }
+                }
+                */
+                ?>
+                <?php
+                $sql = "SELECT DISTINCT festival_name FROM konsert";
+                $result = $conn->query($sql);
+                if ($result->num_rows > 0) {
+                    while ($row = $result->fetch_assoc()) {
+                        $year = substr($row[festival_name], -2);
+                        echo "<option>20$year</option>";
+                    }
+                }
+                ?>
+            </select>
+        </form>
+        <?php
+        $sql = "SELECT konsert.k_id, konsert.scene_id, konsert.k_name, konsert.k_genre, konsert.date, konsert.time_start, konsert.time_end, scene.s_name FROM konsert INNER JOIN scene ON konsert.scene_id = scene.s_id";
+        $result = $conn->query($sql);
+
+        //makes a table with the info
+        if ($result->num_rows > 0) {
+            echo "<table id='konsertTable'><tr>
+              <th>Scene</th>
+              <th>Navn</th>
+              <th>Sjanger</th>
+              <th>Dato</th>
+              <th>Start</th>
+              <th>Slutt</th>
+              </tr>";
+            while ($row = $result->fetch_assoc()) {
+
+                echo "<tr>
+                <td>" . $row["s_name"]. "</td>
+                <td>" . $row["k_name"]. "</td>
+                <td>" . $row["k_genre"]. "</td>
+                <td>" . $row["date"]. "</td>
+                <td>" . $row["time_start"]. "</td>
+                <td>" . $row["time_end"]. "</td>
+                </tr>";
+            }
+            echo "</table>";
+        } else {
+            echo "0 results";
+        }
+        $conn->close();
+        ?>
     </main>
     </body>
 </html>
