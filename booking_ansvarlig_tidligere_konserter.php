@@ -17,7 +17,7 @@
     <!-- To ensure proper rendering and touch zooming -->	<meta name="viewport" content="width=device-width, initial-scale=1">
 
     <!-- Lokal CSS/JS -->
-    <link rel="stylesheet" type="text/css" href="CSS\standard.css">
+    <link rel="stylesheet" type="text/css" href="CSS/standard.css">
     <style type="text/css"></style>
   </head>
 
@@ -224,7 +224,7 @@
         }
         $conn->close();
         ?>
-    </main>
-    </body>
+  </main>
   <script src="JavaScript/konsertSort.js"></script>
+</body>
 </html>
