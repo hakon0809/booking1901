@@ -16,7 +16,7 @@
     <!-- To ensure proper rendering and touch zooming -->	<meta name="viewport" content="width=device-width, initial-scale=1">
 
     <!-- Lokal CSS/JS -->
-    <link rel="stylesheet" type="text/css" href="CSS\standard.css">
+    <link rel="stylesheet" type="text/css" href="CSS/standard.css">
     <style type="text/css">
             table, th, td {
                 border: 1px solid black;

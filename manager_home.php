@@ -16,7 +16,7 @@
     <!-- To ensure proper rendering and touch zooming -->	<meta name="viewport" content="width=device-width, initial-scale=1">
 
     <!-- Lokal CSS/JS -->
-    <link rel="stylesheet" type="text/css" href="CSS\standard.css">
+    <link rel="stylesheet" type="text/css" href="CSS/standard.css">
     <style type="text/css"></style>
   </head>
 
@@ -59,15 +59,11 @@
           <h4>Teknisk Behov</h4>
 
           <form action="Backend/manager_back.php" method="post">
-                  <tr>
-                    <td><label> Skriv tekniskebehov for konserten:</label></td>
-                    <br>
-                    <td>
-                      <textarea id="teknisk_behov" name="teknisk_behov" type="text"rows="5" cols="40" ></textarea>
-                    </td>
-                  </tr>
-                  <br>
-              <input id="btn" type="submit" name="submit" value="Send"/>
+            <label> Skriv tekniskebehov for konserten:</label>
+            <br>
+            <textarea id="teknisk_behov" name="teknisk_behov" rows="5" cols="40" ></textarea>
+            <br>
+            <input id="btn" type="submit" name="submit" value="Send"/>
           </form>
       </div>
     </main>

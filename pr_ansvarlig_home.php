@@ -16,7 +16,7 @@
     <!-- To ensure proper rendering and touch zooming -->	<meta name="viewport" content="width=device-width, initial-scale=1">
 
     <!-- Lokal CSS/JS -->
-    <link rel="stylesheet" type="text/css" href="CSS\standard.css">
+    <link rel="stylesheet" type="text/css" href="CSS/standard.css">
     <style type="text/css"></style>
   </head>
 
@@ -56,7 +56,7 @@
 
     <main id="Main-content">
       <div>
-          <label><h4> Oversikt av Konserter </h4></label>
+        <h4> Oversikt av Konserter </h4>
         <form>
               <?php
               include("config.php");
@@ -67,10 +67,9 @@
               if ($result->num_rows > 0) {
                   while ($row = $result->fetch_assoc()) {
                       echo "
-                          <form method='post'>
-                          <button type='button' id='0' onclick='moreOrLess(this.id)' class='artistButton'>Artist:  " . $row["t_artist_name"] . "</button> <br>
+                          <input class='o' name='tilbudid' style='display:none' value='" . $row["t_id"] . "'/>
+                          <button type='button' onclick='moreOrLess(this.id)' class='artistButton'>Artist:  " . $row["t_artist_name"] . "</button> <br>
                           <table class='tilbudText' style='display:none'>
-                          <input class='o' name='tilbudid' id='tilbudid' style='display:none' value='" . $row["t_id"] . "'/>
                           <tr><th><label>Artist: </label></th><th>" . $row["t_artist_name"] . "</th></tr>
                           <tr><td><label> Pris per billett: </label></td><td> " . $row[""] . ",- NOK</td></tr>
                           <tr><td><label> Dato for konsert: </label></td><td> " . $row["t_dato_k"] . "</td></tr>
@@ -81,8 +80,7 @@
                           <tr><td><label> Salgstall: </label></td><td> " . $row[""] . "</td></tr>
                           <tr><td><label> Lenker til presseomtaler: </label></td><td> " . $row[""] . "</td></tr>
                           <tr><td><label> Manager e-mail: </label></td><td> " . $row["mail_m"] . "</td></tr>
-                          </table><br>
-                          </form>";
+                          </table><br>";
                   }
               } else {
                   echo "Ingen konserter";
