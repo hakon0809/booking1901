@@ -16,7 +16,7 @@ include("PHP/config.php");
     <!-- To ensure proper rendering and touch zooming -->	<meta name="viewport" content="width=device-width, initial-scale=1">
 
     <!-- Lokal CSS/JS -->
-    <link rel="stylesheet" type="text/css" href="CSS\standard.css">
+    <link rel="stylesheet" type="text/css" href="CSS/standard.css">
     <style type="text/css">
 
         table, th, td {
@@ -52,7 +52,7 @@ include("PHP/config.php");
                 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                     <ul class="nav navbar-nav">
                         <li><a href= <?php echo $_SESSION["role"] . "_home.php"; ?>> Min side </a></li><!-- må skrive en side for hver user side som vi kan linke til og for de brukerne som kan også bruke dette side-->
-                        <li class="active"><a href="konsertoversikt.php"> Konsertoversikt<span class="sr-only">(current)</a></li>
+                        <li class="active"><a href="konsertoversikt.php"> Konsertoversikt<span class="sr-only">(current)</span></a></li>
                         <?php
                         switch ($_SESSION["role"]) {
                             case 'arrangor':
@@ -84,59 +84,16 @@ include("PHP/config.php");
 
 <main id="Main-content">
     <h1>Konserter</h1>
-    <form>
-        <button type="button" onClick="showAll()">Vis alle</button>Søk: <input type="text" id="searchField" onkeyup="nameSort()" placeholder="Søk etter en tidligere konsert">
-        Sjanger:
-        <select name="sjanger" id="sjanger" onchange="genreSort()">
-            <option value="0">Alle sjangre</option>
-            <?php
-            $sql = "SELECT DISTINCT k_genre FROM konsert";
-            $result = $conn->query($sql);
-            if ($result->num_rows > 0) {
-                while ($row = $result->fetch_assoc()) {
-                    echo "<option>" . $row["k_genre"] . "</option>";
-                }
-            }
-            ?>
-        </select>
-      </br>
-        Scene:
-        <select name="scene" id="scene" onchange="sceneSort()">
-            <option value="0">Alle scener</option>
-            <?php
-            $sql = "SELECT DISTINCT s_name FROM scene";
-            $result = $conn->query($sql);
-            if ($result->num_rows > 0) {
-                while ($row = $result->fetch_assoc()) {
-                    echo "<option>" . $row["s_name"] . "</option>";
-                }
-            }
-            ?>
-        </select>
-      </br>
-        År:
-        <select name="år" id="year" onchange="yearSort()">
-            <option value="0">Alle år</option>
-            <?php
-            $sql = "SELECT DISTINCT festival_name FROM konsert";
-            $result = $conn->query($sql);
-            if ($result->num_rows > 0) {
-                while ($row = $result->fetch_assoc()) {
-                    $year = substr($row[festival_name], -2);
-                    echo "<option>20$year</option>";
-                }
-            }
-            ?>
-        </select>
-    </form>
-  </br>
     <?php
-    $sql = "SELECT konsert.k_id, konsert.scene_id, konsert.k_name, konsert.k_genre, konsert.date, konsert.time_start, konsert.time_end, scene.s_name FROM konsert INNER JOIN scene ON konsert.scene_id = scene.s_id";
+    $sql = "SELECT konsert.k_id, konsert.scene_id, konsert.k_name, konsert.k_genre, konsert.date, konsert.time_start, konsert.time_end, scene.s_name
+            FROM konsert INNER JOIN scene
+            ON  scene.s_id = konsert.scene_id
+            AND konsert.festival_name = 'Dagene 2018'";
     $result = $conn->query($sql);
 
     //makes a table with the info
     if ($result->num_rows > 0) {
-        echo "<table id='konsertTable'><tr>
+        echo "<table><tr>
               <th>Scene</th>
               <th>Navn</th>
               <th>Sjanger</th>
@@ -163,5 +120,4 @@ include("PHP/config.php");
     ?>
 </main>
 </body>
-<script src="JavaScript/konsertSort.js"></script>
 </html>
