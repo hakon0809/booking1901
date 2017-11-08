@@ -43,10 +43,10 @@
                 <!-- Henter nav linker, forms, og andre innhold for aktivering til navbaren-->
                 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                   <ul class="nav navbar-nav">
-                    <li><a href = "home_bookingsjef.php"> Min side </a></li>
+                    <li><a href ="bookingsjef_home.php"> Min side </a></li>
                     <li ><a href="konsertoversikt.php"> Konsertoversikt</a></li>
-                    <li class="active"><a>Rapport<span class="sr-only">(current)</span></a></li>
-                    <li><a href="bsjef_oversikt.php">Bookingoversikt</a></li>
+                    <li class="active"><a href="bookingsjef_rapport.php">Rapport<span class="sr-only">(current)</span></a></li>
+                    <li><a href="bookingsjef_oversikt.php">Bookingoversikt</a></li>
                   </ul>
                   <ul class="nav navbar-nav navbar-right">
                     <li><a href="Log_In/login.php"> Logg ut</a></li>

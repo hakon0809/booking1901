@@ -62,11 +62,11 @@ include("PHP/config.php");
                             case 'manager':
                                 break;
                             case 'booking_ansvarlig':
-                                echo "<li><a href='bans_tidligere_konserter.php'>Tidligere konserter</a></li>";
+                                echo "<li><a href='booking_ansvarlig_tidligere_konserter.php'>Tidligere konserter</a></li>";
                                 break;
                             case 'bookingsjef':
-                                echo "<li><a href='bsjef_rapport.php'>Rapport</a></li>
-                                  <li><a href='bsjef_oversikt.php'>Bookingoversikt</a></li>";
+                                echo "<li><a href='bookingsjef_rapport.php'>Rapport</a></li>
+                                  <li><a href='bookingsjef_oversikt.php'>Bookingoversikt</a></li>";
                                 break;
                             case 'admin':
                                 break;

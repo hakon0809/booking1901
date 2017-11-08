@@ -43,7 +43,7 @@
                 <!-- Henter nav linker, forms, og andre innhold for aktivering til navbaren-->
                 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                   <ul class="nav navbar-nav">
-                    <li><a href= <?php echo "home_" . $_SESSION["role"] . ".php"; ?>> Min side </a></li>
+                    <li><a href= <?php echo $_SESSION["role"] . "_home.php"; ?>> Min side </a></li>
                     <li ><a href="konsertoversikt.php"> Konsertoversikt</a></li>
                     <li class="active"><a href="home_booking_ansvarlig_konsertsjanger.php">Tidligere konserter<span class="sr-only">(current)</span></a></li>
                   </ul>
