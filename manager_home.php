@@ -70,13 +70,6 @@
               <input id="btn" type="submit" name="submit" value="Send"/>
           </form>
       </div>
-
-    <div id="tilbudmanager">
-      <h4> Tilbud </h4>  <!-- for å finne tilbud fra bookingsjef og godkjenne den -->
-
-    </div>
-
-
     </main>
     </body>
 </html>

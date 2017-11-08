@@ -99,6 +99,7 @@ include("config.php");
             }
             ?>
         </select>
+      </br>
         Scene:
         <select name="scene" id="scene" onchange="sceneSort()">
             <option value="0">Alle scener</option>
@@ -112,6 +113,7 @@ include("config.php");
             }
             ?>
         </select>
+      </br>
         År:
         <select name="år" id="year" onchange="yearSort()">
             <option value="0">Alle år</option>
@@ -127,6 +129,7 @@ include("config.php");
             ?>
         </select>
     </form>
+  </br>
     <?php
     $sql = "SELECT konsert.k_id, konsert.scene_id, konsert.k_name, konsert.k_genre, konsert.date, konsert.time_start, konsert.time_end, scene.s_name FROM konsert INNER JOIN scene ON konsert.scene_id = scene.s_id";
     $result = $conn->query($sql);
