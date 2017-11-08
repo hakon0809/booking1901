@@ -16,7 +16,7 @@ include("PHP/config.php");
     <!-- To ensure proper rendering and touch zooming -->	<meta name="viewport" content="width=device-width, initial-scale=1">
 
     <!-- Lokal CSS/JS -->
-    <link rel="stylesheet" type="text/css" href="CSS\standard.css">
+    <link rel="stylesheet" type="text/css" href="CSS/standard.css">
     <style type="text/css"></style>
   </head>
 
@@ -42,7 +42,7 @@ include("PHP/config.php");
                 <!-- Henter nav linker, forms, og andre innhold for aktivering til navbaren-->
                 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                   <ul class="nav navbar-nav">
-                    <li><a href="bookingsjef_home.php"; ?>> Min side </a></li>
+                    <li><a href="bookingsjef_home.php"> Min side </a></li>
                     <li><a href="konsertoversikt.php">Konsertoversikt</a></li>
                     <li><a href="bookingsjef_rapport.php">Rapport</a></li>
                     <li class="active"><a href="bookingsjef_oversikt.php">Bookingoversikt <span class="sr-only">(current)</span></a></li>
@@ -57,8 +57,8 @@ include("PHP/config.php");
         </div>
 
     <main id="Main-content">
-      <label><h4> Oversikt: </h4></label>  <!-- for å finne tilbud til manager og godkjenne den -->
-          <script type="text/javascript" language="javascript">
+      <h4> Oversikt: </h4>  <!-- for å finne tilbud til manager og godkjenne den -->
+          <script type="text/javascript">
           function selectChange(val1) {
           //Set the value of action in action attribute of form element.
           //Submit the form

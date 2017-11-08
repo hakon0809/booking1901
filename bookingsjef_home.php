@@ -16,7 +16,7 @@ include("PHP/config.php");
     <!-- To ensure proper rendering and touch zooming -->	<meta name="viewport" content="width=device-width, initial-scale=1">
 
     <!-- Lokal CSS/JS -->
-    <link rel="stylesheet" type="text/css" href="CSS\standard.css">
+    <link rel="stylesheet" type="text/css" href="CSS/standard.css">
     <style type="text/css"></style>
   </head>
 
@@ -57,8 +57,8 @@ include("PHP/config.php");
         </div>
 
     <main id="Main-content">
-      <label><h4> Tilbud for Manager </h4></label>  <!-- for å finne tilbud til manager og godkjenne den -->
-          <script type="text/javascript" language="javascript">
+      <h4> Tilbud for Manager </h4>  <!-- for å finne tilbud til manager og godkjenne den -->
+          <script type="text/javascript">
           function selectChange(val1) {
           //Set the value of action in action attribute of form element.
           //Submit the form
@@ -206,11 +206,11 @@ include("PHP/config.php");
             </tr>
             <tr>
                 <td><label>Utgifter: </label></td>
-                <td><input type="number" id="konsertUtgifter" step="1" placeholder="0" maxlength="8"></td>
+                <td><input type="number" id="konsertUtgifter" step="1" placeholder="0"></td>
             </tr>
             <tr>
                 <td><label>Ønsket overskudd dersom utsolgt: </label></td>
-                <td><input type="number" id="konsertOverskudd" step="1" placeholder="0" maxlength="6"></td>
+                <td><input type="number" id="konsertOverskudd" step="1" placeholder="0"></td>
             </tr>
             <tr>
                 <td><button type="button" id="beregnPrisBtn">Beregn</button></td>
@@ -241,6 +241,6 @@ include("PHP/config.php");
             </tr>
         </table>
     </main>
+  <script type="text/javascript" src="JavaScript/prisforslag.js"></script>
 </body>
-<script type="text/javascript" src="JavaScript/prisforslag.js"></script>
 </html>

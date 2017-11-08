@@ -17,7 +17,7 @@
     <!-- To ensure proper rendering and touch zooming -->	<meta name="viewport" content="width=device-width, initial-scale=1">
 
     <!-- Lokal CSS/JS -->
-    <link rel="stylesheet" type="text/css" href="CSS\standard.css">
+    <link rel="stylesheet" type="text/css" href="CSS/standard.css">
     <style type="text/css"></style>
   </head>
 
@@ -59,7 +59,7 @@
 
     <main id="Main-content">
 
-        <script type="text/javascript" language="javascript">
+        <script type="text/javascript">
             function selectChange(val) {
             //Set the value of action in action attribute of form element.
             //Submit the form
