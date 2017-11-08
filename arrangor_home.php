@@ -16,7 +16,7 @@
     <!-- To ensure proper rendering and touch zooming -->	<meta name="viewport" content="width=device-width, initial-scale=1">
 
     <!-- Lokal CSS/JS -->
-    <link rel="stylesheet" type="text/css" href="CSS\standard.css">
+    <link rel="stylesheet" type="text/css" href="CSS/standard.css">
     <style type="text/css"></style>
   </head>
 
@@ -42,7 +42,7 @@
                 <!-- Henter nav linker, forms, og andre innhold for aktivering til navbaren-->
                 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                   <ul class="nav navbar-nav">
-                    <li class="active"><a href= <?php echo "home_" . $_SESSION["role"] . ".php"; ?>> Min side <span class="sr-only">(current)</span> </a></li>
+                    <li class="active"><a href= <?php echo $_SESSION["role"] . "_home.php"; ?>> Min side <span class="sr-only">(current)</span> </a></li>
                     <li><a href="konsertoversikt.php">Konsertoversikt</a></li>
                   </ul>
                   <ul class="nav navbar-nav navbar-right">
@@ -55,8 +55,8 @@
         </div>
 
     <main id="Main-content">
-      <h4> Sjanger </h4>
-        <script type="text/javascript" language="javascript">
+      <h4> Teknikere til konsert: </h4>
+        <script type="text/javascript">
             function selectChange(val) {
             //Set the value of action in action attribute of form element.
             //Submit the form
