@@ -57,7 +57,7 @@ include("PHP/config.php");
 
 <main id="Main-content">
 
-    <script type="text/javascript" language="javascript">
+    <script type="text/javascript">
         function selectChange(val1) {
             //Set the value of action in action attribute of form element.
             //Submit the form
@@ -109,12 +109,11 @@ include("PHP/config.php");
         </tr>
     </table>
 
-    <label><h4> Nytt tilbud til manager </h4></label>  <!-- for å finne tilbud til manager og godkjenne den -->
+    <h4> Nytt tilbud til manager </h4>  <!-- for å finne tilbud til manager og godkjenne den -->
 
     <div class="registering_band_via_manager">
         <form action="sendtilbudBA.php" method="post">
             <table>
-                <tr>
                 <tr>
                     <td><label> Artist: </label></td>
                     <td><input id="artist" name="artist" type="text"/></td>
@@ -160,19 +159,19 @@ include("PHP/config.php");
                 <tr>
                     <td><label> Omtale </label></td>
                     <td>
-                        <textarea id="omtale" name="omtale" type="text" rows="5" cols="40"></textarea>
+                        <textarea id="omtale" name="omtale" rows="5" cols="40"></textarea>
                     </td>
                 </tr>
                 <tr>
                     <td><label> Lenker til Presseomtaler </label></td>
                     <td>
-                        <textarea id="presseomtale" name="presseomtale" type="text" rows="5" cols="40"></textarea>
+                        <textarea id="presseomtale" name="presseomtale" rows="5" cols="40"></textarea>
                     </td>
                 </tr>
                 <tr>
                     <td><label> Melding til Manager </label></td>
                     <td>
-                        <textarea id="meldingm" name="meldingm" type="text" rows="5" cols="40" ></textarea>
+                        <textarea id="meldingm" name="meldingm" rows="5" cols="40" ></textarea>
                     </td>
                 </tr>
                 <tr>
@@ -182,9 +181,10 @@ include("PHP/config.php");
                 <tr>
                     <td><label> Melding til Bookingsjef: </label></td>
                     <td>
-                        <textarea id="meldingbs" name="meldingbs" type="text"rows="5" cols="40" ></textarea>
+                        <textarea id="meldingbs" name="meldingbs" rows="5" cols="40" ></textarea>
                     </td>
                 </tr>
+                <tr>
                 <td></td>
                 <td> <input id="btn" type="submit" name="submit" value="Send"/>
                 </td> <!--tilbud blir sendt til Bookingsjef-->
