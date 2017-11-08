@@ -83,7 +83,7 @@ include("config.php");
 </div>
 
 <main id="Main-content">
-    <h1>Tidligere konserter:</h1>
+    <h1>Konserter</h1>
     <form>
         <button type="button" onClick="showAll()">Vis alle</button>Søk: <input type="text" id="searchField" onkeyup="nameSort()" placeholder="Søk etter en tidligere konsert">
         Sjanger:
@@ -115,30 +115,6 @@ include("config.php");
         År:
         <select name="år" id="year" onchange="yearSort()">
             <option value="0">Alle år</option>
-            <?php
-            /*
-            $sql = "SELECT DISTINCT konsert.date FROM konsert";
-            $result = $conn->query($sql);
-            if ($result->num_rows > 0) {
-                $currentDate = date("d.m.Y");
-
-                $currentYear = substr($currentDate, -2, 2);
-                $currentMonth = substr($currentDate, -7, 2);
-                $currentDay = substr($currentDate, 0, 2);
-
-                while ($row = $result->fetch_assoc()) {
-                    $year = substr($row["date"], -2);
-
-                    $month = substr($row["date"], -5, 2);
-                    $day = substr($row["date"], 0, 2);
-
-                    if ($year < $currentYear) {
-                        echo "<option>$year</option>";
-                    }
-                }
-            }
-            */
-            ?>
             <?php
             $sql = "SELECT DISTINCT festival_name FROM konsert";
             $result = $conn->query($sql);
