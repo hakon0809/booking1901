@@ -1,6 +1,6 @@
 <?php
   session_start();
-  include("../config.php");
+  include("../PHP/config.php");
 
   if($_SERVER["REQUEST_METHOD"] == "POST") {
     //username and password is sent from form with POST method
@@ -38,7 +38,7 @@
             header('Location: ../home_bookingsjef.php');
             break;
         case 'admin':
-            header('location: ../admin.php');
+            header('location: ../admin_home.php');
             break;
         default:
             echo "not a valid usertype";
