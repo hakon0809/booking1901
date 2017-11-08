@@ -51,7 +51,7 @@ include("config.php");
                 <!-- Henter nav linker, forms, og andre innhold for aktivering til navbaren-->
                 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                     <ul class="nav navbar-nav">
-                        <li><a href= <?php echo "home_" . $_SESSION["role"] . ".php"; ?>> Min side </a></li><!-- må skrive en side for hver user side som vi kan linke til og for de brukerne som kan også bruke dette side-->
+                        <li><a href= <?php echo $_SESSION["role"] . "_home.php"; ?>> Min side </a></li><!-- må skrive en side for hver user side som vi kan linke til og for de brukerne som kan også bruke dette side-->
                         <li class="active"><a href="konsertoversikt.php"> Konsertoversikt<span class="sr-only">(current)</a></li>
                         <?php
                         switch ($_SESSION["role"]) {
