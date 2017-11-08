@@ -18,7 +18,8 @@
     if($count == 1) {
       $_SESSION["user_id"] = $row["u_id"];
       $_SESSION["role"] = $row["role"];
-      switch ($row["role"]) {
+      header('Location: ../' . $row["role"] . '_home.php');
+      /*switch ($row["role"]) {
         case 'arrangor':
             header('Location: ../home_arrangor.php');
             break;
@@ -41,9 +42,8 @@
             header('location: ../admin_home.php');
             break;
         default:
-            echo "not a valid usertype";
-      }
-
+            echo "not a valid usertype
+      }*/
     } else {
       $error = "Feil brukernavn eller passord";
     }
