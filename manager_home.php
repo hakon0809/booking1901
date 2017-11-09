@@ -64,17 +64,49 @@
             ?>
         </label>
 
-      <div class="teknisk_behov">
-          <h4>Teknisk Behov</h4>
 
-          <form action="PHP/manager_back.php" method="post">
-            <label> Skriv tekniskebehov for konserten:</label>
-            <br>
-            <textarea id="teknisk_behov" name="teknisk_behov" rows="5" cols="40" ></textarea>
-            <br>
-            <input id="btn" type="submit" name="submit" value="Send"/>
+      <h4> Låter for konserten:</h4>
+      <div class="later_for_konserten">
+          <form action="PHP/later_for_konserten.php" method="post">
+              <table>
+
+                <tr>
+                    <td><label> Låter </label></td>
+                    <td>
+                        <textarea id="laterk" name="laterk" rows="5" cols="40" ></textarea>
+                    </td>
+                </tr>
+
+                  <tr>
+                  <td></td>
+                  <td> <input id="btn" type="submit" name="submit" value="Send"/>
+                  </td> <!--send låter som skal spilles til databasen-->
+                  </tr>
+              </table>
           </form>
       </div>
+
+      <h4> Låter for :</h4>
+      <div class="later_for_konserten">
+          <form action="PHP/later_for_oving.php" method="post">
+              <table>
+
+                <tr>
+                    <td><label> Låter for Øving</label></td>
+                    <td>
+                      <textarea id="latero" name="latero" rows="5" cols="40" ></textarea>
+                    </td>
+                </tr>
+
+                  <tr>
+                  <td></td>
+                  <td> <input id="btn" type="submit" name="submit" value="Send"/>
+                  </td> <!--send låter som skal øves til databasen-->
+                  </tr>
+              </table>
+          </form>
+      </div>
+
     </main>
     </body>
 </html>
