@@ -33,7 +33,6 @@ $mail = $row2["mail_m"];
 
 $sql = "INSERT INTO users (username, password, role, email)
                     VALUES ('$un', '$p', 'manager', '$mail')";
-echo "<script>console.log('$mail')";
 if ($conn->query($sql) === TRUE) {
   echo "Ny manager bruker laget!";
   echo "</br";
