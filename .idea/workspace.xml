@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f9ea7f48-9a8d-4dc0-8acd-f6a22bef6e6f" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/JavaScript/adminJS.js" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admin_home.php" afterPath="$PROJECT_DIR$/admin_home.php" />
     </list>
@@ -35,13 +34,26 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="admin_home.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="admin_home.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/admin_home.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="323">
-              <caret line="19" column="35" lean-forward="false" selection-start-line="19" selection-start-column="35" selection-end-line="19" selection-end-column="35" />
+            <state relative-caret-position="550">
+              <caret line="103" column="0" lean-forward="true" selection-start-line="103" selection-start-column="0" selection-end-line="103" selection-end-column="0" />
               <folding>
-                <marker date="1510242118045" expanded="true" signature="3131:3224" ph="SELECT u_id,... users" />
+                <marker date="1510243204959" expanded="true" signature="2927:2958" ph="SELECT DISTI... users" />
+                <marker date="1510243204959" expanded="true" signature="3524:3617" ph="SELECT u_id,... users" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="leggTilBruker.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/PHP/leggTilBruker.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding>
+                <marker date="1510243096362" expanded="true" signature="258:429" ph="INSERT INTO users... " />
               </folding>
             </state>
           </provider>
@@ -258,6 +270,7 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\fredr\Desktop\git\booking1901\PHP" />
       <recent name="$PROJECT_DIR$/PHP" />
     </key>
   </component>
@@ -297,17 +310,18 @@
       <workItem from="1510216531449" duration="4119000" />
       <workItem from="1510234485666" duration="2948000" />
       <workItem from="1510239518892" duration="121000" />
-      <workItem from="1510241895847" duration="218000" />
+      <workItem from="1510241895847" duration="849000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="28909000" />
+    <option name="totallyTimeSpent" value="29540000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1912" y="-8" width="1936" height="1056" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2171875" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2171875" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -337,7 +351,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/avslaaTilbud.php" />
     <entry file="file://$PROJECT_DIR$/godtaTilbud.php" />
     <entry file="file://$PROJECT_DIR$/mailToManager.php" />
     <entry file="file://$PROJECT_DIR$/home_bookingsjef.php" />
@@ -587,10 +600,21 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/admin_home.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="19" column="35" lean-forward="false" selection-start-line="19" selection-start-column="35" selection-end-line="19" selection-end-column="35" />
+        <state relative-caret-position="550">
+          <caret line="103" column="0" lean-forward="true" selection-start-line="103" selection-start-column="0" selection-end-line="103" selection-end-column="0" />
           <folding>
-            <marker date="1510242118045" expanded="true" signature="3131:3224" ph="SELECT u_id,... users" />
+            <marker date="1510243204959" expanded="true" signature="2927:2958" ph="SELECT DISTI... users" />
+            <marker date="1510243204959" expanded="true" signature="3524:3617" ph="SELECT u_id,... users" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PHP/leggTilBruker.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <marker date="1510243096362" expanded="true" signature="258:429" ph="INSERT INTO users... " />
           </folding>
         </state>
       </provider>
