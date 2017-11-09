@@ -99,6 +99,10 @@ table tr:hover {
    margin-top: 10px;
  }
 
+#spacing{
+  padding-bottom: 10px;
+  margin-top: 10px;
+}
 .page-header{
 	border:0;
   margin-top: 20;

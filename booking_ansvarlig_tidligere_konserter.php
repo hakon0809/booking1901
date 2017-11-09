@@ -65,50 +65,56 @@
                 ?>
             </label>
 
-            <h1>Tidligere konserter:</h1>
+            <h2>Tidligere konserter:</h2>
             <form>
-                <button type="button" onClick="showAll()">Vis alle</button>Søk: <input type="text" id="searchField" onkeyup="nameSort()" placeholder="Søk etter en tidligere konsert">
-                Sjanger:
-                <select name="sjanger" id="sjanger" onchange="genreSort()">
-                    <option value="0">Alle sjangre</option>
-                    <?php
-                    $sql = "SELECT DISTINCT k_genre FROM konsert";
-                    $result = $conn->query($sql);
-                    if ($result->num_rows > 0) {
-                        while ($row = $result->fetch_assoc()) {
-                            echo "<option>" . $row["k_genre"] . "</option>";
-                        }
-                    }
-                    ?>
-                </select>
-                Scene:
-                <select name="scene" id="scene" onchange="sceneSort()">
-                    <option value="0">Alle scener</option>
-                    <?php
-                    $sql = "SELECT DISTINCT s_name FROM scene";
-                    $result = $conn->query($sql);
-                    if ($result->num_rows > 0) {
-                        while ($row = $result->fetch_assoc()) {
-                            echo "<option>" . $row["s_name"] . "</option>";
-                        }
-                    }
-                    ?>
-                </select>
-                År:
-                <select name="år" id="year" onchange="yearSort()">
-                    <option value="0">Alle år</option>
-                    <?php
-                    $sql = "SELECT DISTINCT festival_name FROM konsert";
-                    $result = $conn->query($sql);
-                    if ($result->num_rows > 0) {
-                        while ($row = $result->fetch_assoc()) {
-                            $year = substr($row[festival_name], -2);
-                            echo "<option>20$year</option>";
-                        }
-                    }
-                    ?>
-                </select>
+                <button id="btn" type="button" onClick="showAll()">Vis alle</button><br>
+                <div id="spacing">
+                  <label> Søk: </label> <input type="text" id="searchField" onkeyup="nameSort()" placeholder="Søk etter en konsert">
+                </div>
+                <div>
+                  Sjanger:
+                  <select name="sjanger" id="sjanger" onchange="genreSort()">
+                      <option value="0">Alle sjangre</option>
+                      <?php
+                      $sql = "SELECT DISTINCT k_genre FROM konsert";
+                      $result = $conn->query($sql);
+                      if ($result->num_rows > 0) {
+                          while ($row = $result->fetch_assoc()) {
+                              echo "<option>" . $row["k_genre"] . "</option>";
+                          }
+                      }
+                      ?>
+                  </select>
+                    Scene:
+                  <select name="scene" id="scene" onchange="sceneSort()">
+                      <option value="0">Alle scener</option>
+                      <?php
+                      $sql = "SELECT DISTINCT s_name FROM scene";
+                      $result = $conn->query($sql);
+                      if ($result->num_rows > 0) {
+                          while ($row = $result->fetch_assoc()) {
+                              echo "<option>" . $row["s_name"] . "</option>";
+                          }
+                      }
+                      ?>
+                  </select>
+                  År:
+                  <select name="år" id="year" onchange="yearSort()">
+                      <option value="0">Alle år</option>
+                      <?php
+                      $sql = "SELECT DISTINCT festival_name FROM konsert";
+                      $result = $conn->query($sql);
+                      if ($result->num_rows > 0) {
+                          while ($row = $result->fetch_assoc()) {
+                              $year = substr($row[festival_name], -2);
+                              echo "<option>20$year</option>";
+                          }
+                      }
+                      ?>
+                  </select>
+                </div>
             </form>
+            <br>
               <?php
               $current_concert = "Dagene " . date("Y");
               $sql = "SELECT konsert.k_id, konsert.scene_id, konsert.k_name, konsert.k_genre, konsert.date, konsert.time_start, konsert.time_end, scene.s_name, publikum_antall, kostnad, economic_result
