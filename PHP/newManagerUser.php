@@ -1,7 +1,4 @@
 <?php
-//$mail = $_POST['mail_m'];
-//$mail = $_GET["var"];
-
 function createUsername($len = 10) {
     $uName = array_merge(range('a', 'z'), range('A', 'Z'));
     shuffle($uName);
