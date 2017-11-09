@@ -61,6 +61,10 @@ table{
   border:1px solid #ccc
 }
 
+table tr{
+  border-bottom:1px solid #ddd
+}
+
 table tr:nth-child(odd){
   background-color:#fff
 }
