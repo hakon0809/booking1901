@@ -45,6 +45,7 @@
                   <ul class="nav navbar-nav">
                     <li><a href= <?php echo $_SESSION["role"] . "_home.php"; ?>> Min side </a></li>
                     <li ><a href="konsertoversikt.php"> Konsertoversikt</a></li>
+                    <li><a href="booking_ansvarlig_bandinfo.php"> Band Info </a></li>
                     <li class="active"><a href="home_booking_ansvarlig_konsertsjanger.php">Tidligere konserter<span class="sr-only">(current)</span></a></li>
                   </ul>
                   <ul class="nav navbar-nav navbar-right">

@@ -62,7 +62,8 @@ include("PHP/config.php");
                             case 'manager':
                                 break;
                             case 'booking_ansvarlig':
-                                echo "<li><a href='booking_ansvarlig_tidligere_konserter.php'>Tidligere konserter</a></li>";
+                                echo "<li><a href='booking_ansvarlig_bandinfo.php'> Band Info </a></li>
+                                <li><a href='booking_ansvarlig_tidligere_konserter.php'>Tidligere konserter</a></li>";
                                 break;
                             case 'bookingsjef':
                                 echo "<li><a href='bookingsjef_rapport.php'>Rapport</a></li>

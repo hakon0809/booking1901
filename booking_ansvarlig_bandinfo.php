@@ -51,28 +51,10 @@ include("PHP/config.php");
                 <!-- Henter nav linker, forms, og andre innhold for aktivering til navbaren-->
                 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                     <ul class="nav navbar-nav">
-                        <li><a href= <?php echo $_SESSION["role"] . "_home.php"; ?>> Min side </a></li><!-- må skrive en side for hver user side som vi kan linke til og for de brukerne som kan også bruke dette side-->
+                        <li><a href= <?php echo $_SESSION["role"] . "_home.php"; ?>> Min side </a></li>
                         <li><a href="konsertoversikt.php"> Konsertoversikt</a></li>
-                        <li class="active"><a href="bandinfo.php"> Band Info<span class="sr-only">(current)</span></a></li>
-                        <?php
-                        switch ($_SESSION["role"]) {
-                            case 'arrangor':
-                                break;
-                            case 'tekniker':
-                                break;
-                            case 'manager':
-                                break;
-                            case 'booking_ansvarlig':
-                                echo "<li><a href='booking_ansvarlig_tidligere_konserter.php'>Tidligere konserter</a></li>";
-                                break;
-                            case 'bookingsjef':
-                                echo "<li><a href='bookingsjef_rapport.php'>Rapport</a></li>
-                                  <li><a href='bookingsjef_oversikt.php'>Bookingoversikt</a></li>";
-                                break;
-                            case 'admin':
-                                break;
-                        }
-                        ?>
+                        <li class="active"><a href="booking_ansvarlig_bandinfo.php"> Band Info<span class="sr-only">(current)</span></a></li>
+                        <li><a href='booking_ansvarlig_tidligere_konserter.php'>Tidligere konserter</a></li>
                     </ul>
                     <ul class="nav navbar-nav navbar-right">
                         <li><a href="Log_In/login.php"> Logg ut</a></li>

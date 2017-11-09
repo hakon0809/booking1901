@@ -44,6 +44,7 @@ include("PHP/config.php");
                     <ul class="nav navbar-nav">
                         <li class="active"><a href= <?php echo "home_" . $_SESSION["role"] . ".php"; ?>> Min side <span class="sr-only">(current)</span> </a></li>
                         <li><a href="konsertoversikt.php">Konsertoversikt</a></li>
+                        <li><a href="booking_ansvarlig_bandinfo.php"> Band Info </a></li>
                         <li><a href="booking_ansvarlig_tidligere_konserter.php">Tidligere konserter</a></li>
                     </ul>
                     <ul class="nav navbar-nav navbar-right">
