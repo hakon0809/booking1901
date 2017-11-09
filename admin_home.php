@@ -18,7 +18,6 @@ include("PHP/config.php");
     <!-- Lokal CSS/JS -->
     <link rel="stylesheet" type="text/css" href="CSS/standard.css">
     <style type="text/css"></style>
-    <script type="text/javascript" src="JavaScript/adminJS.js"></script>
 </head>
 
     <body>
