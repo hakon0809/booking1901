@@ -23,5 +23,5 @@ if ($conn->query($sql) === TRUE) {
 } else {
     echo "Error: " . $sql . "<br>" . $conn->error;
 }
-header("refresh:3; url= home_booking_ansvarlig.php");
+header("refresh:3; url=../booking_ansvarlig_home.php");
 ?>

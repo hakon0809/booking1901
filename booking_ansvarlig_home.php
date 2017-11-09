@@ -120,7 +120,7 @@ include("PHP/config.php");
     <h4> Nytt tilbud til manager </h4>  <!-- for å finne tilbud til manager og godkjenne den -->
 
     <div class="registering_band_via_manager">
-        <form action="sendtilbudBA.php" method="post">
+        <form action="PHP/sendtilbudBA.php" method="post">
             <table>
                 <tr>
                     <td><label> Artist: </label></td>
