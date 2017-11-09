@@ -1,5 +1,6 @@
 <?php
-$mail_m = $_POST['mail_m'];
+//$mail = $_POST['mail_m'];
+//$mail = $_GET["var"];
 
 function createUsername($len = 10) {
     $uName = array_merge(range('a', 'z'), range('A', 'Z'));
@@ -16,8 +17,23 @@ function createPassword($len = 10) {
 $un = createUserName();
 $p = createPassword();
 
+
+
+$id = $_POST['tilbudid'];
+$sql2 = ("SELECT mail_m
+            FROM tilbud
+            WHERE t_id = $id");
+
+$result2 = $conn->query($sql2);
+$row2 = $result2->fetch_assoc();
+
+$mail = $row2["mail_m"];
+
+
+
 $sql = "INSERT INTO users (username, password, role, email)
-                    VALUES ('$un', '$p', 'manager', '$mail_m')";
+                    VALUES ('$un', '$p', 'manager', '$mail')";
+echo "<script>console.log('$mail')";
 if ($conn->query($sql) === TRUE) {
   echo "Ny manager bruker laget!";
   echo "</br";

@@ -1,6 +1,6 @@
 <?php
 include("config.php");
-include 'mailToManager.php';
+include ('mailToManager.php');
 
 $id = $_POST['tilbudid'];
 
