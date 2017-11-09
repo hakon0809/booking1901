@@ -70,7 +70,7 @@
               <?php
               include("config.php");
               $sql = "SELECT t_id, t_artist_name,  t_scene, t_dato_k,  t_tidkonsertstart, t_tidkonsertslutt
-                FROM tilbud WHERE godkjent_bs = 2 ";
+                FROM tilbud WHERE godkjent_bs = 1 ";
               $result = $conn->query($sql);
 
               if ($result->num_rows > 0) {
