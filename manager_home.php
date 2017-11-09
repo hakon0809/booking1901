@@ -64,49 +64,44 @@
             ?>
         </label>
 
+      <div class="teknisk_behov">
+          <h4>Teknisk Behov</h4>
+          <form action="PHP/manager_back.php" method="post">
+            <label> Skriv tekniskebehov for konserten:</label>
+            <br>
+            <textarea id="teknisk_behov" name="teknisk_behov" rows="5" cols="40" ></textarea>
+            <br>
+            <input id="btn" type="submit" name="submit" value="Send"/>
+          </form>
+      </div>
 
-      <h4> Låter for konserten:</h4>
+      <br>
       <div class="later_for_konserten">
           <form action="PHP/later_for_konserten.php" method="post">
-              <table>
+            <label><h4> Låter for Konserten</h4></label>
+                    <br>
+                    <label> Låter </label>
+                    <br>
+                    <textarea id="laterk" name="laterk" rows="5" cols="40" ></textarea>
+                    <br>
+                    <input id="btn" type="submit" name="submit" value="Send"/> <!--send låter som skal spilles til databasen-->
 
-                <tr>
-                    <td><label> Låter </label></td>
-                    <td>
-                        <textarea id="laterk" name="laterk" rows="5" cols="40" ></textarea>
-                    </td>
-                </tr>
-
-                  <tr>
-                  <td></td>
-                  <td> <input id="btn" type="submit" name="submit" value="Send"/>
-                  </td> <!--send låter som skal spilles til databasen-->
-                  </tr>
-              </table>
           </form>
       </div>
 
-      <h4> Låter for :</h4>
-      <div class="later_for_konserten">
-          <form action="PHP/later_for_oving.php" method="post">
-              <table>
+      <br>
+      <div class="later_for_oving">
+        <form action="PHP/later_for_oving.php" method="post">
+          <label><h4> Låter for Øving</h4></label>
+                  <br>
+                  <label> Låter </label>
+                  <br>
+                  <textarea id="latero" name="latero" rows="5" cols="40" ></textarea>
+                  <br>
+                  <input id="btn" type="submit" name="submit" value="Send"/> <!--send låter som skal øves til databasen-->
 
-                <tr>
-                    <td><label> Låter for Øving</label></td>
-                    <td>
-                      <textarea id="latero" name="latero" rows="5" cols="40" ></textarea>
-                    </td>
-                </tr>
-
-                  <tr>
-                  <td></td>
-                  <td> <input id="btn" type="submit" name="submit" value="Send"/>
-                  </td> <!--send låter som skal øves til databasen-->
-                  </tr>
-              </table>
-          </form>
+        </form>
       </div>
-
     </main>
     </body>
 </html>
