@@ -206,7 +206,6 @@ include("PHP/config.php");
     <div class="later_for_konserten">
       <h3> Låter for Konserten</h3>
           <form action="PHP/later_for_konserten.php" method="post">
-                    <br>
                     <label> Låter </label>
                     <br>
                     <textarea id="laterk" name="laterk" rows="5" cols="40"></textarea>
@@ -220,7 +219,6 @@ include("PHP/config.php");
       <div class="later_for_oving">
         <h3> Låter for Øving</h3>
           <form action="PHP/later_for_oving.php" method="post">
-                    <br>
                     <label> Låter </label>
                     <br>
                     <textarea id="latero" name="latero" rows="5" cols="40"></textarea>
