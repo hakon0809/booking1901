@@ -94,10 +94,11 @@ include("PHP/config.php");
 
     <h1>Konserter</h1>
     <?php
+    $current_concert = "Dagene " . date("Y");
     $sql = "SELECT konsert.k_id, konsert.scene_id, konsert.k_name, konsert.k_genre, konsert.date, konsert.time_start, konsert.time_end, scene.s_name
             FROM konsert INNER JOIN scene
             ON  scene.s_id = konsert.scene_id
-            AND konsert.festival_name = 'Dagene 2018'";
+            AND konsert.festival_name = '$current_concert'";
     $result = $conn->query($sql);
 
     //makes a table with the info

@@ -60,8 +60,6 @@
         <label id="rolle" style="position: static;float:right;background-color:#ffb3b3;">
             Innlogget som:
             <?php
-            include("PHP/config.php");
-            session_start();
             echo "$_SESSION[role]";
             ?>
         </label>
@@ -197,7 +195,11 @@
             </select>
         </form>
         <?php
-        $sql = "SELECT konsert.k_id, konsert.scene_id, konsert.k_name, konsert.k_genre, konsert.date, konsert.time_start, konsert.time_end, scene.s_name, publikum_antall, kostnad, economic_result FROM konsert INNER JOIN scene ON konsert.scene_id = scene.s_id";
+        $current_concert = "Dagene " . date("Y");
+        $sql = "SELECT konsert.k_id, konsert.scene_id, konsert.k_name, konsert.k_genre, konsert.date, konsert.time_start, konsert.time_end, scene.s_name, publikum_antall, kostnad, economic_result
+        FROM konsert INNER JOIN scene
+        ON konsert.scene_id = scene.s_id
+        AND NOT konsert.festival_name = '$current_concert'";
         $result = $conn->query($sql);
 
         //makes a table with the info
