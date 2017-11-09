@@ -179,28 +179,21 @@ include("PHP/config.php");
           </div>
 
           <br><br>
-          <div class="later_for_konserten">
-            <h3> Låter for Konserten</h3>
-                <form action="PHP/later_for_konserten.php" method="post">
-                          <label> Låter </label>
-                          <br>
-                          <textarea id="laterk" name="laterk" rows="5" cols="40"></textarea>
-                          <br>
-                          <input id="btn" type="submit" name="submit" value="Send"> <!--send låter som skal spilles til databasen-->
+          <div class="later">
+                <form action="PHP/later_manager.php" method="post">
 
-                </form>
-          </div>
-
-            <br><br>
-            <div class="later_for_oving">
               <h3> Låter for Øving</h3>
-                <form action="PHP/later_for_oving.php" method="post">
                           <label> Låter </label>
                           <br>
-                          <textarea id="latero" name="latero" rows="5" cols="40"></textarea>
+                          <textarea id="låtero" name="låtero" rows="5" cols="40"></textarea>
                           <br>
-                          <input id="btn" type="submit" name="submit" value="Send"> <!--send låter som skal øves til databasen-->
 
+              <h3> Låter for Konserten</h3>
+                          <label> Låter </label>
+                          <br>
+                          <textarea id="låterk" name="låterk" rows="5" cols="40"></textarea>
+                          <br>
+                          <input id="btn" type="submit" name="submit" value="Send"> <!--send låter -->
                 </form>
             </div>
       </main>
