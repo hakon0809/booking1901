@@ -56,6 +56,14 @@ include("PHP/config.php");
 </div>
 
 <main id="Main-content">
+    <label id="rolle" style="position: static;float:right;background-color:#ffb3b3;">
+        Innlogget som:
+        <?php
+        include("PHP/config.php");
+        session_start();
+        echo "$_SESSION[role]";
+        ?>
+    </label>
 
     <script type="text/javascript">
         function selectChange(val1) {

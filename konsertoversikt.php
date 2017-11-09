@@ -83,6 +83,15 @@ include("PHP/config.php");
 </div>
 
 <main id="Main-content">
+    <label id="rolle" style="position: static;float:right;background-color:#ffb3b3;">
+        Innlogget som:
+        <?php
+        include("PHP/config.php");
+        session_start();
+        echo "$_SESSION[role]";
+        ?>
+    </label>
+
     <h1>Konserter</h1>
     <?php
     $sql = "SELECT konsert.k_id, konsert.scene_id, konsert.k_name, konsert.k_genre, konsert.date, konsert.time_start, konsert.time_end, scene.s_name

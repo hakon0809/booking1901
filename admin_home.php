@@ -57,6 +57,15 @@ include("config.php");
           </div>
 
           <main id="Main-content">
+              <label id="rolle" style="position: static;float:right;background-color:#ffb3b3;">
+                  Innlogget som:
+                  <?php
+                  include("PHP/config.php");
+                  session_start();
+                  echo "$_SESSION[role]";
+                  ?>
+              </label>
+
               <?php
               include("config.php");
               $sql = "SELECT u_id, username, role, email, mobile, name, adress

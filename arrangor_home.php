@@ -55,6 +55,15 @@
         </div>
 
     <main id="Main-content">
+        <label id="rolle" style="position: static;float:right;background-color:#ffb3b3;">
+            Innlogget som:
+            <?php
+            include("PHP/config.php");
+            session_start();
+            echo "$_SESSION[role]";
+            ?>
+        </label>
+
       <h4> Teknikere til konsert: </h4>
         <script type="text/javascript">
             function selectChange(val) {
@@ -73,7 +82,7 @@
           $result = $conn->query($sql);
           echo "<form id='myForm' method = 'post'>";
           echo "<select name='konserter' onChange=selectChange(this.value)>";
-          echo "<option hidden>Velg konsert</option>";
+          echo "<option hidden>Konsert</option>";
           while ($row = $result->fetch_assoc()){
             echo "<option value=" . $row['k_id'] . ">" . $row['k_name'] . "</option>";
           }
