@@ -63,9 +63,11 @@ include("PHP/config.php");
         echo "$_SESSION[role]";
         ?>
     </label>
+    <h4>Legg til bruker</h4>
     <form action="PHP/leggTilBruker.php" method="post">
         <input name="navn" placeholder="Navn">
         <input name="brukernavn" placeholder="Brukernavn">
+        <input name="passord" placeholder="Passord">
         <select name="rolle">
             <option value="0">Velg scene</option>
             <?php
@@ -83,8 +85,26 @@ include("PHP/config.php");
         <input name="adresse" placeholder="Adresse">
         <button type="submit">Legg til bruker</button>
     </form>
+    <br>
+
+    <h4>Slett bruker med id = <form action="PHP/slettBruker.php" method="post"><select name="brukerId">
+                <option value="0">Velg id</option>
+                <?php
+                $sql = "SELECT DISTINCT u_id FROM users";
+                $result = $conn->query($sql);
+                if ($result->num_rows > 0) {
+                    while ($row = $result->fetch_assoc()) {
+                        echo "<option>" . $row["u_id"] . "</option>";
+                    }
+                }
+                ?>
+            </select>
+            <button type="submit">Slett</button>
+        </form>
+    </h4>
+
+
     <?php
-    include("PHP/config.php");
     $sql = "SELECT u_id, username, role, email, mobile, name, adress
                           FROM users";
     $result = $conn->query($sql);
