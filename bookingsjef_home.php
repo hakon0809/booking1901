@@ -94,8 +94,10 @@ include("PHP/config.php");
                                             <tr><td><label> Melding til Manager: </label></td><td> " . $row["melding_til_m"] . "</td></tr>
                                             <tr><td><label> Manager e-mail: </label></td><td> " . $row["mail_m"] . "</td></tr>
                                             <tr><td><label> Melding fra Bookingansvarlig: </label></td><td> " . $row["melding_til_bs"] . "</td></tr>
-                                            <tr><td><label> Godkjenn Tilbud: </label><input id=\"btn\" formaction='PHP/godtaTilbud.php' type=\"submit\" name=\"submit\" value=\"Godkjenn\"/></td><td><input class='avslaaBtn' formaction='PHP/avslaaTilbud.php' id=\"avslaaBtn\" type=\"submit\" name=\"submit\" value=\"Avslå tilbud\"/></td></tr><!-- onclick='setID(this.id)'-->
-
+                                            <tr><td><label> Godkjenn Tilbud: </label></td>
+                                                <td><input id=\"btn\" formaction='PHP/godtaTilbud.php' type=\"submit\" name=\"submit\" value=\"Godkjenn\"/>
+                                                    <input class='avslaaBtn' formaction='PHP/avslaaTilbud.php' id=\"avslaaBtn\" type=\"submit\" name=\"submit\" value=\"Avslå tilbud\"/></td></tr><!-- onclick='setID(this.id)'-->
+                                                </td>
                                             </table><br>
                                             </form>";
                                     }

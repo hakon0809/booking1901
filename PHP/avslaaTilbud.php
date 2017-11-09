@@ -11,5 +11,5 @@ if(!mysqli_query($conn,$sql)){
 } else {
     echo "Tilbud avslått!";
 }
-header("refresh:10; url= ../bookingsjef_home.php");
+header("refresh:3; url= ../bookingsjef_home.php");
 ?>

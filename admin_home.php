@@ -68,6 +68,10 @@ include("PHP/config.php");
                   <input name="navn" placeholder="Navn">
                   <input name="brukernavn" placeholder="Brukernavn">
                   <input name="passord" placeholder="Passord">
+                  <input name="email" type="email" placeholder="E-mail">
+                  <input name="mobilnr" placeholder="Mobilnummer">
+                  <input name="adresse" placeholder="Adresse">
+                  <br><br>
                   <select name="rolle">
                       <option value="0">Velg role</option>
                       <?php
@@ -80,9 +84,6 @@ include("PHP/config.php");
                       }
                       ?>
                   </select>
-                  <input name="email" type="email" placeholder="E-mail">
-                  <input name="mobilnr" placeholder="Mobilnummer">
-                  <input name="adresse" placeholder="Adresse">
                   <button type="submit">Legg til bruker</button>
               </form>
             <br>

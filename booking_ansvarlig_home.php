@@ -101,11 +101,11 @@ include("PHP/config.php");
 
                           //makes a table with the info
                           if ($result->num_rows > 0) {
-                              echo "<table>";
+                              echo "<form>";
                               while ($row = $result->fetch_array(MYSQLI_ASSOC)) {
-                                  echo "<tr><td>" . $row["behov"] . "</td></tr>";
+                                  echo "<h5>" . $row["behov"] . "</h5>";
                               }
-                              echo "</table>";
+                              echo "</form>";
                           } else {
                               echo "Ingen behov lagt inn";
                           }

@@ -88,8 +88,10 @@ include("PHP/config.php");
                                               <tr><td><label> Dato tilbud blir  sendt: </label></td><td> " . $row["t_dato_sendt"] . "</td></tr>
                                               <tr><td><label> Konsert start tid: </label></td><td> " . $row["t_tidkonsertstart"] . "</td></tr>
                                               <tr><td><label> Konsert slutt tid: </label></td><td> " . $row["t_tidkonsertslutt"] . "</td></tr>
-                                              <tr><td><label> Godkjenn Tilbud: </label><input id=\"btn\" formaction='PHP/managerGodtaTilbud.php' type=\"submit\" name=\"submit\" value=\"Godkjenn\"/></td><td><input class='avslaaBtn' formaction='PHP/managerAvslaaTilbud.php' id=\"avslaaBtn\" type=\"submit\" name=\"submit\" value=\"Avslå tilbud\"/></td></tr><!-- onclick='setID(this.id)'-->
-
+                                              <tr><td><label> Godkjenn Tilbud: </label></td>
+                                                  <td><input id=\"btn\" formaction='PHP/managerGodtaTilbud.php' type=\"submit\" name=\"submit\" value=\"Godkjenn\"/>
+                                                      <input class='avslaaBtn' formaction='PHP/managerAvslaaTilbud.php' id=\"avslaaBtn\" type=\"submit\" name=\"submit\" value=\"Avslå tilbud\"/></td></tr><!-- onclick='setID(this.id)'-->
+                                                  </td>
                                               </table>
                                               </form>";
               }
@@ -129,9 +131,9 @@ include("PHP/config.php");
                 while ($row = $result->fetch_assoc()) {
                     echo "
 
-                                                <button type='button' id='0' onclick='moreOrLess(this.id)' class='artistButton'>Artist: " . $row["t_artist_name"] . "</button>
+                                                <button type='button' id='0' onclick='moreOrLess(this.id)' class='artistButton'>Artist: " . $row["t_artist_name"] . "</button><br>
                                                 <table class='tilbudText' style='display:none'>
-                                                <input class='o' name='tilbudid' id='tilbudid' style='display:none' value='" . $row["t_id"] . "'/>
+                                                <input class='o' name='tilbudid' id='tilbudid' style='display:none' value='" . $row["t_id"] . "'/><br>
                                                 <tr><th><label>Artist: </label></th><th>" . $row["t_artist_name"] . "</th></tr>
                                                 <tr><td><label> Pris: </label></td><td> " . $row["t_pris"] . ",- NOK</td></tr>
                                                 <tr><td><label> Dato for konsert: </label></td><td> " . $row["t_dato_k"] . "</td></tr>
@@ -139,7 +141,7 @@ include("PHP/config.php");
                                                 <tr><td><label> Dato tilbud blir  sendt: </label></td><td> " . $row["t_dato_sendt"] . "</td></tr>
                                                 <tr><td><label> Konsert start tid: </label></td><td> " . $row["t_tidkonsertstart"] . "</td></tr>
                                                 <tr><td><label> Konsert slutt tid: </label></td><td> " . $row["t_tidkonsertslutt"] . "</td></tr>
-                                                </table><br>
+                                                </table>
                                                 ";
                 }
             } else {
