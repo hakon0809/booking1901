@@ -115,6 +115,7 @@ include("PHP/config.php");
         </tr>
     </table>
 
+    <br><br>
     <h4> Nytt tilbud til manager </h4>  <!-- for å finne tilbud til manager og godkjenne den -->
 
     <div class="registering_band_via_manager">
@@ -210,9 +211,9 @@ include("PHP/config.php");
     if ($result->num_rows > 0) {
         while ($row = $result->fetch_assoc()) {
             echo "
-                        <button type='button' id='0' onclick='moreOrLess(this.id)' class='artistButton'>Artist: " . $row["t_artist_name"] . "</button>
+                        <button type='button' id='0' onclick='moreOrLess(this.id)' class='artistButton'>Artist: " . $row["t_artist_name"] . "</button><br>
                         <table class='tilbudText' style='display:none'>
-                        <input class='o' name='tilbudid' id='tilbudid' style='display:none' value='" . $row["t_id"] . "'/>
+                        <input class='o' name='tilbudid' id='tilbudid' style='display:none' value='" . $row["t_id"] . "'/><br>
                         <tr><th><label>Artist: </label></th><th>" . $row["t_artist_name"] . "</th></tr>
                         <tr><td><label> Pris: </label></td><td> " . $row["t_pris"] . ",- NOK</td></tr>
                         <tr><td><label> Dato for konsert: </label></td><td> " . $row["t_dato_k"] . "</td></tr>

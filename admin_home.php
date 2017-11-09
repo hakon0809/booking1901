@@ -69,7 +69,7 @@ include("PHP/config.php");
         <input name="brukernavn" placeholder="Brukernavn">
         <input name="passord" placeholder="Passord">
         <select name="rolle">
-            <option value="0">Velg scene</option>
+            <option value="0">Velg role</option>
             <?php
             $sql = "SELECT DISTINCT role FROM users";
             $result = $conn->query($sql);

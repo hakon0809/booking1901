@@ -66,62 +66,10 @@ include("PHP/config.php");
             ?>
         </label>
 
-      <h4> Tilbud for Manager </h4>  <!-- for å finne tilbud til manager og godkjenne den -->
-          <script type="text/javascript">
-          function selectChange(val1) {
-          //Set the value of action in action attribute of form element.
-          //Submit the form
-          $('#myForm').submit();}
-          </script>
-
-          <div id="dropdownmenu">
-              <?php
-                $sql = "SELECT band.b_id, users.name
-                        FROM users INNER JOIN band
-                        ON users.u_id = band.manager_id
-                        AND band.bans_id = '$_SESSION[user_id]'" ;
-                $result = $conn->query($sql);
-                echo "<form id='myForm' method = 'post'>";
-                echo "<select name='band_id' onChange=selectChange(this.value)>";
-                echo "<option hidden> Velg manager </option>";
-                while ($row = $result->fetch_assoc()){
-                  echo "<option value=" . $row['b_id'] . ">" . $row['name'] . "</option>";
-                }
-                echo "</select>";
-                echo "</form>";
-                ?>
-              </div>
-
      <div class="registering_band_via_manager">
                 <form class="band-form" >
-                  <table>
-                    <tr>
-                      <td><label>  Tekniske behov fra band: </label></td>
-                        <td>
-                        <?php
-                          if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
-                            $sql = "SELECT behov FROM teknisk_behov WHERE band_id = '$_POST[band_id]'";
-                            $result = $conn->query($sql);
-
-                            //makes a table with the info
-                            if ($result->num_rows > 0) {
-                              echo "<table>";
-                              while ($row = $result->fetch_array(MYSQLI_ASSOC)) {
-                                echo "<tr><td>" . $row["behov"] . "</td></tr>";
-                              }
-                                echo "</table>";
-                              } else {
-                                echo "Ingen behov lagt inn";
-                              }
-                            }
-                            $conn->close();
-                          ?>
-                        </td>
-                      </tr>
-
-                  </table>
-                    <label>Tilbud mottatt for godkjenning: </label><br>
+                    <label><h3>Tilbud mottatt for godkjenning: </h3></label><br>
                             <?php
                             include("PHP/config.php");
                             $sql = "SELECT t_id, t_artist_name, t_pris, t_scene, t_dato_k, t_dato_sendt, t_tidkonsertstart, t_tidkonsertslutt, melding_til_m, mail_m, melding_til_bs, godkjent_bs, godkjent_m, tilbud_sendt_til_bs, tilbud_sendt_til_m
@@ -133,9 +81,9 @@ include("PHP/config.php");
                                 while ($row = $result->fetch_assoc()) {
                                     echo "
                                         <form method='post'>
-                                        <button type='button' id='0' onclick='moreOrLess(this.id)' class='artistButton'>Artist: " . $row["t_artist_name"] . "</button>
+                                        <button type='button' id='0' onclick='moreOrLess(this.id)' class='artistButton'>Artist: " . $row["t_artist_name"] . "</button><br>
                                         <table class='tilbudText' style='display:none'>
-                                        <input class='o' name='tilbudid' id='tilbudid' style='display:none' value='" . $row["t_id"] . "'/>
+                                        <input class='o' name='tilbudid' id='tilbudid' style='display:none' value='" . $row["t_id"] . "'/><br>
                                         <tr><th><label>Artist: </label></th><th>" . $row["t_artist_name"] . "</th></tr>
                                         <tr><td><label> Pris: </label></td><td> " . $row["t_pris"] . ",- NOK</td></tr>
                                         <tr><td><label> Dato for konsert: </label></td><td> " . $row["t_dato_k"] . "</td></tr>
@@ -187,21 +135,8 @@ include("PHP/config.php");
                     </script>
               </form>
             </div>
-              <br><br>
 
-
-
-
-
-
-
-
-
-
-
-
-
-        <h4> Billettprisgenerator4000 </h4>
+        <h3> Billettpris Generator </h3>
         <table>
             <tr>
                 <td><label>Scene: </label></td>
