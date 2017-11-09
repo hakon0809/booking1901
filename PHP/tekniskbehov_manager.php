@@ -14,5 +14,5 @@ if(!mysqli_query($conn,$sql)){
 } else {
   echo "Sent!";
 }
-header("refresh:3; url= home_manager.php");
+header("refresh:3; url= ../manager_home.php");
   ?>
