@@ -192,8 +192,7 @@ include("PHP/config.php");
 
     <br><br>
     <div class="teknisk_behov">
-        <h4>Teknisk Behov</h4>
-
+      <h3>Teknisk Behov</h3>
         <form action="PHP/manager_back.php" method="post">
             <label> Skriv tekniskebehov for konserten:</label>
             <br>
@@ -205,8 +204,8 @@ include("PHP/config.php");
 
     <br><br>
     <div class="later_for_konserten">
+      <h3> Låter for Konserten</h3>
           <form action="PHP/later_for_konserten.php" method="post">
-            <label><h4> Låter for Konserten</h4></label>
                     <br>
                     <label> Låter </label>
                     <br>
@@ -219,8 +218,8 @@ include("PHP/config.php");
 
       <br><br>
       <div class="later_for_oving">
+        <h3> Låter for Øving</h3>
           <form action="PHP/later_for_oving.php" method="post">
-            <label><h4> Låter for Øving</h4></label>
                     <br>
                     <label> Låter </label>
                     <br>
