@@ -97,7 +97,7 @@
 
             $result = $conn->query($sql);
             if ($result->num_rows > 0) {
-              echo "<table class='table-striped'><tr>
+              echo "<br><table class='table-striped'><tr>
                     <th>Navn</th>
                     <th>Publikum</th>
                     <th>Kostnader</th>
@@ -114,7 +114,7 @@
               }
                 echo "</table>";
               } else {
-                echo "Ingen data";
+                echo "<br> Ingen data";
               }
             }
             $conn->close();
