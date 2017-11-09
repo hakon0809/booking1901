@@ -69,7 +69,7 @@
         <form>
               <?php
               include("config.php");
-              $sql = "SELECT t_id, t_artist_name,  t_scene, t_dato_k,  t_tidkonsertstart, t_tidkonsertslutt
+              $sql = "SELECT t_id, t_artist_name,  t_scene, t_dato_k,  t_tidkonsertstart, t_tidkonsertslutt, omtaler, mail_m
                 FROM tilbud WHERE godkjent_bs = 1 ";
               $result = $conn->query($sql);
 
@@ -87,6 +87,8 @@
                           <tr><td><label> Konsert slutt tid: </label></td><td> " . $row["t_tidkonsertslutt"] . "</td></tr>
                           <tr><td><label> Omtale av band: </label></td><td> " . $row["omtaler"] . "</td></tr>
                           <tr><td><label> Salgstall: </label></td><td> " . $row[""] . "</td></tr>
+                          <tr><td><label> Lenker til presseomtaler: </label></td><td> " . $row[""] . "</td></tr>
+                          <tr><td><label> Manager e-mail: </label></td><td> " . $row["mail_m"] . "</td></tr>
                           </table><br>";
                   }
               } else {
@@ -97,16 +99,9 @@
             <script>
               var artistList = document.getElementsByClassName("artistButton");
               var tekstList = document.getElementsByClassName("tilbudText");
-              /*
-              var avslaaList = document.getElementsByClassName("o");
-              var avslaaBtnList = document.getElementsByClassName("avslaaBtn");
-              */
 
               for(var i=0;i<=artistList.length;i++) {
                   artistList[i].id = i;
-                  //tekstList[i].id = "0" + i;
-                  //avslaaBtnList[i].id = i;
-
               }
 
               function moreOrLess(i) {
@@ -115,13 +110,7 @@
                   } else {
                       tekstList[i].style.display = "none";
                   }
-              }
-              /*
-              function setID(i) {
-                  avslaaList[i].id = "tilbudid";
-              }
-              */
-            </script>
+              }</script>
         </form>
       </div>
     </main>
