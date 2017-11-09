@@ -18,6 +18,7 @@
     if($count == 1) {
       $_SESSION["user_id"] = $row["u_id"];
       $_SESSION["role"] = $row["role"];
+      $_SESSION["mail"] = $row["email"];
       header('Location: ../' . $row["role"] . '_home.php');
       /*switch ($row["role"]) {
         case 'arrangor':

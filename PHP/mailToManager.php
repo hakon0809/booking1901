@@ -10,6 +10,7 @@ $result = $conn->query($sql);
 $row = $result->fetch_assoc();
 
 $msg = $row["melding_til_m"] . "\n" .
+    "Nettside: http://org.ntnu.no/booking1901/ \n" .
     "Brukernavn: " . $un . "\n" .
     "Passord: " . $p;
 
