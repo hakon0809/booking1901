@@ -1,6 +1,6 @@
 <?php
 session_start();
-include("config.php");
+include("PHP/config.php");
 ?>
 
 <!DOCTYPE html>
@@ -17,7 +17,6 @@ include("config.php");
 
     <!-- Lokal CSS/JS -->
     <link rel="stylesheet" type="text/css" href="CSS/standard.css">
-    <link rel="stylesheet" type="text/css" href="CSS/admin.css">
     <style type="text/css"></style>
     <script type="text/javascript" src="JavaScript/adminJS.js"></script>
 </head>
@@ -67,11 +66,11 @@ include("config.php");
               </label>
 
               <?php
-              include("config.php");
+              include("PHP/config.php");
               $sql = "SELECT u_id, username, role, email, mobile, name, adress
                           FROM users";
               $result = $conn->query($sql);
-              echo "<table id='myTable'>";
+              echo "<table id='myAdminTable'>";
               echo "<tr><th>id</th><th>Navn</th><th>Brukernavn</th><th>Rolle</th><th>email</th><th>Mobilnummer</th><th>Adresse</th>";
               while ($row = $result->fetch_assoc()){
                   echo "<tr>";
