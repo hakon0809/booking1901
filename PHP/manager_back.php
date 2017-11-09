@@ -1,8 +1,10 @@
 <?php
+  session_start();
   include("config.php");
 
-  $sql = "INSERT INTO teknisk_behov (behov, band_id)
-          VALUES ('$_POST[teknisk_behov]', 1)";
+
+  $sql = "INSERT INTO teknisk_behov (behov, man_id)
+          VALUES ('$_POST[teknisk_behov]', '$_SESSION[user_id]')";
   if ($conn->query($sql) === TRUE) {
     echo "New record created successfully";
   } else {

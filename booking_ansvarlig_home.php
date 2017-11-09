@@ -59,8 +59,6 @@ include("PHP/config.php");
     <label id="rolle" style="position: static;float:right;background-color:#ffb3b3;">
         Innlogget som:
         <?php
-        include("PHP/config.php");
-        session_start();
         echo "$_SESSION[role]";
         ?>
     </label>
@@ -74,16 +72,16 @@ include("PHP/config.php");
 
     <div id="dropdownmenu">
         <?php
-        $sql = "SELECT band.b_id, users.name
-                            FROM users INNER JOIN band
-                            ON users.u_id = band.manager_id
-                            AND band.bans_id = '$_SESSION[user_id]'" ;
+        $sql = "SELECT users.u_id, users.name
+                FROM users INNER JOIN band
+                ON users.u_id = band.manager_id
+                AND band.bans_id = '$_SESSION[user_id]'";
         $result = $conn->query($sql);
         echo "<form id='myForm' method = 'post'>";
-        echo "<select name='band_id' onChange=selectChange(this.value)>";
+        echo "<select name='man_id' onChange=selectChange(this.value)>";
         echo "<option hidden> Velg manager </option>";
         while ($row = $result->fetch_assoc()){
-            echo "<option value=" . $row['b_id'] . ">" . $row['name'] . "</option>";
+            echo "<option value=" . $row['u_id'] . ">" . $row['name'] . "</option>";
         }
         echo "</select>";
         echo "</form>";
@@ -97,7 +95,7 @@ include("PHP/config.php");
                 <?php
                 if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
-                    $sql = "SELECT behov FROM teknisk_behov WHERE band_id = '$_POST[band_id]'";
+                    $sql = "SELECT behov FROM teknisk_behov WHERE man_id = '$_POST[man_id]'";
                     $result = $conn->query($sql);
 
                     //makes a table with the info
