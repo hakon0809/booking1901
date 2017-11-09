@@ -192,17 +192,25 @@ include("PHP/config.php");
 
 
 
-      <h4> Billettprisgenerator4000 </h4>
+        <h4> Billettprisgenerator4000 </h4>
         <table>
             <tr>
                 <td><label>Scene: </label></td>
-                <td><select id="scene">
-                        <option value="0" hidden>Velg scene</option>
-                        <option value="10">Scene 1 (10 plasser)</option>
-                        <option value="50">Scene 2 (50 plasser)</option>
-                        <option value="500">Scene 3 (500 plasser)</option>
-                        <option value="4500">Scene 4 (4500 plasser)</option>
-                    </select></td>
+                <td>
+                    <select name="scene" id="scene">
+                        <option hidden>Velg scene</option>
+                        <?php
+                        include("PHP/config.php");
+                        $sql = "SELECT DISTINCT s_name FROM scene";
+                        $result = $conn->query($sql);
+                        if ($result->num_rows > 0) {
+                            while ($row = $result->fetch_assoc()) {
+                                echo "<option>" . $row["s_name"] . "</option>";
+                            }
+                        }
+                        $conn->close();
+                        ?></select>
+                </td>
             </tr>
             <tr>
                 <td><label>Utgifter: </label></td>
@@ -218,23 +226,23 @@ include("PHP/config.php");
             </tr>
             <tr>
                 <td><label>
-                    Dersom 50% billettsalg:
-                </label></td>
+                        Billettpris dersom 50% forventet billettsalg:
+                    </label></td>
                 <td id="50pris">
 
                 </td>
             </tr>
             <tr>
                 <td><label>
-                    Dersom 75% billettsalg:
-                </label></td>
+                        Billettpris dersom 75% forventet billettsalg:
+                    </label></td>
                 <td id="75pris">
                 </td>
             </tr>
             <tr>
                 <td><label>
-                    Dersom 100% billettsalg:
-                </label></td>
+                        Billettpris dersom 100% forventet billettsalg:
+                    </label></td>
                 <td id="100pris">
 
                 </td>

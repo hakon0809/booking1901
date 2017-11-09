@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f9ea7f48-9a8d-4dc0-8acd-f6a22bef6e6f" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bans_tidligere_konserter.php" afterPath="$PROJECT_DIR$/bans_tidligere_konserter.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bookingsjef_home.php" afterPath="$PROJECT_DIR$/bookingsjef_home.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -13,25 +14,6 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="home_booking_ansvarlig.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/home_booking_ansvarlig.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="782">
-              <caret line="46" column="61" lean-forward="false" selection-start-line="46" selection-start-column="61" selection-end-line="46" selection-end-column="61" />
-              <folding>
-                <marker date="1510026023174" expanded="true" signature="2872:3083" ph="SELECT band.... users" />
-                <marker date="1510026023174" expanded="true" signature="3737:3802" ph="SELECT behov... teknisk_behov" />
-                <marker date="1510026023174" expanded="true" signature="5392:5425" ph="SELECT DISTI... scene" />
-                <marker date="1510026023174" expanded="true" signature="8256:8592" ph="SELECT t_id,... tilbud" />
-                <marker date="1510026023174" expanded="false" signature="8987:8999" ph="..." />
-                <marker date="1510026023174" expanded="true" signature="9000:10286" ph="..." />
-                <marker date="1510026023174" expanded="true" signature="9000:10292" ph="..." />
-                <marker date="1510026023174" expanded="false" signature="9080:9092" ph="..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="admin.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/CSS/admin.css">
           <provider selected="true" editor-type-id="text-editor">
@@ -42,93 +24,20 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="admin.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/admin.php">
+      <file leaf-file-name="bookingsjef_home.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/bookingsjef_home.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1701">
-              <caret line="109" column="0" lean-forward="true" selection-start-line="109" selection-start-column="0" selection-end-line="109" selection-end-column="0" />
+            <state relative-caret-position="385">
+              <caret line="197" column="47" lean-forward="true" selection-start-line="197" selection-start-column="47" selection-end-line="197" selection-end-column="47" />
               <folding>
-                <marker date="1510027488009" expanded="true" signature="2592:2675" ph="SELECT u_id,... users" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="sendtilbudBA.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/sendtilbudBA.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="51">
-              <caret line="3" column="0" lean-forward="true" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
-              <folding>
-                <marker date="1510025028592" expanded="true" signature="479:912" ph="INSERT INTO tilbud... " />
-                <marker date="1510025028592" expanded="true" signature="909:912" ph="INSERT INTO tilbud... " />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="mailToManager.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/mailToManager.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="459">
-              <caret line="27" column="0" lean-forward="true" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
-              <folding>
-                <marker date="1510020740465" expanded="true" signature="97:175" ph="SELECT mail_... tilbud" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="home_bookingsjef.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/home_bookingsjef.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1645">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding>
-                <marker date="1510012482249" expanded="true" signature="3068:3267" ph="SELECT band.... users" />
-                <marker date="1510012482249" expanded="true" signature="4173:4238" ph="SELECT behov... teknisk_behov" />
-                <marker date="1510012482249" expanded="true" signature="5218:5492" ph="SELECT t_id,... tilbud" />
-                <marker date="1510012482249" expanded="true" signature="5816:7968" ph="..." />
-                <marker date="1510012482249" expanded="false" signature="6058:6070" ph="..." />
-                <marker date="1510012482249" expanded="true" signature="6071:7916" ph="..." />
-                <marker date="1510012482249" expanded="false" signature="6167:6179" ph="..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="avslaaTilbud.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/avslaaTilbud.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="187">
-              <caret line="11" column="27" lean-forward="false" selection-start-line="11" selection-start-column="27" selection-end-line="11" selection-end-column="27" />
-              <folding>
-                <marker date="1510021252962" expanded="true" signature="65:133" ph="UPDATE tilbu... " />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="bans_tidligere_konserter.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/bans_tidligere_konserter.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1636">
-              <caret line="225" column="10" lean-forward="false" selection-start-line="225" selection-start-column="10" selection-end-line="225" selection-end-column="10" />
-              <folding>
-                <marker date="1510027811432" expanded="true" signature="3036:3072" ph="SELECT DISTI... konsert" />
-                <marker date="1510027811432" expanded="true" signature="3680:4013" ph="SELECT scene... konsert" />
-                <marker date="1510027811432" expanded="true" signature="4148:4434" ph="..." />
-                <marker date="1510027811432" expanded="true" signature="4152:4434" ph="..." />
-                <marker date="1510027811432" expanded="true" signature="4517:4922" ph="..." />
-                <marker date="1510027811432" expanded="true" signature="5535:5571" ph="SELECT DISTI... konsert" />
-                <marker date="1510027811432" expanded="true" signature="6067:6100" ph="SELECT DISTI... scene" />
-                <marker date="1510027811432" expanded="true" signature="7482:7524" ph="SELECT DISTI... konsert" />
-                <marker date="1510027811432" expanded="true" signature="7927:8063" ph="SELECT konse... konsert" />
-                <marker date="1510027811432" expanded="true" signature="7927:8169" ph="SELECT konse... konsert" />
-                <marker date="1510027811432" expanded="true" signature="8328:8644" ph="..." />
-                <marker date="1510027811432" expanded="true" signature="8332:8644" ph="..." />
-                <marker date="1510027811432" expanded="true" signature="8726:9195" ph="..." />
-                <marker date="1510027811432" expanded="true" signature="9164:9195" ph="..." />
+                <marker date="1510193693509" expanded="true" signature="3047:3246" ph="SELECT band.... users" />
+                <marker date="1510193693509" expanded="true" signature="4152:4217" ph="SELECT behov... teknisk_behov" />
+                <marker date="1510193693509" expanded="true" signature="5197:5471" ph="SELECT t_id,... tilbud" />
+                <marker date="1510193693509" expanded="true" signature="5795:7947" ph="..." />
+                <marker date="1510193693509" expanded="false" signature="6037:6049" ph="..." />
+                <marker date="1510193693509" expanded="true" signature="6050:7895" ph="..." />
+                <marker date="1510193693509" expanded="false" signature="6146:6158" ph="..." />
+                <marker date="1510193693509" expanded="true" signature="9882:9915" ph="SELECT DISTI... scene" />
               </folding>
             </state>
           </provider>
@@ -163,6 +72,7 @@
         <option value="$PROJECT_DIR$/CSS/admin.css" />
         <option value="$PROJECT_DIR$/admin.php" />
         <option value="$PROJECT_DIR$/bans_tidligere_konserter.php" />
+        <option value="$PROJECT_DIR$/bookingsjef_home.php" />
       </list>
     </option>
   </component>
@@ -174,10 +84,10 @@
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-1088" />
-    <option name="y" value="-454" />
-    <option name="width" value="1096" />
-    <option name="height" value="1896" />
+    <option name="x" value="-8" />
+    <option name="y" value="-8" />
+    <option name="width" value="1936" />
+    <option name="height" value="1056" />
   </component>
   <component name="ProjectView">
     <navigator currentView="ProjectPane" proportions="" version="1">
@@ -194,6 +104,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -201,22 +113,10 @@
               <item name="booking1901" type="b2602c69:ProjectViewProjectNode" />
               <item name="booking1901" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
-            <path>
-              <item name="booking1901" type="b2602c69:ProjectViewProjectNode" />
-              <item name="booking1901" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="CSS" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="booking1901" type="b2602c69:ProjectViewProjectNode" />
-              <item name="booking1901" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="JavaScript" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scratches" />
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -250,18 +150,19 @@
       <workItem from="1509378152422" duration="8462000" />
       <workItem from="1509398793524" duration="2628000" />
       <workItem from="1509612158862" duration="599000" />
-      <workItem from="1510012834455" duration="4954000" />
+      <workItem from="1510012834455" duration="5684000" />
+      <workItem from="1510191304630" duration="1233000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="17054000" />
+    <option name="totallyTimeSpent" value="19017000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-1088" y="-454" width="1096" height="1896" extended-state="6" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21018519" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.118229166" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -293,18 +194,65 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/home_booking_ansvarlig.php">
       <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="782">
+          <caret line="46" column="61" lean-forward="false" selection-start-line="46" selection-start-column="61" selection-end-line="46" selection-end-column="61" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CSS/admin.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="1" lean-forward="false" selection-start-line="2" selection-start-column="1" selection-end-line="2" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admin.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1853">
+          <caret line="109" column="0" lean-forward="true" selection-start-line="109" selection-start-column="0" selection-end-line="109" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sendtilbudBA.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" column="0" lean-forward="true" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/home_bookingsjef.php">
+      <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <marker date="1510026023174" expanded="true" signature="2872:3083" ph="SELECT band.... users" />
-            <marker date="1510026023174" expanded="true" signature="3737:3802" ph="SELECT behov... teknisk_behov" />
-            <marker date="1510026023174" expanded="true" signature="5392:5425" ph="SELECT DISTI... scene" />
-            <marker date="1510026023174" expanded="true" signature="8256:8592" ph="SELECT t_id,... tilbud" />
-            <marker date="1510026023174" expanded="false" signature="8987:8999" ph="..." />
-            <marker date="1510026023174" expanded="true" signature="9000:10286" ph="..." />
-            <marker date="1510026023174" expanded="true" signature="9000:10292" ph="..." />
-            <marker date="1510026023174" expanded="false" signature="9080:9092" ph="..." />
-          </folding>
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mailToManager.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="459">
+          <caret line="27" column="0" lean-forward="true" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/avslaaTilbud.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="11" column="27" lean-forward="false" selection-start-line="11" selection-start-column="27" selection-end-line="11" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bans_tidligere_konserter.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3536">
+          <caret line="229" column="7" lean-forward="true" selection-start-line="229" selection-start-column="7" selection-end-line="229" selection-end-column="7" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -312,16 +260,15 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <marker date="1510026023174" expanded="true" signature="2872:3083" ph="SELECT band.... users" />
-            <marker date="1510026023174" expanded="true" signature="3737:3802" ph="SELECT behov... teknisk_behov" />
-            <marker date="1510026023174" expanded="true" signature="5392:5425" ph="SELECT DISTI... scene" />
-            <marker date="1510026023174" expanded="true" signature="8256:8592" ph="SELECT t_id,... tilbud" />
-            <marker date="1510026023174" expanded="false" signature="8987:8999" ph="..." />
-            <marker date="1510026023174" expanded="true" signature="9000:10286" ph="..." />
-            <marker date="1510026023174" expanded="true" signature="9000:10292" ph="..." />
-            <marker date="1510026023174" expanded="false" signature="9080:9092" ph="..." />
-          </folding>
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/home_booking_ansvarlig.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -352,9 +299,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="459">
           <caret line="27" column="0" lean-forward="true" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
-          <folding>
-            <marker date="1510020740465" expanded="true" signature="97:175" ph="SELECT mail_... tilbud" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -362,26 +307,15 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="51">
           <caret line="3" column="0" lean-forward="true" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
-          <folding>
-            <marker date="1510025028592" expanded="true" signature="479:912" ph="INSERT INTO tilbud... " />
-            <marker date="1510025028592" expanded="true" signature="909:912" ph="INSERT INTO tilbud... " />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/home_bookingsjef.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1645">
+        <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <marker date="1510012482249" expanded="true" signature="3068:3267" ph="SELECT band.... users" />
-            <marker date="1510012482249" expanded="true" signature="4173:4238" ph="SELECT behov... teknisk_behov" />
-            <marker date="1510012482249" expanded="true" signature="5218:5492" ph="SELECT t_id,... tilbud" />
-            <marker date="1510012482249" expanded="true" signature="5816:7968" ph="..." />
-            <marker date="1510012482249" expanded="false" signature="6058:6070" ph="..." />
-            <marker date="1510012482249" expanded="true" signature="6071:7916" ph="..." />
-            <marker date="1510012482249" expanded="false" signature="6167:6179" ph="..." />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -389,9 +323,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="187">
           <caret line="11" column="27" lean-forward="false" selection-start-line="11" selection-start-column="27" selection-end-line="11" selection-end-column="27" />
-          <folding>
-            <marker date="1510021252962" expanded="true" signature="65:133" ph="UPDATE tilbu... " />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -399,16 +331,23 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="782">
           <caret line="46" column="61" lean-forward="false" selection-start-line="46" selection-start-column="61" selection-end-line="46" selection-end-column="61" />
-          <folding>
-            <marker date="1510026023174" expanded="true" signature="2872:3083" ph="SELECT band.... users" />
-            <marker date="1510026023174" expanded="true" signature="3737:3802" ph="SELECT behov... teknisk_behov" />
-            <marker date="1510026023174" expanded="true" signature="5392:5425" ph="SELECT DISTI... scene" />
-            <marker date="1510026023174" expanded="true" signature="8256:8592" ph="SELECT t_id,... tilbud" />
-            <marker date="1510026023174" expanded="false" signature="8987:8999" ph="..." />
-            <marker date="1510026023174" expanded="true" signature="9000:10286" ph="..." />
-            <marker date="1510026023174" expanded="true" signature="9000:10292" ph="..." />
-            <marker date="1510026023174" expanded="false" signature="9080:9092" ph="..." />
-          </folding>
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admin.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1853">
+          <caret line="109" column="0" lean-forward="false" selection-start-line="109" selection-start-column="0" selection-end-line="109" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bans_tidligere_konserter.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1602">
+          <caret line="229" column="7" lean-forward="true" selection-start-line="229" selection-start-column="7" selection-end-line="229" selection-end-column="7" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -420,35 +359,19 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/admin.php">
+    <entry file="file://$PROJECT_DIR$/bookingsjef_home.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1701">
-          <caret line="109" column="0" lean-forward="true" selection-start-line="109" selection-start-column="0" selection-end-line="109" selection-end-column="0" />
+        <state relative-caret-position="385">
+          <caret line="197" column="47" lean-forward="true" selection-start-line="197" selection-start-column="47" selection-end-line="197" selection-end-column="47" />
           <folding>
-            <marker date="1510027488009" expanded="true" signature="2592:2675" ph="SELECT u_id,... users" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bans_tidligere_konserter.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1636">
-          <caret line="225" column="10" lean-forward="false" selection-start-line="225" selection-start-column="10" selection-end-line="225" selection-end-column="10" />
-          <folding>
-            <marker date="1510027811432" expanded="true" signature="3036:3072" ph="SELECT DISTI... konsert" />
-            <marker date="1510027811432" expanded="true" signature="3680:4013" ph="SELECT scene... konsert" />
-            <marker date="1510027811432" expanded="true" signature="4148:4434" ph="..." />
-            <marker date="1510027811432" expanded="true" signature="4152:4434" ph="..." />
-            <marker date="1510027811432" expanded="true" signature="4517:4922" ph="..." />
-            <marker date="1510027811432" expanded="true" signature="5535:5571" ph="SELECT DISTI... konsert" />
-            <marker date="1510027811432" expanded="true" signature="6067:6100" ph="SELECT DISTI... scene" />
-            <marker date="1510027811432" expanded="true" signature="7482:7524" ph="SELECT DISTI... konsert" />
-            <marker date="1510027811432" expanded="true" signature="7927:8063" ph="SELECT konse... konsert" />
-            <marker date="1510027811432" expanded="true" signature="7927:8169" ph="SELECT konse... konsert" />
-            <marker date="1510027811432" expanded="true" signature="8328:8644" ph="..." />
-            <marker date="1510027811432" expanded="true" signature="8332:8644" ph="..." />
-            <marker date="1510027811432" expanded="true" signature="8726:9195" ph="..." />
-            <marker date="1510027811432" expanded="true" signature="9164:9195" ph="..." />
+            <marker date="1510193693509" expanded="true" signature="3047:3246" ph="SELECT band.... users" />
+            <marker date="1510193693509" expanded="true" signature="4152:4217" ph="SELECT behov... teknisk_behov" />
+            <marker date="1510193693509" expanded="true" signature="5197:5471" ph="SELECT t_id,... tilbud" />
+            <marker date="1510193693509" expanded="true" signature="5795:7947" ph="..." />
+            <marker date="1510193693509" expanded="false" signature="6037:6049" ph="..." />
+            <marker date="1510193693509" expanded="true" signature="6050:7895" ph="..." />
+            <marker date="1510193693509" expanded="false" signature="6146:6158" ph="..." />
+            <marker date="1510193693509" expanded="true" signature="9882:9915" ph="SELECT DISTI... scene" />
           </folding>
         </state>
       </provider>
