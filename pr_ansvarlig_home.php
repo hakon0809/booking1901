@@ -69,7 +69,7 @@
         <form>
               <?php
               include("config.php");
-              $sql = "SELECT t_id, t_artist_name,  t_scene, t_dato_k,  t_tidkonsertstart, t_tidkonsertslutt, omtaler, mail_m
+              $sql = "SELECT t_id, t_artist_name,  t_scene, t_dato_k,  t_tidkonsertstart, t_tidkonsertslutt
                 FROM tilbud WHERE godkjent_bs = 2 ";
               $result = $conn->query($sql);
 
@@ -87,8 +87,6 @@
                           <tr><td><label> Konsert slutt tid: </label></td><td> " . $row["t_tidkonsertslutt"] . "</td></tr>
                           <tr><td><label> Omtale av band: </label></td><td> " . $row["omtaler"] . "</td></tr>
                           <tr><td><label> Salgstall: </label></td><td> " . $row[""] . "</td></tr>
-                          <tr><td><label> Lenker til presseomtaler: </label></td><td> " . $row[""] . "</td></tr>
-                          <tr><td><label> Manager e-mail: </label></td><td> " . $row["mail_m"] . "</td></tr>
                           </table><br>";
                   }
               } else {
