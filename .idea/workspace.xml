@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f9ea7f48-9a8d-4dc0-8acd-f6a22bef6e6f" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bookingsjef_home.php" afterPath="$PROJECT_DIR$/bookingsjef_home.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/manager_home.php" afterPath="$PROJECT_DIR$/manager_home.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -13,10 +13,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="bookingsjef_home.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="bookingsjef_home.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/bookingsjef_home.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="354">
+            <state relative-caret-position="409">
               <caret line="148" column="234" lean-forward="false" selection-start-line="148" selection-start-column="234" selection-end-line="148" selection-end-column="234" />
               <folding>
                 <marker date="1510219479000" expanded="true" signature="3319:3518" ph="SELECT band.... users" />
@@ -33,12 +33,24 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="manager_home.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="manager_home.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/manager_home.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="280">
-              <caret line="64" column="16" lean-forward="false" selection-start-line="64" selection-start-column="16" selection-end-line="64" selection-end-column="16" />
+            <state relative-caret-position="355">
+              <caret line="69" column="52" lean-forward="false" selection-start-line="69" selection-start-column="52" selection-end-line="69" selection-end-column="52" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="tekniskbehov_manager.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/PHP/tekniskbehov_manager.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding>
+                <marker date="1510216252000" expanded="true" signature="368:427" ph="INSERT INTO teknisk_behov... " />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -51,19 +63,6 @@
               <folding>
                 <marker date="1510218214000" expanded="true" signature="2906:2991" ph="SELECT t_id,... tilbud" />
                 <marker date="1510218214000" expanded="true" signature="2906:3064" ph="SELECT t_id,... tilbud" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="tekniker_home.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/tekniker_home.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="130">
-              <caret line="75" column="21" lean-forward="false" selection-start-line="75" selection-start-column="21" selection-end-line="75" selection-end-column="21" />
-              <folding>
-                <marker date="1510218214000" expanded="true" signature="2949:3293" ph="SELECT scene... konsert" />
-                <marker date="1510218214000" expanded="true" signature="3493:3775" ph="..." />
               </folding>
             </state>
           </provider>
@@ -178,7 +177,6 @@
         <option value="$PROJECT_DIR$/bans_tidligere_konserter.php" />
         <option value="$PROJECT_DIR$/booking_ansvarlig_tidligere_konserter.php" />
         <option value="$PROJECT_DIR$/konsertoversikt.php" />
-        <option value="$PROJECT_DIR$/manager_home.php" />
         <option value="$PROJECT_DIR$/CSS/standard.css" />
         <option value="$PROJECT_DIR$/admin_home.php" />
         <option value="$PROJECT_DIR$/arrangor_home.php" />
@@ -193,6 +191,7 @@
         <option value="$PROJECT_DIR$/PHP/godtaTilbud.php" />
         <option value="$PROJECT_DIR$/PHP/avslaaTilbud.php" />
         <option value="$PROJECT_DIR$/bookingsjef_home.php" />
+        <option value="$PROJECT_DIR$/manager_home.php" />
       </list>
     </option>
   </component>
@@ -296,12 +295,12 @@
       <workItem from="1510201019629" duration="792000" />
       <workItem from="1510202918599" duration="234000" />
       <workItem from="1510216299193" duration="164000" />
-      <workItem from="1510216531449" duration="2341000" />
+      <workItem from="1510216531449" duration="2503000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="23844000" />
+    <option name="totallyTimeSpent" value="24006000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1280" height="729" extended-state="6" />
@@ -337,7 +336,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/home_booking_ansvarlig.php" />
     <entry file="file://$PROJECT_DIR$/home_bookingsjef.php" />
     <entry file="file://$PROJECT_DIR$/avslaaTilbud.php" />
     <entry file="file://$PROJECT_DIR$/JavaScript/konsertSort.js" />
@@ -467,14 +465,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/manager_home.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="280">
-          <caret line="64" column="16" lean-forward="false" selection-start-line="64" selection-start-column="16" selection-end-line="64" selection-end-column="16" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/tekniker_home.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="130">
@@ -592,7 +582,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/bookingsjef_home.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="354">
+        <state relative-caret-position="409">
           <caret line="148" column="234" lean-forward="false" selection-start-line="148" selection-start-column="234" selection-end-line="148" selection-end-column="234" />
           <folding>
             <marker date="1510219479000" expanded="true" signature="3319:3518" ph="SELECT band.... users" />
@@ -605,6 +595,24 @@
             <marker date="1510219479000" expanded="true" signature="10246:10279" ph="SELECT DISTI... scene" />
             <marker date="1510219479000" expanded="true" signature="10848:10903" ph="SELECT audie... scene" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PHP/tekniskbehov_manager.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <marker date="1510216252000" expanded="true" signature="368:427" ph="INSERT INTO teknisk_behov... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/manager_home.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="355">
+          <caret line="69" column="52" lean-forward="false" selection-start-line="69" selection-start-column="52" selection-end-line="69" selection-end-column="52" />
+          <folding />
         </state>
       </provider>
     </entry>
