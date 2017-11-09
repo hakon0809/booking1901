@@ -141,7 +141,7 @@ include("PHP/config.php");
     if ($result->num_rows > 0) {
         while ($row = $result->fetch_assoc()) {
             echo "
-                                        
+
                                         <button type='button' id='0' onclick='moreOrLess(this.id)' class='artistButton'>Artist: " . $row["t_artist_name"] . "</button>
                                         <table class='tilbudText' style='display:none'>
                                         <input class='o' name='tilbudid' id='tilbudid' style='display:none' value='" . $row["t_id"] . "'/>
@@ -190,8 +190,7 @@ include("PHP/config.php");
         */
     </script>
 
-    <br>
-    <br>
+    <br><br>
     <div class="teknisk_behov">
         <h4>Teknisk Behov</h4>
 
@@ -203,6 +202,34 @@ include("PHP/config.php");
             <input id="btn" type="submit" name="submit" value="Send"/>
         </form>
     </div>
+
+    <br><br>
+    <div class="later_for_konserten">
+          <form action="PHP/later_for_konserten.php" method="post">
+            <label><h4> Låter for Konserten</h4></label>
+                    <br>
+                    <label> Låter </label>
+                    <br>
+                    <textarea id="laterk" name="laterk" rows="5" cols="40"></textarea>
+                    <br>
+                    <input id="btn" type="submit" name="submit" value="Send"> <!--send låter som skal spilles til databasen-->
+
+          </form>
+      </div>
+
+      <br><br>
+      <div class="later_for_oving">
+          <form action="PHP/later_for_oving.php" method="post">
+            <label><h4> Låter for Øving</h4></label>
+                    <br>
+                    <label> Låter </label>
+                    <br>
+                    <textarea id="latero" name="latero" rows="5" cols="40"></textarea>
+                    <br>
+                    <input id="btn" type="submit" name="submit" value="Send"> <!--send låter som skal øves til databasen-->
+
+          </form>
+        </div>
 </main>
 </body>
 </html>
