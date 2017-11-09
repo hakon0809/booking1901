@@ -64,7 +64,7 @@
             ?>
         </label>
 
-      <h4> Teknikere til konsert: </h4>
+      <h4> Velg konsert under for å vise ansvarlige teknikere: </h4>
         <script type="text/javascript">
             function selectChange(val) {
             //Set the value of action in action attribute of form element.

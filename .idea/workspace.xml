@@ -2,8 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f9ea7f48-9a8d-4dc0-8acd-f6a22bef6e6f" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pr_ansvarlig_home.php" afterPath="$PROJECT_DIR$/pr_ansvarlig_home.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/arrangor_home.php" afterPath="$PROJECT_DIR$/arrangor_home.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -64,7 +63,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="pr_ansvarlig_home.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="pr_ansvarlig_home.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/pr_ansvarlig_home.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="286">
@@ -87,12 +86,19 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="arrangor_home.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="arrangor_home.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/arrangor_home.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="960">
-              <caret line="64" column="16" lean-forward="false" selection-start-line="64" selection-start-column="16" selection-end-line="64" selection-end-column="16" />
-              <folding />
+            <state relative-caret-position="399">
+              <caret line="66" column="68" lean-forward="true" selection-start-line="66" selection-start-column="68" selection-end-line="66" selection-end-column="68" />
+              <folding>
+                <marker date="1510217530000" expanded="true" signature="3188:3404" ph="SELECT konse... konsert" />
+                <marker date="1510217530000" expanded="true" signature="3906:3965" ph="SELECT k_nam... konsert" />
+                <marker date="1510217530000" expanded="true" signature="4118:4360" ph="SELECT users... users" />
+                <marker date="1510217530000" expanded="true" signature="4494:4627" ph="..." />
+                <marker date="1510217530000" expanded="true" signature="4498:4627" ph="..." />
+                <marker date="1510217530000" expanded="true" signature="4711:4895" ph="..." />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -145,7 +151,6 @@
         <option value="$PROJECT_DIR$/CSS/admin.css" />
         <option value="$PROJECT_DIR$/admin.php" />
         <option value="$PROJECT_DIR$/bans_tidligere_konserter.php" />
-        <option value="$PROJECT_DIR$/arrangor_home.php" />
         <option value="$PROJECT_DIR$/admin_home.php" />
         <option value="$PROJECT_DIR$/booking_ansvarlig_home.php" />
         <option value="$PROJECT_DIR$/booking_ansvarlig_tidligere_konserter.php" />
@@ -156,6 +161,7 @@
         <option value="$PROJECT_DIR$/manager_home.php" />
         <option value="$PROJECT_DIR$/tekniker_home.php" />
         <option value="$PROJECT_DIR$/pr_ansvarlig_home.php" />
+        <option value="$PROJECT_DIR$/arrangor_home.php" />
       </list>
     </option>
   </component>
@@ -249,12 +255,12 @@
       <workItem from="1510201019629" duration="792000" />
       <workItem from="1510202918599" duration="234000" />
       <workItem from="1510216299193" duration="164000" />
-      <workItem from="1510216531449" duration="409000" />
+      <workItem from="1510216531449" duration="715000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="21912000" />
+    <option name="totallyTimeSpent" value="22218000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1280" height="729" extended-state="6" />
@@ -349,14 +355,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/arrangor_home.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="960">
-          <caret line="64" column="16" lean-forward="false" selection-start-line="64" selection-start-column="16" selection-end-line="64" selection-end-column="16" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/booking_ansvarlig_home.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="975">
@@ -428,6 +426,21 @@
           <folding>
             <marker date="1510216956000" expanded="true" signature="2902:2987" ph="SELECT t_id,... tilbud" />
             <marker date="1510216956000" expanded="true" signature="2902:3060" ph="SELECT t_id,... tilbud" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/arrangor_home.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="399">
+          <caret line="66" column="68" lean-forward="true" selection-start-line="66" selection-start-column="68" selection-end-line="66" selection-end-column="68" />
+          <folding>
+            <marker date="1510217530000" expanded="true" signature="3188:3404" ph="SELECT konse... konsert" />
+            <marker date="1510217530000" expanded="true" signature="3906:3965" ph="SELECT k_nam... konsert" />
+            <marker date="1510217530000" expanded="true" signature="4118:4360" ph="SELECT users... users" />
+            <marker date="1510217530000" expanded="true" signature="4494:4627" ph="..." />
+            <marker date="1510217530000" expanded="true" signature="4498:4627" ph="..." />
+            <marker date="1510217530000" expanded="true" signature="4711:4895" ph="..." />
           </folding>
         </state>
       </provider>
