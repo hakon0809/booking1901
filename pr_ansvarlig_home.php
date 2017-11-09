@@ -51,7 +51,7 @@ include("PHP/config.php");
                       <!-- Henter nav linker, forms, og andre innhold for aktivering til navbaren-->
                       <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                           <ul class="nav navbar-nav">
-                              <li class="active"><a href= <?php echo $_SESSION["role"] . "_home.php"; ?> Min Side <span class="sr-only">(current)</span></a></li>
+                              <li class="active"><a href= <?php echo $_SESSION["role"] . "_home.php"; ?>> Min Side <span class="sr-only">(current)</span></a></li>
                           </ul>
                           <ul class="nav navbar-nav navbar-right">
                               <li><a href="Log_In/login.php"> Logg ut</a></li>
