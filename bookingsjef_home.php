@@ -197,7 +197,8 @@ include("PHP/config.php");
             <tr>
                 <td><label>Scene: </label></td>
                 <td>
-                    <select name="scene" id="scene">
+                    <form method="post" action"">
+                    <select name="scene" onchange="this.form.submit()" id="scene">
                         <option hidden>Velg scene</option>
                         <?php
                         include("PHP/config.php");
@@ -208,8 +209,23 @@ include("PHP/config.php");
                                 echo "<option>" . $row["s_name"] . "</option>";
                             }
                         }
-                        $conn->close();
                         ?></select>
+                    </form>
+                    <label>
+                        <?php
+                        include("PHP/config.php");
+                        $scene = $_POST['scene'];
+                        $sql = "SELECT audience_size FROM scene WHERE s_name = '$scene'";
+                        $plasser = $row["audience_size"];
+                        echo "<script>console.log(tester + '$scene')</script>";
+                        $result = $conn->query($sql);
+                        if ($result->num_rows > 0) {
+                            while ($row = $result->fetch_assoc()) {
+                                echo "<label> $scene:&nbsp</label><label id='plasserLabel'>" . $row["audience_size"] . "&nbsp</label><label> plasser</label>";
+                            }
+                        }
+                        ?>
+                    </label>
                 </td>
             </tr>
             <tr>
@@ -249,6 +265,25 @@ include("PHP/config.php");
             </tr>
         </table>
     </main>
-  <script type="text/javascript" src="JavaScript/prisforslag.js"></script>
+    <script type="text/javascript">
+        document.getElementById("anbefaltPris").innerHTML = "Velg scene!";
+        document.getElementById("beregnPrisBtn").addEventListener("click", function(){
+            var plasser = document.getElementById("plasserLabel").innerHTML;
+            plasser = parseInt(plasser);
+            if (plasser > 0) {
+                document.getElementById("anbefaltPris").innerHTML = "";
+
+                var nullPris = (document.getElementById("konsertUtgifter").value / plasser);
+
+                var onsketPris = (document.getElementById("konsertOverskudd").value / plasser) + nullPris;
+                //document.getElementById("anbefaltPris").innerHTML = "Billettpris: " + String(onsketPris) + "NOK";
+                document.getElementById("50pris").innerHTML = "Billettpris: <strong>" + String((onsketPris/0.5).toFixed(2)) + "NOK</strong>" + " = ca. " + ((parseInt((onsketPris/0.5).toFixed(2) / 10, 10) + 1) * 10) + "NOK";
+                document.getElementById("75pris").innerHTML = "Billettpris: <strong>" + String((onsketPris/0.75).toFixed(2)) + "NOK</strong>" + " = ca. " + ((parseInt((onsketPris/0.75).toFixed(2) / 10, 10) + 1) * 10) + "NOK";
+                document.getElementById("100pris").innerHTML = "Billettpris: <strong>" + String(onsketPris.toFixed(2)) + "NOK</strong>" + " = ca. " + ((parseInt(onsketPris.toFixed(2) / 10, 10) + 1) * 10) + "NOK";
+            } else {
+                document.getElementById("anbefaltPris").innerHTML = "Velg en scene!";
+            }
+        });
+    </script>
 </body>
 </html>
