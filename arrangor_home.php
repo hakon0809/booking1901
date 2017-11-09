@@ -73,7 +73,7 @@
             }
         </script>
       <?php
-        include("config.php");
+        include("PHP/config.php");
           // selects conserts and scenes from the database
           $sql = "SELECT konsert.k_name, konsert.k_id
                   FROM konsert INNER JOIN user_konsert

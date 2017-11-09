@@ -77,7 +77,7 @@
         <h4>Scene</h4>
 
       <?php
-        include("config.php");
+        include("PHP/config.php");
           // selects conserts and scenes from the database
 
           $sql = "SELECT s_id, s_name FROM scene" ;

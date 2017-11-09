@@ -136,7 +136,7 @@ include("PHP/config.php");
                         <select name="scene" id="scene">
                             <option hidden>Velg scene</option>
                             <?php
-                            include ("config.php");
+                            include ("PHP/config.php");
                             $sql = "SELECT DISTINCT s_name FROM scene";
                             $result = $conn->query($sql);
                             if ($result->num_rows > 0) {
@@ -202,7 +202,7 @@ include("PHP/config.php");
     </div>
     <h1>Avslåtte tilbud</h1>
     <?php
-    include("config.php");
+    include("PHP/config.php");
     $sql = "SELECT t_id, t_artist_name, t_pris, t_scene, t_dato_k, t_dato_sendt, t_tidkonsertstart, t_tidkonsertslutt, melding_til_m, mail_m, melding_til_bs, godkjent_bs, godkjent_m, tilbud_sendt_til_bs, tilbud_sendt_til_m, fra_bans_id
                               FROM tilbud WHERE godkjent_bs = 2
                               AND fra_bans_id = $_SESSION[user_id]
@@ -234,7 +234,7 @@ include("PHP/config.php");
     $conn->close();
     ?>
     <?php
-    include("config.php");
+    include("PHP/config.php");
     echo "<script>console.log('test$_SESSION[user_id]')</script>";
     ?>
     <script>

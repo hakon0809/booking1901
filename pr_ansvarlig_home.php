@@ -68,7 +68,7 @@
         <h4> Oversikt av Konserter </h4>
         <form>
               <?php
-              include("config.php");
+              include("PHP/config.php");
               $sql = "SELECT t_id, t_artist_name,  t_scene, t_dato_k,  t_tidkonsertstart, t_tidkonsertslutt, presseomtaler, mail_m
                 FROM tilbud WHERE godkjent_bs = 1 ";
               $result = $conn->query($sql);

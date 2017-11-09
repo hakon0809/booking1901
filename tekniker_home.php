@@ -73,7 +73,7 @@
 
       <h1>Mine konserter</h1>
       <?php
-        include("config.php");
+        include("PHP/config.php");
         $sql = "SELECT scene.s_name, konsert.k_name, konsert.date, konsert.time_start, konsert.time_end
                 FROM konsert INNER JOIN user_konsert
                 ON konsert.k_id = user_konsert.konsert_id
