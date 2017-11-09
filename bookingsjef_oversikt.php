@@ -75,7 +75,7 @@ include("PHP/config.php");
             </script>
           <?php
           include("PHP/config.php");
-          $current_concert = "dagene " . date("y");
+          $current_concert = "Dagene " . date("Y");
             // selects conserts and scenes from the database
            $sql = "SELECT DISTINCT date FROM konsert
                   WHERE konsert.festival_name = '$current_concert'";
