@@ -43,7 +43,7 @@
                 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                   <ul class="nav navbar-nav">
                     <li class="active"><a href= <?php echo "home_" . $_SESSION["role"] . ".php"; ?>> Min side <span class="sr-only">(current)</span> </a></li>
-                    <li><a href="konsertoversikt.php">Konsertoversikt</a></li>
+                    <li><a href="pr_ansvarlig_konsertoversikt.php">Konsertoversikt</a></li>
                   </ul>
                   <ul class="nav navbar-nav navbar-right">
                     <li><a href="Log_In/login.php"> Logg ut</a></li>
@@ -65,11 +65,11 @@
         </label>
 
       <div>
-        <h4> Oversikt av Konserter </h4>
+        <h4> Oversikt av nye Konserter </h4>
         <form>
               <?php
               include("PHP/config.php");
-              $sql = "SELECT t_id, t_artist_name,  t_scene, t_dato_k,  t_tidkonsertstart, t_tidkonsertslutt, presseomtaler, mail_m
+              $sql = "SELECT t_id, t_artist_name,  t_scene, t_dato_k,  t_tidkonsertstart, t_tidkonsertslutt, omtaler, presseomtaler, mail_m, salgstall
                 FROM tilbud WHERE godkjent_bs = 1 ";
               $result = $conn->query($sql);
 
@@ -77,7 +77,7 @@
                   while ($row = $result->fetch_assoc()) {
                       echo "
                           <input class='o' name='tilbudid' style='display:none' value='" . $row["t_id"] . "'/>
-                          <button type='button' onclick='moreOrLess(this.id)' class='artistButton'>Artist:  " . $row["t_artist_name"] . "</button> <br>
+                          <button type='button' onclick='moreOrLess(this.id)' class='artistButton'>Artist:  " . $row["t_artist_name"] . "</button><br><br>
                           <table class='tilbudText' style='display:none'>
                           <tr><th><label>Artist: </label></th><th>" . $row["t_artist_name"] . "</th></tr>
                           <tr><td><label> Dato for konsert: </label></td><td> " . $row["t_dato_k"] . "</td></tr>
@@ -85,7 +85,7 @@
                           <tr><td><label> Konsert start tid: </label></td><td> " . $row["t_tidkonsertstart"] . "</td></tr>
                           <tr><td><label> Konsert slutt tid: </label></td><td> " . $row["t_tidkonsertslutt"] . "</td></tr>
                           <tr><td><label> Omtale av band: </label></td><td> " . $row["omtaler"] . "</td></tr>
-                          <tr><td><label> Salgstall: </label></td><td> " . $row[""] . "</td></tr>
+                          <tr><td><label> Salgstall: </label></td><td> " . $row["salgstall"] . "</td></tr>
                           <tr><td><label> Lenker til presseomtaler: </label></td><td> " . $row["presseomtaler"] . "</td></tr>
                           <tr><td><label> Manager e-mail: </label></td><td> " . $row["mail_m"] . "</td></tr>
                           </table><br>";

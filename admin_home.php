@@ -87,7 +87,8 @@ include("PHP/config.php");
     </form>
     <br>
 
-    <h4>Slett bruker med id = <form action="PHP/slettBruker.php" method="post"><select name="brukerId">
+      <h4>Slett bruker med id: </h4>
+    <form action="PHP/slettBruker.php" method="post"><select name="brukerId">
                 <option value="0">Velg id</option>
                 <?php
                 $sql = "SELECT DISTINCT u_id FROM users";
@@ -101,8 +102,7 @@ include("PHP/config.php");
             </select>
             <button type="submit">Slett</button>
         </form>
-    </h4>
-
+        <br>
 
     <?php
     $sql = "SELECT u_id, username, role, email, mobile, name, adress

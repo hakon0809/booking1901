@@ -78,9 +78,9 @@ include("PHP/config.php");
         while ($row = $result->fetch_assoc()) {
             echo "
                                         <form method='post'>
-                                        <button type='button' id='0' onclick='moreOrLess(this.id)' class='artistButton'>Artist: " . $row["t_artist_name"] . "</button>
+                                        <button type='button' id='0' onclick='moreOrLess(this.id)' class='artistButton'>Artist: " . $row["t_artist_name"] . "</button><br>
                                         <table class='tilbudText' style='display:none'>
-                                        <input class='o' name='tilbudid' id='tilbudid' style='display:none' value='" . $row["t_id"] . "'/>
+                                        <input class='o' name='tilbudid' id='tilbudid' style='display:none' value='" . $row["t_id"] . "'/><br>
                                         <tr><th><label>Artist: </label></th><th>" . $row["t_artist_name"] . "</th></tr>
                                         <tr><td><label> Pris: </label></td><td> " . $row["t_pris"] . ",- NOK</td></tr>
                                         <tr><td><label> Dato for konsert: </label></td><td> " . $row["t_dato_k"] . "</td></tr>
@@ -90,27 +90,20 @@ include("PHP/config.php");
                                         <tr><td><label> Konsert slutt tid: </label></td><td> " . $row["t_tidkonsertslutt"] . "</td></tr>
                                         <tr><td><label> Godkjenn Tilbud: </label><input id=\"btn\" formaction='PHP/managerGodtaTilbud.php' type=\"submit\" name=\"submit\" value=\"Godkjenn\"/></td><td><input class='avslaaBtn' formaction='PHP/managerAvslaaTilbud.php' id=\"avslaaBtn\" type=\"submit\" name=\"submit\" value=\"Avslå tilbud\"/></td></tr><!-- onclick='setID(this.id)'-->
 
-                                        </table><br>
+                                        </table>
                                         </form>";
         }
     } else {
-        echo "Ingen nye tilbud";
+        echo "<br> Ingen nye tilbud";
     }
 
     ?>
     <script>
         var artistList = document.getElementsByClassName("artistButton");
         var tekstList = document.getElementsByClassName("tilbudText");
-        /*
-        var avslaaList = document.getElementsByClassName("o");
-        var avslaaBtnList = document.getElementsByClassName("avslaaBtn");
-        */
 
         for(var i=0;i<=artistList.length;i++) {
             artistList[i].id = i;
-            //tekstList[i].id = "0" + i;
-            //avslaaBtnList[i].id = i;
-
         }
 
         function moreOrLess(i) {
@@ -120,14 +113,8 @@ include("PHP/config.php");
                 tekstList[i].style.display = "none";
             }
         }
-
-        /*
-        function setID(i) {
-            avslaaList[i].id = "tilbudid";
-        }
-        */
+        
     </script>
-    <br>
     <h3>Konserter godtatt</h3>
     <?php
     session_start();
@@ -163,16 +150,9 @@ include("PHP/config.php");
     <script>
         var artistList = document.getElementsByClassName("artistButton");
         var tekstList = document.getElementsByClassName("tilbudText");
-        /*
-        var avslaaList = document.getElementsByClassName("o");
-        var avslaaBtnList = document.getElementsByClassName("avslaaBtn");
-        */
 
         for(var i=0;i<=artistList.length;i++) {
             artistList[i].id = i;
-            //tekstList[i].id = "0" + i;
-            //avslaaBtnList[i].id = i;
-
         }
 
         function moreOrLess(i) {
@@ -182,12 +162,6 @@ include("PHP/config.php");
                 tekstList[i].style.display = "none";
             }
         }
-
-        /*
-        function setID(i) {
-            avslaaList[i].id = "tilbudid";
-        }
-        */
     </script>
 
     <br><br>
